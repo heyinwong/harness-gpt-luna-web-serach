@@ -1,0 +1,110 @@
+{
+  "verdict": "EXPLORATORY_ONLY",
+  "notice": "Reuses a recorded hosted reference. Selected after seeing pilot results; not a new holdout, confidence test or proof of transfer. Each row uses questions with all repetitions measurable in all three groups. Reliability rows include failures.",
+  "rows": [
+    {
+      "metric": "search_queries",
+      "n_matched_questions": 9,
+      "original_custom": 1.5,
+      "candidate_custom": 1.3888888888888888,
+      "hosted": 1.2777777777777777,
+      "registered_margin": 1.5
+    },
+    {
+      "metric": "search_actions",
+      "n_matched_questions": 9,
+      "original_custom": 1.2777777777777777,
+      "candidate_custom": 1.2777777777777777,
+      "hosted": 1.1111111111111112,
+      "registered_margin": 1.0
+    },
+    {
+      "metric": "open_actions",
+      "n_matched_questions": 9,
+      "original_custom": 1.7222222222222223,
+      "candidate_custom": 1.0555555555555556,
+      "hosted": 0.2777777777777778,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "any_open",
+      "n_matched_questions": 9,
+      "original_custom": 0.9444444444444444,
+      "candidate_custom": 0.7777777777777778,
+      "hosted": 0.2777777777777778,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "find_actions",
+      "n_matched_questions": 9,
+      "original_custom": 0.5,
+      "candidate_custom": 0.2222222222222222,
+      "hosted": 0.0,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "site_query_share",
+      "n_matched_questions": 9,
+      "original_custom": 1.0,
+      "candidate_custom": 1.0,
+      "hosted": 1.0,
+      "registered_margin": 0.15
+    },
+    {
+      "metric": "citation_domains",
+      "n_matched_questions": 9,
+      "original_custom": 1.0,
+      "candidate_custom": 0.9444444444444444,
+      "hosted": 1.0,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "target_mention",
+      "n_matched_questions": 9,
+      "original_custom": 1.0,
+      "candidate_custom": 1.0,
+      "hosted": 1.0,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "entity_mentions",
+      "n_matched_questions": 9,
+      "original_custom": 1.3333333333333333,
+      "candidate_custom": 1.3333333333333333,
+      "hosted": 1.3333333333333333,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "answer_words",
+      "n_matched_questions": 9,
+      "original_custom": 194.61111111111111,
+      "candidate_custom": 203.38888888888889,
+      "hosted": 216.55555555555554,
+      "registered_margin": 100
+    },
+    {
+      "metric": "completed",
+      "n_matched_questions": 10,
+      "original_custom": 0.9,
+      "candidate_custom": 0.9,
+      "hosted": 1.0,
+      "registered_margin": 0.05
+    },
+    {
+      "metric": "budget_limited",
+      "n_matched_questions": 10,
+      "original_custom": 0.1,
+      "candidate_custom": 0.05,
+      "hosted": 0.0,
+      "registered_margin": 0.05
+    }
+  ],
+  "candidate_runs": 22,
+  "candidate_statuses": {
+    "failed": 1,
+    "round_limit_reached": 1,
+    "completed": 20
+  },
+  "conservative_accounted_usd": 0.5425345,
+  "provenance_note": "Allowlisted export of local results. No API response IDs, encrypted reasoning, page contents, full source/query lists, credentials or local paths are included. Original raw traces remain private. This export supports metric inspection, not independent verification of API execution."
+}

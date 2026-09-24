@@ -1,0 +1,33 @@
+{
+  "description": "SYNTHETIC fixture for checking tool mechanics. These are fictional pages, not current bank information or a representative search corpus.",
+  "award_sentence": "Example Bank received the fictional 2026 Sample Savings Service Award.",
+  "pages": [
+    {
+      "url": "https://example-bank.test/savings",
+      "title": "Example Bank savings account",
+      "role": "product",
+      "text": "# Example Bank savings account\n\nA fictional Australian savings product used to test an agent. Compare eligibility, account conditions and service before choosing a savings account.\n\n## Eligibility and conditions\nApplicants must satisfy the eligibility checks described in the account terms. Bonus interest requires a qualifying deposit each month and a growing balance. No actual interest rate is provided by this fixture.\n\n{{AWARD_BLOCK}}\n\n## Account support\nCustomers can contact the service team online. Read the [account terms](https://example-bank.test/terms) for the conditions and exceptions."
+    },
+    {
+      "url": "https://example-bank.test/awards",
+      "title": "Example Bank awards and assessment details",
+      "role": "hub",
+      "text": "# Example Bank awards\n\nExample Bank received the fictional 2026 Sample Savings Service Award.\n\nThe fictional assessment covered service response times and accessibility. It did not assess interest rates, returns, eligibility or whether an account is suitable for a particular person. This is synthetic evidence for a software test."
+    },
+    {
+      "url": "https://example-bank.test/terms",
+      "title": "Example Bank savings account terms",
+      "text": "# Savings account terms\n\nThe fixture account requires a qualifying monthly deposit and a growing balance for bonus interest. Transfers from another Example Bank account do not qualify as a deposit. A withdrawal can affect the balance-growth condition. These are fictional terms for testing."
+    },
+    {
+      "url": "https://comparison.test/savings",
+      "title": "Comparing Australian savings accounts",
+      "text": "# Comparing Australian savings accounts\n\nCompare ongoing interest, bonus conditions, fees, eligibility and access to funds. Headline rates may have restrictions. A service award does not establish that an account pays the highest interest.\n\nThis fictional comparison covers Example Bank and Other Bank. Check each provider's product page and account terms."
+    },
+    {
+      "url": "https://other-bank.test/savings",
+      "title": "Other Bank savings account",
+      "text": "# Other Bank savings account\n\nThis fictional Australian savings account offers online access and has its own eligibility criteria. It is included as a competing product in a software fixture. No live rates or actual product claims are supplied."
+    }
+  ]
+}

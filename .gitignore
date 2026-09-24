@@ -1,0 +1,10 @@
+__pycache__/
+.env
+.env.*
+results/
+.venv/
+
+# Private source photographs and platform artifacts
+*.HEIC
+*.heic
+.DS_Store

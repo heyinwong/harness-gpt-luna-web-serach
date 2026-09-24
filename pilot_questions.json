@@ -1,0 +1,5 @@
+[
+  {"id": "product_01", "category": "product", "question": "What conditions apply to Example Bank's savings account?"},
+  {"id": "comparison_01", "category": "comparison", "question": "How should I compare Example Bank and Other Bank savings accounts?"},
+  {"id": "trust_01", "category": "trust", "question": "What evidence supports the quality of Example Bank's savings service?"}
+]
