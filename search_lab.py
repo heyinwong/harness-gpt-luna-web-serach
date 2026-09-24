@@ -20,7 +20,8 @@ from urllib.error import HTTPError, URLError
 
 ROOT = Path(__file__).resolve().parent
 ARMS = ("baseline", "inline", "no_link", "link_vague", "link_descriptive")
-ALL_ARMS = ARMS + ("reference",)
+EXPERIMENT_ARMS = ARMS + ("current_footnote",)
+ALL_ARMS = EXPERIMENT_ARMS + ("reference",)
 LINK = re.compile(r"\[([^\]]+)\]\(([^\s)]+)\)")
 INSTRUCTIONS = (
     "Answer the user's question using the available evidence. You may search, open pages, "
@@ -34,6 +35,20 @@ def tokens(text):
     return re.findall(r"[a-z0-9]+", text.lower())
 
 
+def readable_text(text):
+    """Index link labels, not tracking parameters or destination-path words."""
+    return LINK.sub(lambda match: match.group(1), text)
+
+
+def browser_class(retrieval="window"):
+    if retrieval == "window":
+        return Browser
+    if retrieval == "context":
+        from context_passages import ContextPassageBrowser
+        return ContextPassageBrowser
+    raise ValueError("Unknown retrieval configuration")
+
+
 def canonical(url):
     parts = urlsplit(url)
     if parts.scheme not in ("http", "https") or not parts.hostname or parts.username:
@@ -45,6 +60,14 @@ def save(path, obj):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n")
+
+
+def replace_span(page, start, end, replacement):
+    """Keep fragment offsets valid when editing a captured page."""
+    page['text'] = page['text'][:start] + replacement + page['text'][end:]
+    page['anchors'] = {key: offset if offset <= start else
+                       offset + len(replacement) - (end - start) if offset >= end else start
+                       for key, offset in page.get('anchors', {}).items()}
 
 
 def make_pages(corpus, arm):
@@ -78,8 +101,15 @@ def make_pages(corpus, arm):
         "link_vague": f"[See our awards]({hub_url})",
         "link_descriptive": f"{award} [Award details]({hub_url})",
     }
-    products[0]["text"] = products[0]["text"].replace("{{AWARD_BLOCK}}", blocks[arm])
-    if arm in ("baseline", "inline"):
+    if arm == 'current_footnote':
+        original = products[0].get('original_snapshot')
+        if not original or not isinstance(original.get('text'), str):
+            raise ValueError('current_footnote requires an original_snapshot on the product page')
+        products[0].update(copy.deepcopy(original))
+    else:
+        start = products[0]['text'].index('{{AWARD_BLOCK}}')
+        replace_span(products[0], start, start + len('{{AWARD_BLOCK}}'), blocks[arm])
+    if arm in ("baseline", "inline", "current_footnote"):
         pages.remove(hubs[0])
     result = {}
     for page in pages:
@@ -99,15 +129,26 @@ class Browser:
         if not (100 <= snippet_chars <= 20000 and 1 <= top_k <= 20 and 100 <= page_chars <= 50000):
             raise ValueError("Invalid snippet, result-count or page-window setting")
         self.pages = make_pages(corpus, arm)
+        self.aliases = {}
+        for url, page in self.pages.items():
+            for alias in page.get('aliases', []):
+                alias = canonical(alias)
+                if (alias in self.pages and alias != url) or self.aliases.get(alias, url) != url:
+                    raise ValueError('Ambiguous corpus URL alias')
+                self.aliases[alias] = url
         self.snippet_chars, self.top_k, self.page_chars = snippet_chars, top_k, page_chars
         self.events = []
         self.visible_links = {}
         self.visible_pages = set()
         self.link_seen_at = {}
         self.page_seen_at = {}
-        self.documents = {u: Counter(tokens(p["title"] + " " + p["text"])) for u, p in self.pages.items()}
+        self.documents = {u: Counter(tokens(p["title"] + " " + readable_text(p["text"]))) for u, p in self.pages.items()}
         self.avg_len = sum(map(lambda c: sum(c.values()), self.documents.values())) / len(self.pages)
         self.df = Counter(t for counts in self.documents.values() for t in counts)
+
+    def resolve(self, url):
+        url = canonical(url)
+        return self.aliases.get(url, url)
 
     def links(self, url, text):
         result = []
@@ -149,6 +190,10 @@ class Browser:
                 end = m.end()
         return text[start:end], start, end
 
+    def search_excerpt(self, url, terms):
+        excerpt, start, end = self.snippet(self.pages[url]['text'], terms)
+        return {'text': excerpt, 'start': start, 'end': end}
+
     def search(self, queries):
         if not isinstance(queries, list) or not 1 <= len(queries) <= 8:
             raise ValueError("queries must contain 1–8 strings")
@@ -186,14 +231,13 @@ class Browser:
             ranked.sort(key=lambda item: (-item[0], item[1]))
             results = []
             for score, url in ranked[:self.top_k]:
-                excerpt, start, end = self.snippet(self.pages[url]["text"], terms)
-                results.append(self.expose(url, excerpt, start=start, end=end))
+                results.append(self.expose(url, **self.search_excerpt(url, terms)))
             batches.append({"query": query, "results": results})
         return {"searches": batches}
 
     def open(self, url, offset=0):
         fragment = unquote(urlsplit(url).fragment)
-        url = canonical(url)
+        url = self.resolve(url)
         if url not in self.pages:
             return {"error": "not_in_corpus", "url": url}
         text = self.pages[url]["text"]
@@ -211,14 +255,14 @@ class Browser:
                            total_chars=len(text), next_offset=end if end < len(text) else None)
 
     def click(self, page_url, link_id):
-        page_url = canonical(page_url)
+        page_url = self.resolve(page_url)
         key = (page_url, link_id)
         if key not in self.visible_links:
             return {"error": "link_not_previously_exposed"}
         return self.open(self.visible_links[key])
 
     def find(self, url, text):
-        url = canonical(url)
+        url = self.resolve(url)
         if url not in self.visible_pages:
             return {"error": "page_not_previously_exposed"}
         if not isinstance(text, str) or not text.strip():
@@ -251,9 +295,9 @@ class Browser:
         try:
             if name not in allowed or not isinstance(arguments, dict):
                 raise ValueError("Unknown tool or invalid arguments")
-            if name == "click" and (canonical(arguments.get("page_url", "")), arguments.get("link_id")) not in observed_links:
+            if name == "click" and (self.resolve(arguments.get("page_url", "")), arguments.get("link_id")) not in observed_links:
                 result = {"error": "link_not_previously_exposed"}
-            elif name == "find" and canonical(arguments.get("url", "")) not in observed_pages:
+            elif name == "find" and self.resolve(arguments.get("url", "")) not in observed_pages:
                 result = {"error": "page_not_previously_exposed"}
             else:
                 result = allowed[name](**arguments)
@@ -267,7 +311,7 @@ class Browser:
         attempts = [e for e in self.events if e["tool"] in ("open", "click")]
         successful = [e for e in attempts if "error" not in e["output"]]
         followed = [e for e in successful if e["tool"] == "click"
-                    and self.pages[canonical(e["arguments"]["page_url"])].get("role") == "product"
+                    and self.pages[self.resolve(e["arguments"]["page_url"])].get("role") == "product"
                     and self.pages[e["output"]["url"]].get("role") == "hub"]
         searches = [e for e in self.events if e["tool"] == "search" and "error" not in e["output"]]
         return {"search_actions": len(searches), "search_queries": sum(len(e["output"]["searches"]) for e in searches),
@@ -377,21 +421,24 @@ def cost_estimate(responses, mode):
             "note": "Estimate for GPT-5.6 Luna standard short-context pricing checked 2026-09-24; search fees estimated per reported search action. Not an invoice or a hard spending limit."}
 
 
-def run(args, transport=request_response):
+def run(args, transport=request_response, browser_factory=None):
     if not args.allow_paid:
         raise ValueError("Paid requests disabled. Add --allow-paid only when ready to incur API charges.")
     if args.model != "gpt-5.6-luna":
         raise ValueError("This pilot is pinned to gpt-5.6-luna; do not silently substitute another model")
     corpus = json.loads(Path(args.corpus).read_text()) if args.mode == "custom" else None
-    browser = Browser(corpus, args.arm, args.snippet_chars, args.top_k, args.page_chars) if corpus else None
+    browser = (browser_factory or browser_class(getattr(args, "retrieval", "window")))(corpus, args.arm, args.snippet_chars, args.top_k, args.page_chars) if corpus else None
     started = time.monotonic()
     trace = {"created_at": datetime.now(timezone.utc).isoformat(), "mode": args.mode,
              "model": args.model, "reasoning": args.reasoning, "question": args.question,
              "arm": args.arm if args.mode == "custom" else None, "instructions": getattr(args, "instructions", INSTRUCTIONS),
              "corpus_sha256": hashlib.sha256(Path(args.corpus).read_bytes()).hexdigest() if args.mode == "custom" else None,
              "corpus_description": corpus.get("description") if args.mode == "custom" else None,
+             "retrieval_backend": getattr(browser, 'backend_name', 'window') if browser else 'hosted',
              "config": {k: getattr(args, k) for k in ("snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens", "web_tool")},
              "responses": [], "tool_events": [], "status": "running"}
+    if hasattr(args, "retrieval"):
+        trace["config"]["retrieval"] = args.retrieval
     if getattr(args, "allowed_domains", None):
         trace["allowed_domains"] = args.allowed_domains
     history = [{"role": "user", "content": args.question}]
@@ -469,7 +516,8 @@ def main():
     runner.add_argument("--model", default="gpt-5.6-luna")
     runner.add_argument("--reasoning", choices=("none", "low", "medium", "high", "xhigh", "max"), default="medium")
     runner.add_argument("--web-tool", choices=("web_search", "web_search_preview"), default="web_search_preview")
-    runner.add_argument("--snippet-chars", type=int, default=1200)
+    runner.add_argument("--retrieval", choices=("context", "window"), default="context")
+    runner.add_argument("--snippet-chars", type=int, default=3000)
     runner.add_argument("--page-chars", type=int, default=8000)
     runner.add_argument("--top-k", type=int, default=5)
     runner.add_argument("--max-rounds", type=int, default=12)

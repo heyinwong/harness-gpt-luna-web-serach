@@ -1,0 +1,3659 @@
+{
+  "verdict": "inconclusive",
+  "confidence_level": 0.95,
+  "simultaneous_coordinates": 196,
+  "interval_method": "Two-sided empirical Bernstein bounds with Bonferroni correction; paired question clusters.",
+  "scope": "Authored Australian savings calibration questions across selected providers; unrestricted hosted web search versus a bounded observed corpus. Not a representative holdout or ChatGPT product validation.",
+  "manifest_sha256": "09881e92d669768abfc46b51ddc743096a6835379ad5c8daa7995e5d3626a265",
+  "planned_runs": 48,
+  "observed_runs": 48,
+  "n_independent_questions": 12,
+  "flags": [
+    "exploratory_split_not_confirmatory",
+    "missing_metric_data:lookup:answer_words",
+    "missing_metric_data:lookup:any_open",
+    "missing_metric_data:lookup:citation_domain_distribution",
+    "missing_metric_data:lookup:citation_domains",
+    "missing_metric_data:lookup:entity_distribution",
+    "missing_metric_data:lookup:entity_mentions",
+    "missing_metric_data:lookup:find_actions",
+    "missing_metric_data:lookup:open_actions",
+    "missing_metric_data:lookup:open_count_distribution",
+    "missing_metric_data:lookup:search_actions",
+    "missing_metric_data:lookup:search_count_distribution",
+    "missing_metric_data:lookup:search_queries",
+    "missing_metric_data:lookup:site_query_share",
+    "missing_metric_data:lookup:target_mention",
+    "missing_metric_data:overall:answer_words",
+    "missing_metric_data:overall:any_open",
+    "missing_metric_data:overall:citation_domain_distribution",
+    "missing_metric_data:overall:citation_domains",
+    "missing_metric_data:overall:entity_distribution",
+    "missing_metric_data:overall:entity_mentions",
+    "missing_metric_data:overall:find_actions",
+    "missing_metric_data:overall:open_actions",
+    "missing_metric_data:overall:open_count_distribution",
+    "missing_metric_data:overall:search_actions",
+    "missing_metric_data:overall:search_count_distribution",
+    "missing_metric_data:overall:search_queries",
+    "missing_metric_data:overall:site_query_share",
+    "missing_metric_data:overall:target_mention",
+    "representative_independent_sampling_not_declared",
+    "too_few_independent_questions",
+    "too_few_questions_in_category:comparison",
+    "too_few_questions_in_category:conditions",
+    "too_few_questions_in_category:lookup"
+  ],
+  "point_estimates_outside_tolerance": [
+    "search_actions",
+    "open_actions",
+    "any_open",
+    "search_count_distribution",
+    "open_count_distribution"
+  ],
+  "rows": [
+    {
+      "scope": "overall",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 3.0,
+      "live": 2.727272727272727,
+      "interval": {
+        "estimate": 0.2727272727272727,
+        "low": -20,
+        "high": 20,
+        "n_questions": 11
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "overall",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 2.8181818181818183,
+      "live": 1.3181818181818181,
+      "interval": {
+        "estimate": 1.5,
+        "low": -12,
+        "high": 12,
+        "n_questions": 11
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "overall",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 2.772727272727273,
+      "live": 0.4090909090909091,
+      "interval": {
+        "estimate": 2.3636363636363638,
+        "low": -10,
+        "high": 10,
+        "n_questions": 11
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.9090909090909091,
+      "live": 0.4090909090909091,
+      "interval": {
+        "estimate": 0.5,
+        "low": -1,
+        "high": 1,
+        "n_questions": 11
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.22727272727272727,
+      "live": 0.09090909090909091,
+      "interval": {
+        "estimate": 0.13636363636363635,
+        "low": -10,
+        "high": 10,
+        "n_questions": 11
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.7902056277056277,
+      "live": 0.9204545454545454,
+      "interval": {
+        "estimate": -0.13024891774891775,
+        "low": -1,
+        "high": 1,
+        "n_questions": 11
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 1.5454545454545454,
+      "live": 1.6363636363636365,
+      "interval": {
+        "estimate": -0.09090909090909091,
+        "low": -10,
+        "high": 10,
+        "n_questions": 11
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.45454545454545453,
+      "live": 0.45454545454545453,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 11
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 1.3636363636363635,
+      "live": 1.3636363636363635,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 11
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 356.90909090909093,
+      "live": 375.22727272727275,
+      "interval": {
+        "estimate": -18.318181818181817,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 11
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "overall",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 0.9583333333333334,
+      "live": 1.0,
+      "interval": {
+        "estimate": -0.041666666666666664,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.041666666666666664,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.041666666666666664,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.4090909090909091,
+        0.5,
+        0.09090909090909091,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.5454545454545454,
+        0.3181818181818182,
+        0.13636363636363635,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.18181818181818182,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.13636363636363635,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.18181818181818182,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.045454545454545456,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "overall",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.09090909090909091,
+        0.09090909090909091,
+        0.3181818181818182,
+        0.36363636363636365,
+        0.13636363636363635
+      ],
+      "live": [
+        0.5909090909090909,
+        0.4090909090909091,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.8181818181818181,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.3181818181818182,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.3181818181818182,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.36363636363636365,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.13636363636363635,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.28787878787878785,
+        0.0,
+        0.1212121212121212,
+        0.0606060606060606,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.06818181818181818,
+        0.0303030303030303,
+        0.0,
+        0.022727272727272728,
+        0.045454545454545456
+      ],
+      "live": [
+        0.3371212121212121,
+        0.0,
+        0.12878787878787878,
+        0.06439393939393939,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.09090909090909091,
+        0.01515151515151515,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.08333333333333334,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.04924242424242424,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.007575757575757574,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.0037878787878787845,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": -0.022727272727272728,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.01515151515151515,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.022727272727272728,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.045454545454545456,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "overall",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3484848484848485,
+        0.0,
+        0.1212121212121212,
+        0.07575757575757575,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.0,
+        0.0,
+        0.0,
+        0.09090909090909091
+      ],
+      "live": [
+        0.3484848484848485,
+        0.0,
+        0.1212121212121212,
+        0.07575757575757575,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.1212121212121212,
+        0.0,
+        0.0,
+        0.0,
+        0.09090909090909091
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 11,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 11
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.9583333333333334,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.041666666666666664,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 3.1666666666666665,
+      "live": 2.6666666666666665,
+      "interval": {
+        "estimate": 0.5,
+        "low": -20,
+        "high": 20,
+        "n_questions": 3
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "lookup",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 2.8333333333333335,
+      "live": 1.3333333333333333,
+      "interval": {
+        "estimate": 1.5,
+        "low": -12,
+        "high": 12,
+        "n_questions": 3
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "lookup",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 3.6666666666666665,
+      "live": 0.5,
+      "interval": {
+        "estimate": 3.1666666666666665,
+        "low": -10,
+        "high": 10,
+        "n_questions": 3
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 0.5,
+      "interval": {
+        "estimate": 0.5,
+        "low": -1,
+        "high": 1,
+        "n_questions": 3
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.8333333333333334,
+      "live": 0.16666666666666666,
+      "interval": {
+        "estimate": 0.6666666666666666,
+        "low": -10,
+        "high": 10,
+        "n_questions": 3
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.8916666666666666,
+      "live": 0.875,
+      "interval": {
+        "estimate": 0.01666666666666668,
+        "low": -1,
+        "high": 1,
+        "n_questions": 3
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 1.1666666666666667,
+      "live": 1.3333333333333333,
+      "interval": {
+        "estimate": -0.16666666666666666,
+        "low": -10,
+        "high": 10,
+        "n_questions": 3
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.3333333333333333,
+      "live": 0.3333333333333333,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 3
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 0.6666666666666666,
+      "live": 0.6666666666666666,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 3
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 357.1666666666667,
+      "live": 381.5,
+      "interval": {
+        "estimate": -24.333333333333332,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 3
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "lookup",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 0.875,
+      "live": 1.0,
+      "interval": {
+        "estimate": -0.125,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.125,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.125,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.3333333333333333,
+        0.6666666666666666,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.5,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": -0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "lookup",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.5,
+        0.16666666666666666
+      ],
+      "live": [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 1,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.3333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "lookup",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.25,
+        0.0,
+        0.0,
+        0.08333333333333333,
+        0.0
+      ],
+      "live": [
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.08333333333333333,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": -0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "lookup",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333
+      ],
+      "live": [
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 3,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 3
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "lookup",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.875,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.125,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 4.0,
+      "live": 4.25,
+      "interval": {
+        "estimate": -0.25,
+        "low": -20,
+        "high": 20,
+        "n_questions": 4
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "comparison",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 3.875,
+      "live": 1.625,
+      "interval": {
+        "estimate": 2.25,
+        "low": -12,
+        "high": 12,
+        "n_questions": 4
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "comparison",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 3.0,
+      "live": 0.25,
+      "interval": {
+        "estimate": 2.75,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.75,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.5,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.125,
+      "interval": {
+        "estimate": -0.125,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.7418154761904762,
+      "live": 0.9375,
+      "interval": {
+        "estimate": -0.19568452380952384,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 2.5,
+      "live": 2.5,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.75,
+      "live": 0.75,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 2.25,
+      "live": 2.25,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 550.625,
+      "live": 577.5,
+      "interval": {
+        "estimate": -26.875,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 4
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "comparison",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.125,
+        0.625,
+        0.25,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.125,
+        0.5,
+        0.375,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.125,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "comparison",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.0,
+        0.0,
+        0.5,
+        0.25
+      ],
+      "live": [
+        0.75,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.75,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.41666666666666663,
+        0.0,
+        0.08333333333333333,
+        0.16666666666666666,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.42708333333333326,
+        0.0,
+        0.10416666666666666,
+        0.17708333333333331,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.041666666666666664,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.04166666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.010416666666666657,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.02083333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.010416666666666657,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.4583333333333333,
+        0.0,
+        0.08333333333333333,
+        0.20833333333333331,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.4583333333333333,
+        0.0,
+        0.08333333333333333,
+        0.20833333333333331,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 1.875,
+      "live": 1.25,
+      "interval": {
+        "estimate": 0.625,
+        "low": -20,
+        "high": 20,
+        "n_questions": 4
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "conditions",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 1.75,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.75,
+        "low": -12,
+        "high": 12,
+        "n_questions": 4
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "conditions",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 1.875,
+      "live": 0.5,
+      "interval": {
+        "estimate": 1.375,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 0.5,
+      "interval": {
+        "estimate": 0.5,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.7625,
+      "live": 0.9375,
+      "interval": {
+        "estimate": -0.175,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 0.875,
+      "live": 1.0,
+      "interval": {
+        "estimate": -0.125,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.25,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 163.0,
+      "live": 168.25,
+      "interval": {
+        "estimate": -5.25,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 4
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "conditions",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.75,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.25,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "conditions",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.25,
+        0.625,
+        0.125,
+        0.0
+      ],
+      "live": [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.75,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.625,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "conditions",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.125,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "live": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.125,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "conditions",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "conditions",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    }
+  ],
+  "live_repeatability": {
+    "search_queries": {
+      "mean_absolute_repeat_difference": 1.1666666666666667,
+      "n_questions": 12
+    },
+    "search_actions": {
+      "mean_absolute_repeat_difference": 0.4166666666666667,
+      "n_questions": 12
+    },
+    "open_actions": {
+      "mean_absolute_repeat_difference": 0.5,
+      "n_questions": 12
+    },
+    "any_open": {
+      "mean_absolute_repeat_difference": 0.4166666666666667,
+      "n_questions": 12
+    },
+    "find_actions": {
+      "mean_absolute_repeat_difference": 0.16666666666666666,
+      "n_questions": 12
+    },
+    "site_query_share": {
+      "mean_absolute_repeat_difference": 0.09027777777777779,
+      "n_questions": 12
+    },
+    "citation_domains": {
+      "mean_absolute_repeat_difference": 0.16666666666666666,
+      "n_questions": 12
+    },
+    "target_mention": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "entity_mentions": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "answer_words": {
+      "mean_absolute_repeat_difference": 38.5,
+      "n_questions": 12
+    },
+    "completed": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "budget_limited": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    }
+  },
+  "interpretation": "Confidence is coverage of registered metric bounds under the sampling assumptions; it is not a probability that two agents are identical or that results transfer to all future designs.",
+  "precision_plan": {
+    "notice": "Optimistic precision floor assuming zero difference and zero variance (perfect reliability for quality gates). Actual variance or a gap increases sample requirements; a gap outside tolerance requires a design change. Counts are independent questions per scope, not model repetitions. This is not a power calculation.",
+    "requirements": [
+      {
+        "scope": "overall",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "overall",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "overall",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "overall",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "lookup",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "lookup",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "lookup",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "lookup",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "lookup",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "lookup",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "lookup",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "lookup",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "conditions",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "conditions",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "conditions",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "conditions",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "conditions",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "conditions",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "conditions",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "conditions",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      }
+    ],
+    "largest_per_scope_floor": 1805
+  },
+  "coverage": {
+    "reported_hosted_source_urls": 334,
+    "source_urls_in_snapshot": 80,
+    "outside_snapshot": [
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20201110.pdf",
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20211216.pdf",
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20230213.pdf",
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20230313.pdf",
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20250819.pdf",
+      "https://adviser.ing.com.au/pdf/AdviserUpdate/ING_Adviser_Update_20251114.pdf",
+      "https://adviser.ing.com.au/pdf/SM_Terms_and_Conditions.pdf",
+      "https://beta.macquarie.com.au/wrap/resources/assets/bfs/documents/personal-direct/transaction-account/macquarie-previous-rate-card.pdf",
+      "https://cashonline.macquarie.com.au/initiate.aspx?product=CMA",
+      "https://cms.ubank.com.au/wp-content/uploads/general-terms-before-apr30.pdf",
+      "https://cms.ubank.com.au/wp-content/uploads/save-account-tmd.pdf",
+      "https://cms.ubank.com.au/wp-content/uploads/tnc-changes-to-savings-accounts.pdf",
+      "https://cms.ubank.com.au/wp-content/uploads/usave-change-notice.pdf",
+      "https://cms.ubank.com.au/wp-content/uploads/usave-terms-conditions.pdf",
+      "https://cms.ubank.com.au/wp-content/uploads/usaver-terms-conditions.pdf",
+      "https://en.wikipedia.org/wiki/List_of_banks_in_Australia",
+      "https://en.wikipedia.org/wiki/Sao_Khue_Award",
+      "https://helphub.ing.com.au/how-to/sm-additional-savings-rate/",
+      "https://helphub.ing.com.au/setup-and-features/orange-everyday-activate/oe-reissue/frequently-asked-questions-oe-reissue/",
+      "https://helphub.ing.com.au/setup-and-features/orange-everyday/frequently-asked-questions/",
+      "https://helphub.ing.com.au/setup-and-features/savings-maximiser/frequently-asked-questions/",
+      "https://helphub.ing.com.au/setup-and-features/savings-maximiser/get-to-know-savings-maximiser/",
+      "https://helphub.ing.com.au/tips-and-guides/home-truth/saving/page/2/",
+      "https://helphub.ing.com.au/tips-and-hints/daily-banking/additional-savings-rate/",
+      "https://investorpa.com/announcement-pdf/20260210/254650.pdf",
+      "https://miblinks.nab.com.au/content/dam/nabrwd/documents/guides/banking/personal-transaction-and-savings-accounts-terms-and-conditions.pdf",
+      "https://moneysmart.gov.au/banking",
+      "https://moneysmart.gov.au/banking/transaction-accounts-and-debit-cards",
+      "https://moneysmart.gov.au/glossary",
+      "https://moneysmart.gov.au/glossary/honeymoon-or-introductory-interest-rate",
+      "https://moneysmart.gov.au/how-to-invest/track-your-investments",
+      "https://moneysmart.gov.au/investments-paying-interest/term-deposits",
+      "https://moneysmart.gov.au/media-centre",
+      "https://moneysmart.gov.au/media-centre/news-can-you-save-on-bank-fees",
+      "https://moneysmart.gov.au/online-safety/using-comparison-websites",
+      "https://moneysmart.gov.au/other-ways-to-borrow/interest-free-deals",
+      "https://moneysmart.gov.au/supporting-first-nations-people-with-money-matters/bank-accounts",
+      "https://newsroom.ing.com.au/ing-announces-interest-rate-changes-4/",
+      "https://newsroom.ing.com.au/ing-announces-interest-rate-changes-6/",
+      "https://newsroom.ing.com.au/ing-delivers-a-lift-for-savers-with-new-interest-rate-increases/",
+      "https://online.macquarie.com.au/wrap/resources/advisers/insights/monthly-technical-roundup/march-2026.html",
+      "https://online.macquarie.com.au/wrap/resources/advisers/solutions/macquarie-cash-management-account.html",
+      "https://online.macquarie.com.au/wrap/resources/assets/bfs/documents/personal-direct/transaction-account/macquarie-previous-rate-card.pdf",
+      "https://online.macquarie.com.au/wrap/resources/assets/bfs/secure/ddo/macquarie-tmd-transaction-savings-accounts.pdf",
+      "https://online.macquarie.com.au/wrap/resources/assets/bfs/secure/ddo/macquarie-tmd-transaction-savings-accounts.pdf?utm_source=openai",
+      "https://play.google.com/store/apps/details?hl=en_US&id=au.com.bank86400",
+      "https://sit01.www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/goal-saver/",
+      "https://sovereignfinancial.com.au/?jet_download=657d9e62efff343d14b714ab6a54e222f669b08c",
+      "https://static.moneysmart.gov.au/files/publications/cfs-credit-cards-and-store-cards.pdf",
+      "https://static.moneysmart.gov.au/files/publications/dealing-with-book-up.pdf",
+      "https://static.moneysmart.gov.au/files/publications/get-the-facts-capital-guaranteed-or-protected-investments.pdf",
+      "https://static.moneysmart.gov.au/files/publications/interest-free-deals.pdf",
+      "https://static.moneysmart.gov.au/files/publications/personal-loans.pdf",
+      "https://static.moneysmart.gov.au/files/publications/super-decisions.pdf",
+      "https://wrap.perpetual.com.au/wrap/resources/assets/bfs/secure/ddo/macquarie-tmd-cash-management-accounts.pdf",
+      "https://wrap.perpetual.com.au/wrap/resources/help/personal/transaction-and-savings-accounts/opening-an-account/what-you-need-to-open-a-transaction-or-savings-account.html",
+      "https://www.anz.com.au/about-us/esg/financial-wellbeing/saver-plus/",
+      "https://www.anz.com.au/content/dam/anzcomau/documents/pdf/everyday-banking-saving.pdf",
+      "https://www.anz.com.au/content/dam/anzcomau/documents/pdf/saving-transaction-products-tcs-payto.pdf",
+      "https://www.anz.com.au/content/dam/anzcomau/pdf/bank-accounts/target-market-determination/anz-online-saver-target-market-determination.pdf",
+      "https://www.anz.com.au/content/dam/anzcomau/pdf/bank-accounts/target-market-determination/anz-progress-saver-target-market-determination.pdf",
+      "https://www.anz.com.au/content/dam/anzcomau/pdf/bank-accounts/target-market-determination/historical/anz-progress-saver-target-market-determination_historical_effective_05082022-15062024.pdf",
+      "https://www.anz.com.au/personal/bank-accounts/calculators-tools/compare-bank-accounts/",
+      "https://www.anz.com.au/personal/bank-accounts/manage-my-accounts/rates-fees-terms/",
+      "https://www.anz.com.au/personal/bank-accounts/open-account/",
+      "https://www.anz.com.au/personal/bank-accounts/savings-accounts/savings-calculator/",
+      "https://www.anz.com.au/personal/bank-accounts/tips-and-guides/more-money-matters/changing-jobs/",
+      "https://www.anz.com.au/personal/bank-accounts/tips-and-guides/more-money-matters/earning-interest/",
+      "https://www.anz.com.au/personal/bank-accounts/tips-and-guides/more-money-matters/seniors/",
+      "https://www.anz.com.au/personal/bank-accounts/tips-and-guides/save-money/new-year-savings/",
+      "https://www.anz.com.au/personal/credit-cards/manage-my-card/rates-fees-terms/",
+      "https://www.anz.com.au/support/legal/rates-fees-terms/target-market-determinations/",
+      "https://www.anz.com/resources/1/7/176ff2004d1883b5bc5ffee8559e3115/Progress-Saver-Account-Terms.pdf?MOD=AJPERES",
+      "https://www.anz.com/resources/2/3/23a41441-c629-49b0-8b12-a0d96eeeda51/Progress-Saver-Form.pdf?MOD=AJPERES",
+      "https://www.canstar.com.au/star-ratings-awards/innovation-awards/",
+      "https://www.commbank.com.au/articles/newsroom/2023/02/interest-rates-february.html",
+      "https://www.commbank.com.au/articles/newsroom/2023/05/interest-rates-may.html",
+      "https://www.commbank.com.au/articles/newsroom/2023/06/interest-rates-june.html",
+      "https://www.commbank.com.au/articles/newsroom/2023/11/interest-rates-november.html",
+      "https://www.commbank.com.au/articles/newsroom/2026/02/commbank-17-wins-in-rfi-global-awards.html",
+      "https://www.commbank.com.au/bank-accounts.html",
+      "https://www.commbank.com.au/banking/everyday-account-smart-access/rates-fees.html",
+      "https://www.commbank.com.au/banking/everyday-accounts.html",
+      "https://www.commbank.com.au/banking/teenagers.html",
+      "https://www.commbank.com.au/banking/young-adults.html",
+      "https://www.commbank.com.au/banking/youthsaver/support-for-parents.html",
+      "https://www.commbank.com.au/brighter/investing/investment-disclosure.html",
+      "https://www.commbank.com.au/content/dam/commbank-assets/banking/docs/Netbank-Saver-Flyer.pdf",
+      "https://www.commbank.com.au/content/dam/commbank-assets/banking/docs/TSIA-addendum.pdf",
+      "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy25/2025-annual-report.pdf",
+      "https://www.commbank.com.au/content/dam/tmd/GoalSaver/goalsaver-tmd.pdf",
+      "https://www.commbank.com.au/developer/documentation/Products",
+      "https://www.commbank.com.au/digital-banking/new-netbank/feature-changes.html",
+      "https://www.commbank.com.au/home-loans/interest-offset.html",
+      "https://www.commbank.com.au/important-info.html",
+      "https://www.commbank.com.au/important-info/business.html",
+      "https://www.commbank.com.au/investing-and-super/smsf/cdia-cash-account.html",
+      "https://www.commbank.com.au/moving-to-australia.html?agentid=A8315&ocid=mfs-A8315",
+      "https://www.commbank.com.au/moving-to-australia/banking.html",
+      "https://www.commbank.com.au/moving-to-australia/banking/rates-fees.html",
+      "https://www.commbank.com.au/moving-to-australia/terms-conditions-welcome-pack.html",
+      "https://www.commbank.com.au/news/savings-rate-announcement.html",
+      "https://www.commbank.com.au/personal/apply-online/download-printed-forms/SavingsInvestment_ADB2852.pdf",
+      "https://www.commbank.com.au/personal/apply-online/download-printed-forms/SavingsInvestment_ADB2852.pdf?utm_source=openai",
+      "https://www.commbank.com.au/personal/apply-online/download-printed-forms/TSI_interest_rates.pdf",
+      "https://www.commbank.com.au/personal/apply-online/download-printed-forms/TSI_interest_rates.pdf?ei=gsa_generic_interest-rates-on-bank-accounts",
+      "https://www.commbank.com.au/products/interest-rates-and-fees.html",
+      "https://www.commbank.com.au/savings-accounts/set-up-your-account.html",
+      "https://www.commbankawards.com.au/contact",
+      "https://www.exclusives.anz.com.au/content/dam/anzcomau/documents/pdf/everyday-banking-saving.pdf",
+      "https://www.exclusives.anz.com.au/personal/bank-accounts/",
+      "https://www.forrester.com/blogs/conversational-ai-and-anticipatory-insights-whats-new-in-australian-mobile-banking-in-2025/",
+      "https://www.forrester.com/press-newsroom/forresters-2025-australian-digital-experience-review-delivering-personalized-experiences-and-prioritizing-the-customers-financial-wellbeing-are-next-frontiers-in-mobile-banking/",
+      "https://www.ing.com.au/4fkjhauhsiygsuiy4467shjtjsaah9898.html",
+      "https://www.ing.com.au/4fkjhauhsiygsuiy4467shjtjsaah9898.html?utm_source=openai",
+      "https://www.ing.com.au/help-and-support/documents-and-forms/bank-and-save.html",
+      "https://www.ing.com.au/pdf/ING_SM_TMD.pdf",
+      "https://www.ing.com.au/superannuation/smsf-cash.html",
+      "https://www.macquarie.com.au/assets/bfs/adviser-tools/mpm/msp-annual-report-2025.pdf",
+      "https://www.macquarie.com.au/assets/bfs/adviser-tools/wrap/supermgr.pdf",
+      "https://www.macquarie.com.au/assets/bfs/applications/digital/docs/forms/third-party-authority-form.pdf",
+      "https://www.macquarie.com.au/assets/bfs/applications/innercircle/retail-newsletter/docs/2023-05/mpw_0007477218_20230509.pdf",
+      "https://www.macquarie.com.au/assets/bfs/applications/innercircle/retail-newsletter/docs/2024-01/167288.pdf",
+      "https://www.macquarie.com.au/assets/bfs/applications/innercircle/retail-newsletter/docs/2024-01/171402.pdf",
+      "https://www.macquarie.com.au/assets/bfs/documents/adviser/macquarie-wrap/investment-consolidator-II-IDPS-guide.pdf",
+      "https://www.macquarie.com.au/assets/bfs/documents/personal-direct/home-loans/SAP-MBL-Terms-and-conditions.pdf",
+      "https://www.macquarie.com.au/assets/bfs/documents/personal-direct/transaction-account/macquarie-previous-rate-card.pdf",
+      "https://www.macquarie.com.au/content/dam/bfs/documents/adviser/cash-management-account/cash-management-account-mas.pdf",
+      "https://www.macquarie.com.au/content/dam/bfs/documents/personal-direct/transaction-account/macquarie-previous-rate-card.pdf",
+      "https://www.macquarie.com.au/digital-banking/electronic-banking-terms-and-conditions.html",
+      "https://www.macquarie.com.au/everyday-banking.html",
+      "https://www.macquarie.com.au/everyday-banking/best-savings-account-investments.html",
+      "https://www.macquarie.com.au/everyday-banking/credit-cards/compare-credit-cards.html",
+      "https://www.macquarie.com.au/everyday-banking/credit-cards/ratesaver.html",
+      "https://www.macquarie.com.au/everyday-banking/find-right-high-interest-savings-account.html",
+      "https://www.macquarie.com.au/everyday-banking/set-your-savings-in-motion.html",
+      "https://www.macquarie.com.au/everyday-banking/transaction-account.html",
+      "https://www.macquarie.com.au/everyday-banking/transaction-accounts-travel.html",
+      "https://www.macquarie.com.au/help/personal/bank-accounts/manage-account/How-interest-is-calculated-on-a-transaction-and-savings-account.html",
+      "https://www.macquarie.com.au/help/personal/cards-balances-and-limits/account-balances/checking-your-account-balance.html",
+      "https://www.macquarie.com.au/help/personal/cards-balances-and-limits/account-card-and-atm-limits/understanding-daily-limits-on-payments-and-transfers.html",
+      "https://www.macquarie.com.au/help/personal/credit-cards/manage-credit-card/credit-card-interest-rates-and-fees.html",
+      "https://www.macquarie.com.au/help/personal/payments-transfers-and-deposits/payid/What-is-PayID-and-how-it-works.html",
+      "https://www.macquarie.com.au/help/personal/payments-transfers-and-deposits/payid/setting-up-or-closing-a-payid.html",
+      "https://www.macquarie.com.au/help/personal/payments-transfers-and-deposits/payments-and-transfers/making-a-payment-or-transfer-from-your-transaction-or-savings-account.html",
+      "https://www.macquarie.com.au/help/personal/payments-transfers-and-deposits/payments-and-transfers/making-deposits-and-payments.html",
+      "https://www.macquarie.com.au/help/personal/payments-transfers-and-deposits/payments-and-transfers/what-is-a-pending-transaction.html",
+      "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts.html",
+      "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/managing-your-account/accessing-forms-terms-conditions-for-tsa.html",
+      "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/managing-your-account/linking-your-account-to-external-accounting-software.html",
+      "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/opening-an-account/opening-a-transaction-or-savings-account.html",
+      "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/opening-an-account/opening-a-transaction-or-savings-account.html?utm_source=openai",
+      "https://www.macquarie.com/assets/bfs/documents/personal-direct/transaction-account/macquarie-previous-rate-card.pdf",
+      "https://www.macquarie.com/cl/en/about/news/2026/savers-are-back-in-the-box-seat-as-rba-lifts-cash-rate.html",
+      "https://www.macquarie.com/is/en/about/news/2025/your-savings-game-changer-macquarie-shines-spotlight-on-complex-savings-account-conditions-in-new-campaign.html",
+      "https://www.marketindex.com.au/asx/cbapi/announcements/2026-full-year-results-presentation-2A1688998",
+      "https://www.nab.com.au/content/dam/nab/documents/guides/banking/personal-transactions-saving-products-on-sale-changes.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/guides/banking/personal-transaction-and-savings-accounts-terms-and-conditions.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/guides/banking/personal-transaction-and-savings-products-terms-and-conditions-changes.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/guides/finance/tmd-nab-reward-saver.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/terms-and-conditions/banking/citibank-money-market-at-call-account-terms-and-conditions-variation-notice.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/terms-and-conditions/banking/citibank-online-saver-account-terms-and-conditions-variation-notice.pdf",
+      "https://www.nab.com.au/content/dam/nabrwd/documents/terms-and-conditions/banking/citibank-plus-linked-savings-account-terms-and-conditions-variation-notice.pdf",
+      "https://www.nab.com.au/help-support/personal-banking/manage-payments-transfers/setting-up-regular-deposits",
+      "https://www.nab.com.au/personal/bank-accounts",
+      "https://www.nab.com.au/personal/bank-accounts/compare-savings-transaction-accounts",
+      "https://www.nab.com.au/personal/bank-accounts/concession-card-holders",
+      "https://www.nab.com.au/personal/bank-accounts/opening-a-new-personal-account",
+      "https://www.nab.com.au/personal/bank-accounts/savings-accounts/nab-reward-saver/second-last-banking-day",
+      "https://www.nab.com.au/personal/bank-accounts/savings-accounts/nab-reward-saver/second-last-banking-day?utm_source=openai",
+      "https://www.nab.com.au/personal/bank-accounts/welcome-to-nab",
+      "https://www.nab.com.au/personal/life-moments/manage-money/money-basics/bank-account-types",
+      "https://www.nab.com.au/personal/life-moments/manage-money/money-basics/what-is-savings-account",
+      "https://www.reddit.com/r/AusFinance/comments/10gy7za",
+      "https://www.reddit.com/r/AusFinance/comments/17voi44",
+      "https://www.reddit.com/r/AusFinance/comments/1d0wkcw",
+      "https://www.reddit.com/r/AusFinance/comments/1diid0w",
+      "https://www.reddit.com/r/AusFinance/comments/1g34xev",
+      "https://www.reddit.com/r/AusFinance/comments/1g3ym6l",
+      "https://www.reddit.com/r/AusFinance/comments/1ia3sec/is_open_banking_dead/",
+      "https://www.reddit.com/r/AusFinance/comments/1jk6fni",
+      "https://www.reddit.com/r/AusFinance/comments/1jqh9xl/whats_a_good_everyday_bank/",
+      "https://www.reddit.com/r/AusFinance/comments/1kwey8b/which_bank_are_you_using_in_2025_for_everyday/",
+      "https://www.reddit.com/r/AusFinance/comments/1lqgtwg/thoughts_on_ubank/",
+      "https://www.reddit.com/r/AusFinance/comments/1m05q32",
+      "https://www.reddit.com/r/AusFinance/comments/1m05w33",
+      "https://www.reddit.com/r/AusFinance/comments/1m0tttd/ubank_savings_changes_thoughts/",
+      "https://www.reddit.com/r/AusFinance/comments/1m9of8k/macquarie_bank_savings_account_can_i_transact/",
+      "https://www.reddit.com/r/AusFinance/comments/1mjplb7/can_someone_explain_why_ubanks_1month_is_so/",
+      "https://www.reddit.com/r/AusFinance/comments/1n5crdz",
+      "https://www.reddit.com/r/AusFinance/comments/1neyo0q",
+      "https://www.reddit.com/r/AusFinance/comments/1ni5ec5/psa_when_moving_from_ubank_dont_close_your/",
+      "https://www.reddit.com/r/AusFinance/comments/1obduc2",
+      "https://www.reddit.com/r/AusFinance/comments/1qzsh6s/why_arent_most_banks_passing_interest_rate/",
+      "https://www.reddit.com/r/AusFinance/comments/1r5nzh6/anz_rate_change_notification/",
+      "https://www.reddit.com/r/AusFinance/comments/1r5p2av/finally_acting_on_ubank_changes/",
+      "https://www.reddit.com/r/AusFinance/comments/1sjyo4v/macquarie_bank_savings_account/",
+      "https://www.reddit.com/r/AusFinance/comments/1vihw5q/should_i_even_continue_with_anz/",
+      "https://www.reddit.com/r/AusFinance/comments/1vzxgwv/worth_moving_from_macquarie_to_ing/",
+      "https://www.reddit.com/r/AusFinance/comments/1w0f4bq/so_are_rewards_credit_cards_basically_dead_in_aus/",
+      "https://www.reddit.com/r/AusFinance/comments/1w3yixn/macquarie_to_end_welcome_rate_on_popular_savings/",
+      "https://www.reddit.com/r/AusFinance/comments/zgjz3k",
+      "https://www.reddit.com/r/Banking/comments/e0v6bh",
+      "https://www.reddit.com/r/CommBank/comments/1njajn3/is_the_commbank_app_the_best_in_australia_or_just/",
+      "https://www.reddit.com/r/CommBank/comments/1nu4yx3/how_do_you_rate_the_commbank_app_compared_to/",
+      "https://www.reddit.com/r/CommBank/comments/1qguagl/anyone_else_feel_commbank_is_becoming_more_tech/",
+      "https://www.reddit.com/r/CommBank/comments/1szn4lh/hows_the_commbank_app_compared_to_other_banks/",
+      "https://www.reddit.com/r/CommBank/comments/1vs0puy/commbank_yello_cash_back_ending/",
+      "https://www.reddit.com/r/CommBank/comments/1vshg8c/commonwealth_bank_reimagines_rewards_for_everyday/",
+      "https://www.reddit.com/r/CommBank/comments/1vvz280/smart_awards_is_ending_goodbye/",
+      "https://www.reddit.com/r/CommBank/comments/1vxjdun/ultimate_award_changes_get_the_35_fee_back_via/",
+      "https://www.reddit.com/r/CommBank/comments/1whlcxk/commbank_awards_already_given_up/",
+      "https://www.reddit.com/r/Macquarie/comments/1g39z3v",
+      "https://www.reddit.com/r/PersonalFinanceNZ/comments/1gh07qp/heads_up_anz_quietly_dropped_serious_saver_rates/",
+      "https://www.reddit.com/r/PersonalFinanceNZ/comments/1ud75dj/interesting_anz_just_dropped_some_of_its_home/",
+      "https://www.reddit.com/r/anz/comments/1wn337v/is_the_anz_plus_savings_rate_genuinely/",
+      "https://www.reddit.com/r/creditcardchurningAus/comments/1vsi5nh/replacement_for_commbank_smart_awards_cc_after/",
+      "https://www.reddit.com/r/fiaustralia/comments/1rzn461/would_macquaries_high_interest_savings_account_be/",
+      "https://www.reddit.com/r/fiaustralia/comments/1t276fd/removed/",
+      "https://www.reddit.com/r/perth/comments/1w7nv6u/recommendations_for_banking_in_wa/",
+      "https://www.reddit.com/r/ubank/comments/1m4a4wc",
+      "https://www.reddit.com/r/ubank/comments/1vzkgkt/setting_up_a_joint_account_setup_for_household/",
+      "https://www.reddit.com/r/ubank/comments/1wd93w6/how_many_active_save_accounts_do_you_actually_use/",
+      "https://www.savings.com.au/news/macquarie-ends-welcome-rate-on-popular-savings-account",
+      "https://www.ubank.com.au/banking/savings-account/savings-targets",
+      "https://www.ubank.com.au/general-terms",
+      "https://www.ubank.com.au/help/current/app-and-online-banking/using-my-accounts-app/how-can-i-open-another-save-account",
+      "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/does-an-offset-account-earn-interest",
+      "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/how-is-interest-calculated",
+      "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/which-transaction-is-my-interest",
+      "https://www.ubank.com.au/help/current/everyday-banking/shared-accounts/do-you-offer-joint-accounts",
+      "https://www.ubank.com.au/help/current/everyday-banking/shared-accounts/how-do-shared-accounts-work",
+      "https://www.ubank.com.au/help/current/everyday-banking/shared-accounts/ive-already-got-an-account-can-i-make-that-a-shared-account",
+      "https://www.ubank.com.au/help/current/everyday-banking/using-your-accounts/how-many-save-accounts-can-i-open",
+      "https://www.ubank.com.au/tips-and-guides/joint-accounts",
+      "https://www.ubank.com.au/wp-content/uploads/general-terms-before-apr30.pdf",
+      "https://www.ubank.com.au/wp-content/uploads/save-account-tmd.pdf",
+      "https://www.ubank.com.au/wp-content/uploads/tnc-changes-to-savings-accounts.pdf",
+      "https://www.ubank.com.au/wp-content/uploads/tnc-changes-to-transaction-accounts.pdf",
+      "https://www.ubank.com.au/wp-content/uploads/usave-terms-conditions.pdf",
+      "https://www.westpac.com.au/about-westpac/media/media-releases/2025/30-september/",
+      "https://www.westpac.com.au/about-westpac/media/media-releases/2026/5-may2/",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/bump-to-life-tran",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/bump-to-life-tran?utm_source=openai",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/rates",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/rates?utm_source=openai",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/types-savings-accounts",
+      "https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/aw/ic/wbc-1H26-presentation-IDP-2026.pdf",
+      "https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/aw/ic/wbc-annual-report-2025.pdf",
+      "https://www.westpac.com.au/faq/spend-and-save-interest-unexpected/",
+      "https://www.westpac.com.au/help/lifemoments/recovery/thrive/how-to-build-wealth/",
+      "https://www.westpac.com.au/personal-banking/bank-accounts/life-choice-new-2/",
+      "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-calculator/",
+      "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals?pid=iwc%3Adp%3ALife_2309%3A%3Amob"
+    ],
+    "notice": "URL overlap ignores query, scheme and fragment. It does not establish identical content, complete candidate coverage or actual reading."
+  },
+  "observations": [
+    {
+      "case_id": "cba_pair",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02477
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013101
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.01309
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012424
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005383
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00288
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.01334
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002183
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007704
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002582
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00534
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004752
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005631
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006336
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007907
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002495
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006305
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.003566
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012141
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013306
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001403
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.026032
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00591
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024958
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006256
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024729
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006006
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001409
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015382
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011482
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015123
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012126
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02506
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.009328
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.028114
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013312
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025982
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "round_limit_reached",
+      "possibly_budget_limited": true,
+      "estimated_usd": 0.00789
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015512
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005568
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.028225
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001216
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001737
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011284
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024801
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011517
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002372
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015448
+    }
+  ],
+  "estimated_usd": 0.5434180000000002,
+  "conservative_accounted_usd": 1.0485456999999994,
+  "provenance_note": "Allowlisted report and numeric observations only; raw corpus and responses remain private. This uses the initial 67-document corpus, before the subsequent ANZ rate-rendering repair."
+}

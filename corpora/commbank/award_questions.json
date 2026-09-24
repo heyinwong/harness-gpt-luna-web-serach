@@ -1,0 +1,92 @@
+[
+  {
+    "id": "discover_flexible",
+    "category": "unbranded",
+    "question": "Which Australian savings accounts are worth comparing if I want flexibility to withdraw occasionally? Explain the ongoing interest conditions."
+  },
+  {
+    "id": "discover_simple",
+    "category": "unbranded",
+    "question": "Help me shortlist Australian savings accounts with simple monthly requirements and no monthly account fee."
+  },
+  {
+    "id": "discover_digital",
+    "category": "unbranded",
+    "question": "Which Australian banks should I compare for saving regularly and managing savings goals in an app? Explain your reasons and cite evidence."
+  },
+  {
+    "id": "discover_ongoing",
+    "category": "unbranded",
+    "question": "I want to compare ongoing savings value rather than just introductory offers. Which Australian accounts should I look at and what conditions matter?"
+  },
+  {
+    "id": "discover_choice",
+    "category": "unbranded",
+    "question": "What savings accounts should an Australian adult compare for an emergency fund? Explain access, bonus conditions and fees."
+  },
+  {
+    "id": "discover_criteria",
+    "category": "unbranded",
+    "question": "Give me a shortlist of Australian savings accounts and explain the trade-offs between ease of use and conditional interest."
+  },
+  {
+    "id": "cba_fit",
+    "category": "branded",
+    "question": "What are the strengths and limitations of CommBank savings accounts for someone who saves each month?"
+  },
+  {
+    "id": "cba_reasons",
+    "category": "branded",
+    "question": "Give me reasons to consider or avoid CommBank for my savings, based on evidence rather than marketing claims."
+  },
+  {
+    "id": "cba_digital",
+    "category": "branded",
+    "question": "What makes CommBank useful for tracking savings goals and managing money digitally? Explain any limitations."
+  },
+  {
+    "id": "cba_products",
+    "category": "branded",
+    "question": "Which CommBank savings account types should I compare for regular saving versus keeping an emergency fund accessible?"
+  },
+  {
+    "id": "cba_value",
+    "category": "branded",
+    "question": "How should I assess whether CommBank savings accounts offer good value beyond an advertised interest rate?"
+  },
+  {
+    "id": "cba_conditions",
+    "category": "branded",
+    "question": "Before choosing a CommBank savings account, what conditions, fees and account features should I check?"
+  },
+  {
+    "id": "major_choice",
+    "category": "comparison",
+    "question": "Compare CommBank, NAB and Westpac for an adult who wants a savings account they can keep using for several years."
+  },
+  {
+    "id": "online_choice",
+    "category": "comparison",
+    "question": "Compare CommBank with ING and ubank for building savings through regular deposits. Explain both benefits and conditions."
+  },
+  {
+    "id": "digital_choice",
+    "category": "comparison",
+    "question": "Compare CommBank and Westpac for savings tools in their banking apps and explain how much weight those features deserve."
+  },
+  {
+    "id": "low_effort",
+    "category": "comparison",
+    "question": "Compare CommBank, ANZ and Macquarie for someone who prefers fewer monthly steps to qualify for savings interest."
+  },
+  {
+    "id": "flexibility",
+    "category": "comparison",
+    "question": "Compare CommBank, NAB and ING if I may need to withdraw from savings during the month."
+  },
+  {
+    "id": "evidence_choice",
+    "category": "comparison",
+    "question": "Compare CommBank with two alternatives for a savings account, explaining the evidence behind each option and its limitations."
+  }
+]

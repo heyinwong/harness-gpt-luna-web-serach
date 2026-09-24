@@ -34,13 +34,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--questions", default=str(lab.ROOT / "pilot_questions.json"))
     parser.add_argument("--corpus", default=str(lab.ROOT / "sample_corpus.json"))
-    parser.add_argument("--arms", nargs="+", choices=lab.ARMS, default=list(lab.ARMS))
+    parser.add_argument("--arms", nargs="+", choices=lab.EXPERIMENT_ARMS, default=list(lab.ARMS))
     parser.add_argument("--repeats", type=int, default=1)
     parser.add_argument("--include-live", action="store_true")
     parser.add_argument("--seed", type=int, default=20260924)
     parser.add_argument("--reasoning", choices=("none", "low", "medium", "high", "xhigh", "max"), default="medium")
     parser.add_argument("--web-tool", choices=("web_search", "web_search_preview"), default="web_search_preview")
-    parser.add_argument("--snippet-chars", type=int, default=1200)
+    parser.add_argument("--retrieval", choices=("context", "window"), default="context")
+    parser.add_argument("--snippet-chars", type=int, default=3000)
     parser.add_argument("--page-chars", type=int, default=8000)
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--max-rounds", type=int, default=12)
@@ -58,14 +59,16 @@ def main():
         parser.error("Use 1–30 rounds and 256–16000 output tokens")
     corpus = json.loads(Path(args.corpus).read_text())
     # Validate before any paid request, including when the first job happens to be live.
-    lab.Browser(corpus, args.arms[0], args.snippet_chars, args.top_k, args.page_chars)
+    lab.browser_class(args.retrieval)(corpus, args.arms[0], args.snippet_chars, args.top_k, args.page_chars)
     if args.include_live and "SYNTHETIC" in corpus.get("description", "").upper():
         parser.error("Use a real corpus/question set for a paired live suite; the default fixture is synthetic")
     jobs = plan(json.loads(Path(args.questions).read_text()), list(dict.fromkeys(args.arms)), args.repeats, args.include_live, args.seed)
-    config = {k: getattr(args, k) for k in ("reasoning", "web_tool", "snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens")}
+    config = {k: getattr(args, k) for k in ("retrieval", "reasoning", "web_tool", "snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens")}
     config.update(model="gpt-5.6-luna", corpus_sha256=hashlib.sha256(Path(args.corpus).read_bytes()).hexdigest(),
                   instructions=lab.INSTRUCTIONS, runner_sha256=hashlib.sha256(Path(lab.__file__).read_bytes()).hexdigest(),
                   suite_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    config['retrieval_code_hashes'] = {name: hashlib.sha256((lab.ROOT/name).read_bytes()).hexdigest()
+                                       for name in ('context_passages.py', 'passage_retrieval.py')}
     print(json.dumps({"paid_enabled": args.allow_paid, "planned_runs": len(jobs), "maximum_new_runs_this_invocation": args.max_runs,
                       "estimated_spend_stop_usd": args.stop_after_estimated_usd,
                       "reservation_budget_usd": args.budget_usd,

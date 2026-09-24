@@ -82,8 +82,11 @@ def summarize(directory, scores, confidence=.95):
     for key, job in expected.items():
         groups.setdefault((job['id'],job['arm']), []).append(key)
     rows = []
-    alpha = (1-confidence)/(len(CONTRASTS)*2)
-    for left,right in CONTRASTS:
+    contrasts = list(CONTRASTS)
+    if any(j['arm'] == 'current_footnote' for j in expected.values()):
+        contrasts += [('current_footnote', 'baseline'), ('inline', 'current_footnote')]
+    alpha = (1-confidence)/(len(contrasts)*2)
+    for left,right in contrasts:
         for field in ('correct_relevant_award','unsupported_product_claim'):
             xs,ys = [],[]
             for question in sorted({j['id'] for j in expected.values()}):

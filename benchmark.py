@@ -13,7 +13,7 @@ from validation.planning import precision_plan
 
 
 def code_hashes():
-    paths = [lab.ROOT / name for name in ("search_lab.py", "benchmark.py")] + sorted((lab.ROOT / "validation").glob("*.py"))
+    paths = [lab.ROOT / name for name in ("search_lab.py", "benchmark.py", "context_passages.py", "passage_retrieval.py")] + sorted((lab.ROOT / "validation").glob("*.py"))
     import hashlib
     return {str(p.relative_to(lab.ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
@@ -55,7 +55,9 @@ def main():
         corpus = json.loads(Path(args.corpus).read_text())
         if corpus.get("failures"):
             parser.error("Fix or explicitly redesign snapshot coverage before freezing; unresolved fetch failures")
-        lab.Browser(corpus, "reference")
+        if corpus.get('quality_flags'):
+            parser.error('Resolve corpus extraction quality flags before freezing')
+        lab.browser_class(profile['runner'].get('retrieval', 'window'))(corpus, "reference")
         corpus_text = Path(args.corpus).read_bytes()
         import hashlib
         manifest = {"profile": profile, "corpus_sha256": hashlib.sha256(corpus_text).hexdigest(), "code_hashes": code_hashes()}

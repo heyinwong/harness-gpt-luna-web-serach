@@ -1,0 +1,406 @@
+{
+  "verdict": "EXPLORATORY_ONLY",
+  "rows": [
+    {
+      "metric": "search_queries",
+      "n_matched_questions": 6,
+      "window": 2.3333333333333335,
+      "passages": 2.75,
+      "hosted": 3.0,
+      "registered_margin": 1.5
+    },
+    {
+      "metric": "search_actions",
+      "n_matched_questions": 6,
+      "window": 2.0,
+      "passages": 2.0833333333333335,
+      "hosted": 1.4166666666666667,
+      "registered_margin": 1.0
+    },
+    {
+      "metric": "open_actions",
+      "n_matched_questions": 6,
+      "window": 2.25,
+      "passages": 0.75,
+      "hosted": 0.5,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "any_open",
+      "n_matched_questions": 6,
+      "window": 0.9166666666666666,
+      "passages": 0.5,
+      "hosted": 0.4166666666666667,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "find_actions",
+      "n_matched_questions": 6,
+      "window": 0.0,
+      "passages": 0.08333333333333333,
+      "hosted": 0.08333333333333333,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "site_query_share",
+      "n_matched_questions": 6,
+      "window": 0.875,
+      "passages": 0.8194444444444443,
+      "hosted": 0.9861111111111112,
+      "registered_margin": 0.15
+    },
+    {
+      "metric": "citation_domains",
+      "n_matched_questions": 6,
+      "window": 1.5833333333333333,
+      "passages": 1.8333333333333333,
+      "hosted": 1.75,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "target_mention",
+      "n_matched_questions": 6,
+      "window": 0.3333333333333333,
+      "passages": 0.3333333333333333,
+      "hosted": 0.3333333333333333,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "entity_mentions",
+      "n_matched_questions": 6,
+      "window": 1.5,
+      "passages": 1.5,
+      "hosted": 1.5,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "answer_words",
+      "n_matched_questions": 6,
+      "window": 343.0833333333333,
+      "passages": 295.8333333333333,
+      "hosted": 332.8333333333333,
+      "registered_margin": 100
+    },
+    {
+      "metric": "completed",
+      "n_matched_questions": 6,
+      "window": 1.0,
+      "passages": 1.0,
+      "hosted": 1.0,
+      "registered_margin": 0.05
+    },
+    {
+      "metric": "budget_limited",
+      "n_matched_questions": 6,
+      "window": 0.0,
+      "passages": 0.0,
+      "hosted": 0.0,
+      "registered_margin": 0.05
+    }
+  ],
+  "distributions": [
+    {
+      "metric": "search_count_distribution",
+      "n_matched_questions": 6,
+      "window_vs_hosted_tv": 0.16666666666666666,
+      "passages_vs_hosted_tv": 0.16666666666666669,
+      "registered_margin": 0.15,
+      "means": {
+        "window": [
+          0.0,
+          0.6666666666666666,
+          0.25,
+          0.08333333333333333,
+          0.0
+        ],
+        "passages": [
+          0.0,
+          0.4166666666666667,
+          0.4166666666666667,
+          0.16666666666666666,
+          0.0
+        ],
+        "hosted": [
+          0.0,
+          0.5,
+          0.25,
+          0.25,
+          0.0
+        ]
+      }
+    },
+    {
+      "metric": "open_count_distribution",
+      "n_matched_questions": 6,
+      "window_vs_hosted_tv": 0.5833333333333334,
+      "passages_vs_hosted_tv": 0.08333333333333334,
+      "registered_margin": 0.1,
+      "means": {
+        "window": [
+          0.08333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.5833333333333334,
+          0.0
+        ],
+        "passages": [
+          0.5,
+          0.3333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.0
+        ],
+        "hosted": [
+          0.5833333333333334,
+          0.3333333333333333,
+          0.08333333333333333,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "metric": "citation_domain_distribution",
+      "n_matched_questions": 6,
+      "window_vs_hosted_tv": 0.09722222222222221,
+      "passages_vs_hosted_tv": 0.09722222222222221,
+      "registered_margin": 0.15,
+      "means": {
+        "window": [
+          0.2222222222222222,
+          0.08333333333333333,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.08333333333333333
+        ],
+        "passages": [
+          0.2222222222222222,
+          0.16666666666666666,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.08333333333333333,
+          0.0,
+          0.0,
+          0.08333333333333333,
+          0.0
+        ],
+        "hosted": [
+          0.21527777777777776,
+          0.16666666666666666,
+          0.06944444444444443,
+          0.048611111111111105,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "metric": "entity_distribution",
+      "n_matched_questions": 6,
+      "window_vs_hosted_tv": 0.0,
+      "passages_vs_hosted_tv": 0.0,
+      "registered_margin": 0.15,
+      "means": {
+        "window": [
+          0.2222222222222222,
+          0.16666666666666666,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666
+        ],
+        "passages": [
+          0.2222222222222222,
+          0.16666666666666666,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666
+        ],
+        "hosted": [
+          0.2222222222222222,
+          0.16666666666666666,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.2222222222222222,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666
+        ]
+      }
+    }
+  ],
+  "notice": "Fresh custom window and passage trials use the same corpus and character allowance. Hosted responses are reused, not a new holdout. Means use question clusters with all repetitions measurable in all three groups. No equivalence certificate or automatic adoption.",
+  "candidate_statuses": {
+    "window": {
+      "completed": 12
+    },
+    "passages": {
+      "completed": 12
+    }
+  },
+  "planned_runs": 24,
+  "recorded_runs": 24,
+  "manifest": {
+    "baseline_manifest": "09881e92d669768abfc46b51ddc743096a6835379ad5c8daa7995e5d3626a265",
+    "hosted_trace_hashes": [
+      "357119c83d74a4b1416170cd7310d1dd0ebf41d81d9ddcd3b6d17bd4d475c2aa",
+      "252eaf419b28d812f8061f6e2417b26bdf64d4a40daa5e8a5be44aa08f826bd4",
+      "eb50f3f8bca90e316d42a1f43aee4b06a172e47b43df51f5ae1f77eb45ce3939",
+      "51643a863cea24c94ec7273f643c15ba49ac05682537bf6c888464fe0fb97491",
+      "e94e8cb105289f401d696710efacc54a7fa6023a95e0543d5178e2f2a779380d",
+      "89e12603de2eaeee0e6184486ddff34767519b4f18285b074f3ae8a6fc9f7208",
+      "37c45d41420941fcf8c5cd1929db9edcc23559e151bf95b9115a304892d42c19",
+      "cba773dde0c55aab8ff0e78e8c2d5228712bf39358c44cdd5dd1186604c03fe3",
+      "d4e5fa91f6497cdc93f03f6d35585d4b300f6219a2222fcaa630b2b62aa0a1a4",
+      "885ae3c62d44124abe458d38447dee8b08421a8bdc61d74f3111d4ba55d75352",
+      "1e99211a31866ccfb3baee17f2fbfcaf5d77ecd32e40ad5f09a9c730208dd635",
+      "06b2ae1e97b985dd554065a7035f9ebbccab9a782d963bdd4e1683105275628a",
+      "2718f893adb85e99eedee9c1b467004fd17027d227fe12a073878f2e3e9226a4",
+      "e1fa19a92f4a8206f339a64ad146abb35323301f6e2caf4d934a6ebd7db4c7dd",
+      "f9632b04e3e0b31a39fb9ae76714063931a1483a8451a4c0d4a584daf139a734",
+      "4829aeb26be60247b090779496a73bcb3288b29b3591903241b3915fe09770de",
+      "b36a9811445c7fa240bb9e1915bf65fb553ce70af96c01df9c32980d13d4c75f",
+      "e74fa60b0d0b3e63feac0a6050c1bddd0648c3d6ceed47c52c91a5a76e0a0c61",
+      "01e286bb986e06c577a65c6e8d02fe8d7ba6b43115bf5370f26b73caa298aaf8",
+      "cc22b6c8e15b60d5e354c27a8afa90e803c36d5338f8e03391b119316664b7b9",
+      "6fd1a53b426e2d6f37d5d3d9e8aef5e5054ccbc9447ccf08903766de326d6542",
+      "86cddd601466bfbef6ae52362d9dfc0c2b42720664524ae241cd2656aa33dafd",
+      "3f097c18135fa585e7b98e580f4efca81d640bf1b30126eaeff939eeb3aa3a8c",
+      "d62a33aa0df4677983d9573f60619b5e15ada1135dc745dd5c08ef0f296783f9"
+    ],
+    "corpus_sha256": "63068d5253678ba349e3056a3e1045b7e000eb820a17fb83e91472ed6b3b7b5d",
+    "config": {
+      "reasoning": "medium",
+      "web_tool": "web_search_preview",
+      "snippet_chars": 3000,
+      "page_chars": 8000,
+      "top_k": 5,
+      "max_rounds": 8,
+      "max_output_tokens": 4096
+    },
+    "code_hashes": {
+      "search_lab.py": "91515a8383617da2e0d9de5210edb2e2edcbe95fc369789bb5ef5cfc4a378f5e",
+      "benchmark.py": "f03314164e1a053df1bee63f238afc94c11fedabebfb1ce6742eb686f02929f5",
+      "validation/__init__.py": "b27a1ac25081635f78d20e5cf688346bc18f9a5acdf130d92a947a003915b320",
+      "validation/budget.py": "027d8547a9e95f7cc83c9fafbd92636424def33b1a102d64ebe9adc4e8420820",
+      "validation/metrics.py": "693befb25a44d463030016ef56c064663f59635644b32e8859b0933e59eeafcd",
+      "validation/planning.py": "97fe501c3ce02c5e6961489592f09e556db0437218fddd1b79c4d547121992d0",
+      "validation/protocol.py": "8af8ae05a70f5dc6e747c917149150f61427c5a1284eb7656d566476f5a79e51",
+      "validation/snapshot.py": "32e763028582a86ff25292bbf098c4650ede35c778ab827c968a70738ecd30d0",
+      "validation/statistics.py": "03049188a073ef85b3c061ac31a6f2c4415fdb9263b6785e3de7324534b09483",
+      "passage_retrieval.py": "58617c6779c1e7697cc3ad7439700f2a8152dee29defa306df11c81d229025ff",
+      "context_passages.py": "7ba5deadb651d7de045108fa9becbaffb0dc0ac6fcec72b8c9fee5e529d3c77c",
+      "retrieval_trial.py": "f5ff5aea3b4776ea6a6fec47c0b868acaa2c162c4287c1c23ea0265e7b462038"
+    },
+    "cases": [
+      {
+        "id": "cba_goal_bonus",
+        "category": "conditions",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "For CommBank GoalSaver, what actions qualify for bonus interest and do withdrawals automatically disqualify the account?"
+      },
+      {
+        "id": "ing_bonus",
+        "category": "conditions",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "What monthly conditions and balance limits apply to the ING Savings Maximiser additional interest rate?"
+      },
+      {
+        "id": "online_conditions",
+        "category": "comparison",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "Compare the ongoing savings conditions at ING, ubank and Macquarie, including any deposit, balance-growth and card-purchase requirements."
+      },
+      {
+        "id": "major_withdrawals",
+        "category": "comparison",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "Compare CommBank GoalSaver, NAB Reward Saver and Westpac Life for someone who sometimes withdraws savings. Explain when bonus interest is lost."
+      },
+      {
+        "id": "anz_options",
+        "category": "lookup",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "What is the difference between ANZ Online Saver and ANZ Progress Saver, and where can I check their current rates and conditions?"
+      },
+      {
+        "id": "neutral_guidance",
+        "category": "lookup",
+        "topic": "Australian savings",
+        "target_aliases": [
+          "CommBank",
+          "Commonwealth Bank",
+          "CBA"
+        ],
+        "question": "What does ASIC MoneySmart say to check when comparing savings accounts, including bonus rates, introductory rates, fees and deposit protection?"
+      }
+    ],
+    "repeats": 2,
+    "methods": [
+      "window",
+      "passages"
+    ],
+    "passage_version": 2,
+    "notice": "Post-hoc retrieval calibration; the historical reference uses the same model, prompts and native search settings."
+  },
+  "cost": {
+    "maximum_usd": 2.0,
+    "accounted_usd": 0.4034654000000004,
+    "settled_requests": 69
+  }
+}

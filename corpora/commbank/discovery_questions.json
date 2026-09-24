@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cba_products",
+    "question": "What are the differences between CommBank GoalSaver and NetBank Saver, including the ongoing interest conditions and fees?"
+  },
+  {
+    "id": "major_banks",
+    "question": "Compare the main adult savings accounts from CommBank, ANZ, NAB and Westpac. What must a customer do each month to earn their advertised bonus interest?"
+  },
+  {
+    "id": "online_banks",
+    "question": "Compare ING Savings Maximiser, ubank Save and Macquarie Savings Account: ongoing bonus conditions, balance caps and linked accounts."
+  },
+  {
+    "id": "market_search",
+    "question": "Which Australian savings accounts should I compare if I want a competitive ongoing rate without monthly card purchases? Explain the conditions and cite sources."
+  },
+  {
+    "id": "withdrawals",
+    "question": "How do withdrawals affect bonus interest on CommBank GoalSaver, NAB Reward Saver and Westpac Life?"
+  },
+  {
+    "id": "intro_rates",
+    "question": "How do introductory savings rates compare with ongoing bonus rates at CommBank, ANZ, ING and Macquarie? What happens after an introductory period ends?"
+  },
+  {
+    "id": "digital_service",
+    "question": "Compare the savings features and digital banking services of CommBank, Westpac, ubank and ING. What evidence supports their advertised awards?"
+  },
+  {
+    "id": "terms",
+    "question": "Where are the official terms and interest rate schedules for CommBank savings accounts, and how do they explain eligibility, fees and interest calculation?"
+  }
+]

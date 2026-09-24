@@ -14,6 +14,15 @@ HUB = "https://example-bank.test/awards"
 
 
 class ToolTests(unittest.TestCase):
+    def test_link_destinations_do_not_manufacture_search_relevance(self):
+        corpus = {'pages': [{'url': 'https://example.org/page', 'title': 'Account',
+                            'text': '[Account conditions](https://example.org/tracking/fantasticaward)'}]}
+        browser = lab.browser_class('context')(corpus, 'reference', snippet_chars=3000)
+        self.assertEqual(browser.search(['fantasticaward'])['searches'][0]['results'], [])
+        result = browser.search(['conditions'])['searches'][0]['results'][0]
+        self.assertEqual(result['links'][0]['url'], 'https://example.org/tracking/fantasticaward')
+        self.assertEqual(browser.click(result['url'], result['links'][0]['id'])['error'], 'not_in_corpus')
+
     def test_sibling_tool_calls_cannot_follow_not_yet_observed_links(self):
         browser = lab.Browser(CORPUS, "link_descriptive")
         observation = {"pages": set(), "links": {}}

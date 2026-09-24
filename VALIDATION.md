@@ -1,4 +1,29 @@
-# Validation record — 2026-09-24
+# Current validation
+
+<!-- CURRENT_RESULT_START -->
+**Working candidate; full validation in progress.** The current harness uses context-preserving source passages and a 69-document CommBank/competitor corpus. All 65 offline tests pass, including a clean checkout without credentials.
+
+The completed focused check covered six calibration questions, twice each. It reused the recorded hosted reference:
+
+| Observable | Custom context passages | Hosted Luna |
+|---|---:|---:|
+| Queries per answer | 2.75 | 3.00 |
+| Opens per answer | 0.75 | 0.50 |
+| Answers with an open | 50.0% | 41.7% |
+| Citation domains per answer | 1.83 | 1.75 |
+| CommBank mention rate | 33.3% | 33.3% |
+| Completed answers | 12/12 | 12/12 |
+
+The observed open-count distribution distance was 0.083, within the registered 0.10 tolerance. The query-count distribution distance was 0.167, slightly outside 0.15. These are encouraging calibration observations, not confidence-certified equivalence. A non-blinded critical-facts review found one contradictory ANZ withdrawal sentence among the 12 custom answers. The issue is retained in the [quality record](evidence/2026-09-24/commbank_context_quality.json).
+
+A fresh 12-question paired calibration and a frozen 18-question experiment-domain validation are running. Their final results will replace this status; do not treat an unfinished run as a pass. The latter uses the previously authored award-study prompts before any treatment is applied. The code now also excludes link-destination words from page ranking; the focused check above preceded that index correction.
+
+Details: [focused check](evidence/2026-09-24/commbank_context_v5.json), [corpus record](evidence/2026-09-24/commbank_corpus_final.json), [operator handoff](HANDOFF.md).
+<!-- CURRENT_RESULT_END -->
+
+The records below preserve earlier failed attempts and their original scope. They are not the current recommended configuration.
+
+# Historical documentation pilot — 2026-09-24
 
 **Decision: the controlled experiment platform is implemented and tested. The searching agent has NOT passed as a behavioural substitute for hosted Luna or ChatGPT.** No 95% equivalence claim is justified by these runs.
 

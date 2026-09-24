@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exploratory excerpt-length ablation against an existing pilot; never a certificate."""
+"""Exploratory one-factor excerpt or corpus calibration; never a certificate."""
 import argparse
 import hashlib
 import json
@@ -36,7 +36,10 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--baseline-dir',required=True)
     p.add_argument('--out-dir',required=True)
-    p.add_argument('--snippet-chars',type=int,required=True)
+    change=p.add_mutually_exclusive_group(required=True)
+    change.add_argument('--snippet-chars',type=int)
+    change.add_argument('--corpus',help='Use a repaired corpus with the original tool settings')
+    p.add_argument('--case-ids',nargs='+',help='Optional registered calibration cases for a targeted diagnostic')
     p.add_argument('--budget-usd',type=float,default=.25)
     p.add_argument('--allow-paid',action='store_true')
     args=p.parse_args()
@@ -45,7 +48,7 @@ def main():
     profile=source_manifest['profile']
     if profile['split']=='validation':
         p.error('Do not tune against a held-out validation set; use a pilot or calibration baseline')
-    if not 100<=args.snippet_chars<=20000 or not 0<args.budget_usd<=100:
+    if (args.snippet_chars is not None and not 100<=args.snippet_chars<=20000) or not 0<args.budget_usd<=100:
         p.error('Invalid excerpt length or budget')
     traces=[json.loads(f.read_text()) for f in sorted((source_dir/'traces').glob('*.json'))]
     source,errors=observations(source_manifest,traces)
@@ -54,14 +57,25 @@ def main():
     corpus=source_dir/'corpus.json'
     if hashlib.sha256(corpus.read_bytes()).hexdigest()!=source_manifest['corpus_sha256']:
         p.error('Baseline corpus changed')
-    config=profile['runner']|{'snippet_chars':args.snippet_chars}
+    config=profile['runner']|({'snippet_chars':args.snippet_chars} if args.snippet_chars is not None else {})
+    candidate_corpus=Path(args.corpus) if args.corpus else corpus
+    candidate_data=json.loads(candidate_corpus.read_text())
+    if candidate_data.get('failures') or candidate_data.get('quality_flags'):
+        p.error('Resolve candidate corpus failures and quality flags before paid calibration')
+    lab.Browser(candidate_data,'reference')
+    selected=[c for c in profile['cases'] if not args.case_ids or c['id'] in args.case_ids]
+    if args.case_ids and set(args.case_ids)!={c['id'] for c in selected}:
+        p.error('Unknown selected calibration case')
     spec={'baseline_manifest':fingerprint(source_manifest),'source_trace_hashes':[fingerprint(t) for t in traces],
           'candidate_config':config,'current_code_hashes':code_hashes(),
+          'candidate_corpus_sha256':hashlib.sha256(candidate_corpus.read_bytes()).hexdigest(),
+          'selected_case_ids':[c['id'] for c in selected],
           'calibration_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-          'notice':'One-factor snippet-length calibration; uses the same frozen corpus and recorded hosted responses.'}
+          'notice':('One-factor snippet-length calibration; same frozen corpus and recorded hosted responses.' if not args.corpus else
+                    'Corpus-repair diagnostic; original tool settings and recorded hosted responses. All changed source pages belong to this corpus factor.')}
     if spec['current_code_hashes']!=source_manifest['code_hashes']:
         p.error('Code differs from baseline: this command isolates excerpt length only')
-    jobs=[(c,r) for c in profile['cases'] for r in range(profile['repeats'])]
+    jobs=[(c,r) for c in selected for r in range(profile['repeats'])]
     random.Random(profile['seed']).shuffle(jobs)
     print(json.dumps({'paid_enabled':args.allow_paid,'candidate_runs':len(jobs),'snippet_chars':args.snippet_chars,'budget_usd':args.budget_usd}),flush=True)
     if not args.allow_paid:
@@ -71,6 +85,11 @@ def main():
     if mf.exists() and json.loads(mf.read_text())!=spec:
         p.error('Calibration changed; use a new directory')
     lab.save(mf,spec)
+    frozen_corpus=directory/'corpus.json'
+    if frozen_corpus.exists() and hashlib.sha256(frozen_corpus.read_bytes()).hexdigest()!=spec['candidate_corpus_sha256']:
+        p.error('Frozen candidate corpus changed')
+    if not frozen_corpus.exists():
+        frozen_corpus.write_bytes(candidate_corpus.read_bytes())
     budget=BudgetedTransport(directory/'budget.json',args.budget_usd)
     candidate={}
     for case,repeat in jobs:
@@ -82,7 +101,7 @@ def main():
                 p.error('Candidate trace provenance mismatch')
         else:
             values=config|{'model':profile['model'],'instructions':profile['instructions'],'mode':'custom','arm':'reference',
-                           'allow_paid':True,'question':case['question'],'corpus':str(corpus),'out':str(path)}
+                           'allow_paid':True,'question':case['question'],'corpus':str(frozen_corpus),'out':str(path)}
             trace=lab.run(SimpleNamespace(**values),transport=budget)
             trace.update(calibration_job=key,calibration_manifest_sha256=fingerprint(spec))
             lab.save(path,trace)
@@ -93,7 +112,7 @@ def main():
     result=compare(profile,source,candidate)
     result['manifest']=spec
     lab.save(directory/'report.json',result)
-    lines=['# Excerpt-length calibration','',result['notice'],'',f"Candidate statuses: {result['candidate_statuses']}",'',
+    lines=['# Exploratory calibration','',spec['notice'],'',result['notice'],'',f"Candidate statuses: {result['candidate_statuses']}",'',
            '| Metric | Original custom | Candidate custom | Hosted | Matched questions |','|---|---:|---:|---:|---:|']
     for row in result['rows']:
         numbers=['—' if row[k] is None else f"{row[k]:.3f}" for k in ('original_custom','candidate_custom','hosted')]

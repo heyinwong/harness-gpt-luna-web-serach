@@ -1,0 +1,93 @@
+{
+  "reviewer": "Codex qualitative review",
+  "blinded": false,
+  "scope": "Critical task facts and internal contradictions, not exhaustive claim-by-claim or independent human certification. Review conducted after seeing tool metrics. Cited APRA link was exposed by MoneySmart; direct APRA page was not captured.",
+  "items": [
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "trace_sha256": "d0d04b67fa8ffb2dcd55aea5be25e26ece829102f3b592798d47a4e15cc53789",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "External deposit, card purchases, growth, linked account, next-month timing and cap match captured ING terms."
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "trace_sha256": "a7a3b993e333a4a52fe870d924dbd62e4238bcc4be093b437cf015d0627422f2",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Covers introductory duration, ongoing/bonus conditions, fees and ADI deposit protection present on the captured MoneySmart page."
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "trace_sha256": "895d62d5a1b0b8d713a7b343611bfbf4b116a531713084141106b9bd43f5b839",
+      "critical_answer_consistent_with_snapshot": false,
+      "reason": "Correct rates and table conditions; one later sentence incorrectly hedges the effect of a withdrawal."
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "trace_sha256": "a7711b8e4cada93827d4a3cdde921d5c2648a6a4a3499c83352d2a1972d18dc0",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Differentiates ING activity requirements, ubank combined-balance growth and Macquarie linked account without inventing a fixed ubank deposit requirement."
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "trace_sha256": "fb6d835ce2de26c8bb93e54102e1c768ec01ccc64790aba910bdd87d3a6e5452",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Deposit and balance-growth tests, withdrawals and bank-initiated transaction exclusions match the retrieved official text."
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "trace_sha256": "a2b6c3263f22f06b15a0204adc40c435681a092d8506a54244c9437accda20df",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Differentiates ING activity requirements, ubank combined-balance growth and Macquarie linked account without inventing a fixed ubank deposit requirement."
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "trace_sha256": "c8e110c14f63d2f6b57c89fda449388893890a4482c6ba468a639cbd954ea822",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "External deposit, card purchases, growth, linked account, next-month timing and cap match captured ING terms."
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "trace_sha256": "06dff3af3318b4f3460135ba6ec99eaefeb96c652fd3b81cdd21de93e896c38f",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Distinguishes NAB no-withdrawal condition from CBA and Westpac growth tests and their assessment dates."
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "trace_sha256": "c42257c3973ed069aa68c7ba556a43d8b2169158ad0bc58e9379fe874ad6036c",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Distinguishes NAB no-withdrawal condition from CBA and Westpac growth tests and their assessment dates."
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "trace_sha256": "b4c5ff182c1cb8db997ca49480a7f0f39eaaadd63d4cb2a7b7374b244ec4e209",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Correct rate table, deposit/no-withdrawal distinction and links to rate/terms sources."
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "trace_sha256": "7b7cd88c1c3c3cbb81b45a8c2b9e176797efdad4db9668eeebb8a8bd518f7297",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Deposit and balance-growth tests, withdrawals and bank-initiated transaction exclusions match the retrieved official text."
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "trace_sha256": "69847d7117643cf884589c8ecd16d0f411dbb73f762ebaf9917c86273fbc3d31",
+      "critical_answer_consistent_with_snapshot": true,
+      "reason": "Covers introductory duration, ongoing/bonus conditions, fees and ADI deposit protection present on the captured MoneySmart page."
+    }
+  ],
+  "reviewed": 12,
+  "answers_with_identified_material_issue": 1
+}

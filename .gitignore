@@ -8,3 +8,5 @@ results/
 *.HEIC
 *.heic
 .DS_Store
+.playwright-cli/
+output/playwright/

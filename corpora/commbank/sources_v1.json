@@ -1,0 +1,803 @@
+{
+  "scope": "Australian retail savings discovery corpus: selected major banks, online providers and observed market alternatives, plus comparison/award and neutral guidance pages. Convenience coverage, not the whole web or a representative market census. Sources are frozen at capture time.",
+  "target_url": "https://www.commbank.com.au/savings-accounts.html",
+  "award_text": "Canstar 2024 Digital Banking Bank of the Year.",
+  "sources": [
+    {
+      "url": "https://www.amp.com.au/personal-banking/everyday-money/amp-bank-go-save",
+      "provider": "AMP",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.anz.com.au/personal/bank-accounts/",
+      "provider": "ANZ",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.anz.com.au/personal/bank-accounts/savings-accounts/",
+      "provider": "ANZ",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "major_banks",
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.anz.com.au/personal/bank-accounts/savings-accounts/progress-saver/",
+      "provider": "ANZ",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "major_banks",
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.anz.com.au/plus/accounts/growth-saver/",
+      "provider": "ANZ",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks"
+      ]
+    },
+    {
+      "url": "https://www.canstar.com.au/savings-accounts/compare/best-savings-account-interest-rates/",
+      "provider": "Canstar",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.canstar.com.au/star-ratings-awards/digital-banking/",
+      "provider": "Canstar",
+      "category": "award",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ]
+    },
+    {
+      "url": "https://www.canstar.com.au/star-ratings-awards/everyday-banking-awards/",
+      "provider": "Canstar",
+      "category": "award",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/articles/banking/difference-between-a-transaction-and-savings-account.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/articles/banking/tips-for-earning-bonus-interest-on-goalsaver-and-youthsaver-accounts.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "terms",
+        "withdrawals"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/banking/goal-saver.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "digital_service",
+        "intro_rates",
+        "major_banks",
+        "terms",
+        "withdrawals"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/banking/joint-accounts.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/banking/making-the-most-of-your-products.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/banking/netbank-saver.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/TSI_interest_rates.pdf",
+      "provider": "CommBank",
+      "category": "terms",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "intro_rates",
+        "major_banks",
+        "terms",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/digital-banking/goal-tracker.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "digital_service",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/important-info/personal.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "terms",
+        "withdrawals"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/personal/accounts/comparison-table.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "intro_rates",
+        "terms"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/personal/rates-fees/Other_accounts_rates.html",
+      "provider": "CommBank",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "digital_service",
+        "major_banks",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/savings-accounts.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "digital_service",
+        "intro_rates",
+        "major_banks",
+        "market_search",
+        "terms",
+        "withdrawals"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ],
+      "required_text": [
+        "Canstar 2024 Digital Banking Bank of the Year.",
+        "Things you should know"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/tools/rates-and-calculators.html",
+      "provider": "CommBank",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "cba_products",
+        "terms"
+      ],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.finder.com.au/finder-awards/product-awards/banking-awards",
+      "provider": "Finder",
+      "category": "award",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.finder.com.au/finder-awards/provider-of-the-year",
+      "provider": "Finder",
+      "category": "award",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ]
+    },
+    {
+      "url": "https://www.ing.com.au/about-us/who-we-are-awards.html",
+      "provider": "ING",
+      "category": "award",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ]
+    },
+    {
+      "url": "https://www.ing.com.au/help-and-support/tips-hints-guides/account-links.html",
+      "provider": "ING",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "online_banks"
+      ]
+    },
+    {
+      "url": "https://www.ing.com.au/rates-and-fees/interest-rate-announcement.html",
+      "provider": "ING",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates"
+      ]
+    },
+    {
+      "url": "https://www.ing.com.au/savings.html",
+      "provider": "ING",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "intro_rates",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ing.com.au/savings/savings-maximiser.html",
+      "provider": "ING",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "intro_rates",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.macquarie.com.au/everyday-banking/savings-account.html",
+      "provider": "Macquarie",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "market_search",
+        "online_banks"
+      ]
+    },
+    {
+      "url": "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/opening-an-account/comparing-transaction-and-savings-accounts.html",
+      "provider": "Macquarie",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "market_search",
+        "online_banks"
+      ]
+    },
+    {
+      "url": "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/understanding-interest-rates-and-fees/savings-account-balance-bracket-changes.html",
+      "provider": "Macquarie",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "intro_rates",
+        "online_banks"
+      ]
+    },
+    {
+      "url": "https://www.nab.com.au/personal/bank-accounts/product-selector",
+      "provider": "NAB",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.nab.com.au/personal/bank-accounts/savings-accounts/nab-reward-saver",
+      "provider": "NAB",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.pnbank.com.au/help-and-support/interest-rates/savings-accounts/",
+      "provider": "P&N Bank",
+      "category": "rates",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "market_search"
+      ]
+    },
+    {
+      "url": "https://www.ubank.com.au/banking/savings-account",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "market_search",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/how-do-i-earn-bonus-interest",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/how-does-bonus-interest-work-on-shared-accounts",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "market_search",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/help/current/everyday-banking/earning-interest/whats-my-current-save-account-interest-rate",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "market_search"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/help/current/everyday-banking/using-your-accounts/whats-the-difference-between-a-spend-bills-and-a-save-account",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/mobile-banking-app",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/tips-and-guides/the-perks-of-having-ubank-accounts",
+      "provider": "ubank",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/wp-content/uploads/change-notice.pdf",
+      "provider": "ubank",
+      "category": "terms",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "online_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.ubank.com.au/wp-content/uploads/general-terms.pdf",
+      "provider": "ubank",
+      "category": "terms",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "market_search",
+        "online_banks"
+      ],
+      "capture_mode": "browser",
+      "quality_reviews": [
+        {
+          "flag": "pdf_page_1_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_3_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_7_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_11_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_14_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_25_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_30_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_42_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_47_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_58_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_62_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        },
+        {
+          "flag": "pdf_page_65_sparse_text",
+          "content_sha256": "08c7a8299e25c278513de48fcc79b88d0c38e768d30ac43f4657cb324ec362a1",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.westpac.com.au/bank-accounts",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.westpac.com.au/bank-accounts/difference-between-transaction-savings",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.westpac.com.au/bank-accounts/savings-accounts/life",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service",
+        "major_banks"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.westpac.com.au/bank-accounts/savings-accounts/life/bonus-interest",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ],
+      "capture_mode": "browser"
+    },
+    {
+      "url": "https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/pb/PersonalAccounts-tandc.pdf",
+      "provider": "Westpac",
+      "category": "terms",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ],
+      "split_spreads": true
+    },
+    {
+      "url": "https://www.westpac.com.au/faq/spend-and-save-interest-calculated/",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.westpac.com.au/faq/spend-and-save-interest-paid/",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.westpac.com.au/faq/spend-and-save-more-than-150000-in-my-life/",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "major_banks",
+        "withdrawals"
+      ]
+    },
+    {
+      "url": "https://www.westpac.com.au/personal-banking/online-banking/mobile-app/",
+      "provider": "Westpac",
+      "category": "product_or_support",
+      "reason": "Hosted Luna answer citation or source observed in at least two discovery questions",
+      "discovery_cases": [
+        "digital_service"
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/SavingsInvestment_ADB2852.pdf",
+      "provider": "CommBank",
+      "category": "terms",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": [],
+      "split_spreads": true,
+      "quality_reviews": [
+        {
+          "flag": "pdf_page_30_sparse_text",
+          "content_sha256": "3467efeaa83186cf70897d13f1f9e2f84999a66fc7748cdc145421292984548c",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/ElectronicBanking_ADB2426.pdf",
+      "provider": "CommBank",
+      "category": "terms",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": [],
+      "quality_reviews": [
+        {
+          "flag": "pdf_page_60_sparse_text",
+          "content_sha256": "fab557e145a8eaade18a3f76004d295e89eaa9cbbcd9c677b759e7863fd38575",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.commbank.com.au/digital-banking/commbank-app.html",
+      "provider": "CommBank",
+      "category": "product_or_support",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": [],
+      "selectors": [
+        "#skipmaincontent",
+        ".lower-section-container"
+      ]
+    },
+    {
+      "url": "https://www.anz.com.au/personal/bank-accounts/savings-accounts/online-saver/",
+      "provider": "ANZ",
+      "category": "product_or_support",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "url": "https://www.anz.com.au/plus/pricing/",
+      "provider": "ANZ",
+      "category": "rates",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "url": "https://www.anz.com.au/plus/terms-conditions/product-terms-conditions/",
+      "provider": "ANZ",
+      "category": "terms",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "url": "https://www.nab.com.au/personal/bank-accounts/savings-accounts",
+      "provider": "NAB",
+      "category": "product_or_support",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "url": "https://www.ing.com.au/pdf/SM_Terms_and_Conditions.pdf",
+      "provider": "ING",
+      "category": "terms",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "url": "https://moneysmart.gov.au/banking/savings-accounts",
+      "provider": "MoneySmart",
+      "category": "neutral_guidance",
+      "reason": "Direct source link or verified official product/conditions/guidance seed",
+      "discovery_cases": []
+    },
+    {
+      "provider": "NAB",
+      "url": "https://www.nab.com.au/personal/bank-accounts/savings-accounts/nab-isaver",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage"
+    },
+    {
+      "provider": "NAB",
+      "url": "https://www.nab.com.au/personal/interest-rates-fees-and-charges/indicator-rates-deposit-products",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage"
+    },
+    {
+      "provider": "NAB",
+      "url": "https://www.nab.com.au/important-information/personal/transaction-savings-terms-conditions",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage"
+    },
+    {
+      "provider": "ANZ",
+      "url": "https://www.anz.com.au/content/dam/anzcomau/documents/pdf/saving-transaction-products-tcs.pdf",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage",
+      "quality_reviews": [
+        {
+          "flag": "pdf_page_97_sparse_text",
+          "content_sha256": "49bc087159d70959b834d2c9d9d007e4ebb7d5a5d4bf7b000cc4bdb5c8e343dd",
+          "reason": "Rendered and visually inspected 2026-09-24: title/divider page or blank/back-cover page; all substantive visible text captured. No missing body text."
+        }
+      ]
+    },
+    {
+      "provider": "Macquarie",
+      "url": "https://www.macquarie.com.au/digital-banking/bank-accounts-terms-and-conditions.html",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage"
+    },
+    {
+      "provider": "Macquarie",
+      "url": "https://www.macquarie.com.au/help/personal/transaction-and-savings-accounts/understanding-interest-rates-and-fees/understanding-interest-rates-and-fees-for-tsa-and-bsa.html",
+      "category": "product_or_conditions",
+      "reason": "Followed current official product page link to close product/rate/terms coverage"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "url": "https://www.rabobank.com.au/deposits/personal/high-interest-savings-account",
+      "provider": "Rabobank",
+      "reason": "HTTP 403 in both direct and ordinary browser access. Not reconstructed or silently replaced; known discovery coverage gap."
+    },
+    {
+      "url": "https://www.rabobank.com.au/deposits/personal/premiumsaver",
+      "provider": "Rabobank",
+      "reason": "HTTP 403 in both direct and ordinary browser access. Not reconstructed or silently replaced; known discovery coverage gap."
+    }
+  ]
+}

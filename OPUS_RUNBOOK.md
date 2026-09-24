@@ -1,4 +1,8 @@
+> **Current CommBank workflow:** use [HANDOFF.md](HANDOFF.md). This file is the longer technical reference and includes historical documentation-pilot commands. Do not use those historical settings as the current bank configuration.
+
 # Operator runbook: fidelity validation and award experiment
+
+**CommBank update:** Start with [COMMBANK_RUNBOOK.md](COMMBANK_RUNBOOK.md) for the Luna-informed 69-document competitor corpus, reproducible builder, six placement conditions and bank-specific calibration. The original documentation pilot below remains historical evidence; it is not a bank-domain fidelity pass.
 
 Read `HANDOFF.md`, `README.md`, `STATISTICS.md` and `VALIDATION.md` first. Public clones include numeric evidence in `evidence/`; they do not include the original ignored `results/` directories. Generate fresh snapshots/runs or obtain those private artifacts from the owner before using commands that refer to existing results. Opus operates the repository; **the experimental decision model remains `gpt-5.6-luna`**. Switching the decision model to Opus creates a different experiment. Do not substitute models, adjust the open count by imposing a quota, or describe a pilot as a confidence-certified replica of ChatGPT.
 

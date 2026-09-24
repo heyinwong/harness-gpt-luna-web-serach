@@ -1,0 +1,203 @@
+{
+  "verdict": "EXPLORATORY_ONLY",
+  "notice": "Reuses a recorded hosted reference. Selected after seeing pilot results; not a new holdout, confidence test or proof of transfer. Each row uses questions with all repetitions measurable in all three groups. Reliability rows include failures.",
+  "rows": [
+    {
+      "metric": "search_queries",
+      "n_matched_questions": 4,
+      "original_custom": 4.375,
+      "candidate_custom": 2.75,
+      "hosted": 2.625,
+      "registered_margin": 1.5
+    },
+    {
+      "metric": "search_actions",
+      "n_matched_questions": 4,
+      "original_custom": 4.0,
+      "candidate_custom": 2.75,
+      "hosted": 1.25,
+      "registered_margin": 1.0
+    },
+    {
+      "metric": "open_actions",
+      "n_matched_questions": 4,
+      "original_custom": 1.875,
+      "candidate_custom": 0.75,
+      "hosted": 0.625,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "any_open",
+      "n_matched_questions": 4,
+      "original_custom": 0.75,
+      "candidate_custom": 0.625,
+      "hosted": 0.625,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "find_actions",
+      "n_matched_questions": 4,
+      "original_custom": 0.0,
+      "candidate_custom": 0.125,
+      "hosted": 0.0,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "site_query_share",
+      "n_matched_questions": 4,
+      "original_custom": 0.6147321428571428,
+      "candidate_custom": 0.6979166666666666,
+      "hosted": 0.78125,
+      "registered_margin": 0.15
+    },
+    {
+      "metric": "citation_domains",
+      "n_matched_questions": 4,
+      "original_custom": 1.5,
+      "candidate_custom": 1.625,
+      "hosted": 1.625,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "target_mention",
+      "n_matched_questions": 4,
+      "original_custom": 0.25,
+      "candidate_custom": 0.25,
+      "hosted": 0.25,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "entity_mentions",
+      "n_matched_questions": 4,
+      "original_custom": 1.25,
+      "candidate_custom": 1.25,
+      "hosted": 1.25,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "answer_words",
+      "n_matched_questions": 4,
+      "original_custom": 338.0,
+      "candidate_custom": 352.875,
+      "hosted": 354.0,
+      "registered_margin": 100
+    },
+    {
+      "metric": "completed",
+      "n_matched_questions": 5,
+      "original_custom": 1.0,
+      "candidate_custom": 0.9,
+      "hosted": 1.0,
+      "registered_margin": 0.05
+    },
+    {
+      "metric": "budget_limited",
+      "n_matched_questions": 5,
+      "original_custom": 0.0,
+      "candidate_custom": 0.0,
+      "hosted": 0.0,
+      "registered_margin": 0.05
+    }
+  ],
+  "candidate_runs": 13,
+  "candidate_statuses": {
+    "failed": 1,
+    "completed": 12
+  },
+  "manifest": {
+    "baseline_manifest": "09881e92d669768abfc46b51ddc743096a6835379ad5c8daa7995e5d3626a265",
+    "source_trace_hashes": [
+      "3969cf33b85fe5f04de6cbf461a16a8c952163d31efa88760eb4bf15fa55a9ad",
+      "68254f19c57e1c74f85e8f5a66c5d1e8717c35a1d32e37661377b90b5c1ed90c",
+      "357119c83d74a4b1416170cd7310d1dd0ebf41d81d9ddcd3b6d17bd4d475c2aa",
+      "252eaf419b28d812f8061f6e2417b26bdf64d4a40daa5e8a5be44aa08f826bd4",
+      "eb50f3f8bca90e316d42a1f43aee4b06a172e47b43df51f5ae1f77eb45ce3939",
+      "51643a863cea24c94ec7273f643c15ba49ac05682537bf6c888464fe0fb97491",
+      "38fffdd5a0d98ca8ee892109bd74e45e0eeb7f47aed27c70254853e5a586c799",
+      "41245ab6f1f7223c52784cf6de16e22246425cdb8003b2b579dc24551b229525",
+      "e94e8cb105289f401d696710efacc54a7fa6023a95e0543d5178e2f2a779380d",
+      "d6815a40ab2711852e388ad0b9a5524cb8d0d4b74d1e89ad931d04ec966b65a3",
+      "89e12603de2eaeee0e6184486ddff34767519b4f18285b074f3ae8a6fc9f7208",
+      "37c45d41420941fcf8c5cd1929db9edcc23559e151bf95b9115a304892d42c19",
+      "6f193732edda52e570297c8af0124dff36b607757d49912ff63a35e3172e27b2",
+      "cba773dde0c55aab8ff0e78e8c2d5228712bf39358c44cdd5dd1186604c03fe3",
+      "d4e5fa91f6497cdc93f03f6d35585d4b300f6219a2222fcaa630b2b62aa0a1a4",
+      "885ae3c62d44124abe458d38447dee8b08421a8bdc61d74f3111d4ba55d75352",
+      "1e99211a31866ccfb3baee17f2fbfcaf5d77ecd32e40ad5f09a9c730208dd635",
+      "aaede32d24f57fae35e782130d6b9398c08e738c293551cfaa10b25faa12d420",
+      "95f7df58475f043cf6fac556c819b7b96eebb90730c2b51b1da3f8f9e083293d",
+      "480f4ffe9d9d766199123ae003af8b858e142aaa5e0244dd23a1b545e0264c11",
+      "06b2ae1e97b985dd554065a7035f9ebbccab9a782d963bdd4e1683105275628a",
+      "2718f893adb85e99eedee9c1b467004fd17027d227fe12a073878f2e3e9226a4",
+      "e1fa19a92f4a8206f339a64ad146abb35323301f6e2caf4d934a6ebd7db4c7dd",
+      "a223573ff70ae5c0a553ca9906d8070095c77abbb1a6432f54fd7479abf4b07c",
+      "bb1e3192c508790116d76f437b39e1c1d1f5fd4fa97bfd16a1421259b3954ea5",
+      "f9632b04e3e0b31a39fb9ae76714063931a1483a8451a4c0d4a584daf139a734",
+      "c84c877f04394c9dd84aab1612c84b44ac7f051b9f420e5ea712ff269705b90a",
+      "8c9d551266b4fbd0652a5fd2d6124d40febc31694139327443b31fabbc134192",
+      "380fedf19dc5f01e51587ff10e1aeaa517ec597660f440246d7da84156153a7f",
+      "d4b8dc9e6e5dee81b33cb14ed2d74b22aa9b49f3c3414739eeb3a2d0248f2090",
+      "e3c99641cddd12afc8c8dffd4b8e42a0b8dff8baf76dd62053d4fd0f2ee431fa",
+      "d2910a0247f64b94733dfdbc7c6886dcb24db875442a88af45399405024dba51",
+      "4829aeb26be60247b090779496a73bcb3288b29b3591903241b3915fe09770de",
+      "4a5aee44a745fed8916bb78a46db09492008806735b44c1c9106880b5323bc46",
+      "b36a9811445c7fa240bb9e1915bf65fb553ce70af96c01df9c32980d13d4c75f",
+      "e74fa60b0d0b3e63feac0a6050c1bddd0648c3d6ceed47c52c91a5a76e0a0c61",
+      "3dbf12c3c856501766689db281801f2b5e142131ca2443476b9f3e3540fc00dd",
+      "01e286bb986e06c577a65c6e8d02fe8d7ba6b43115bf5370f26b73caa298aaf8",
+      "c8d5cecb1d5bcb7b64aed189454b0242b91f7466194cff67381d1a6cb708fcc9",
+      "cc22b6c8e15b60d5e354c27a8afa90e803c36d5338f8e03391b119316664b7b9",
+      "6fd1a53b426e2d6f37d5d3d9e8aef5e5054ccbc9447ccf08903766de326d6542",
+      "86cddd601466bfbef6ae52362d9dfc0c2b42720664524ae241cd2656aa33dafd",
+      "0234dc32cad3855a541f793cb12364c2c8d00ca0f9c0f9bb19c479ba8e8d4dfd",
+      "c49fea80fbda05ea2e6f5be3cf355a56dc14295d0dc899c23c9777b14414f9e1",
+      "3f097c18135fa585e7b98e580f4efca81d640bf1b30126eaeff939eeb3aa3a8c",
+      "4b45bff406b2ad1b178a6061fe85b56655d60c8556fe50e1cbb82629c74f1d76",
+      "add8c9db3619ff033892366a37f024869cbcb51cc6178aa4a22b622f9fb14c01",
+      "d62a33aa0df4677983d9573f60619b5e15ada1135dc745dd5c08ef0f296783f9"
+    ],
+    "candidate_config": {
+      "reasoning": "medium",
+      "web_tool": "web_search_preview",
+      "snippet_chars": 6000,
+      "page_chars": 8000,
+      "top_k": 5,
+      "max_rounds": 8,
+      "max_output_tokens": 4096
+    },
+    "current_code_hashes": {
+      "search_lab.py": "443da3b6f69e7c8e8d09a24100fb0d2135186c008a73fa4c45516e6753ee9bbd",
+      "benchmark.py": "f03314164e1a053df1bee63f238afc94c11fedabebfb1ce6742eb686f02929f5",
+      "validation/__init__.py": "b27a1ac25081635f78d20e5cf688346bc18f9a5acdf130d92a947a003915b320",
+      "validation/budget.py": "027d8547a9e95f7cc83c9fafbd92636424def33b1a102d64ebe9adc4e8420820",
+      "validation/metrics.py": "693befb25a44d463030016ef56c064663f59635644b32e8859b0933e59eeafcd",
+      "validation/planning.py": "97fe501c3ce02c5e6961489592f09e556db0437218fddd1b79c4d547121992d0",
+      "validation/protocol.py": "8af8ae05a70f5dc6e747c917149150f61427c5a1284eb7656d566476f5a79e51",
+      "validation/snapshot.py": "32e763028582a86ff25292bbf098c4650ede35c778ab827c968a70738ecd30d0",
+      "validation/statistics.py": "03049188a073ef85b3c061ac31a6f2c4415fdb9263b6785e3de7324534b09483"
+    },
+    "candidate_corpus_sha256": "d417db3c19b5e7b7dcc0babb6840ce1ce46d48dad17bca1cf5e6f68b183fb470",
+    "selected_case_ids": [
+      "cba_goal_bonus",
+      "ing_bonus",
+      "nab_bonus",
+      "ubank_joint",
+      "cba_pair",
+      "online_conditions",
+      "major_withdrawals",
+      "rates_vs_awards",
+      "cba_source",
+      "macquarie_cap",
+      "anz_options",
+      "neutral_guidance"
+    ],
+    "calibration_code_sha256": "678b0ea81461787acc243b539e1a0caeabe4d5d2118821bc81766a668495e9fc",
+    "notice": "One-factor snippet-length calibration; same frozen corpus and recorded hosted responses."
+  },
+  "cost": {
+    "maximum_usd": 1.5,
+    "accounted_usd": 0.3314907,
+    "settled_requests": 43,
+    "unknown_requests": 0
+  }
+}
