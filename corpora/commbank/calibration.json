@@ -1,5 +1,5 @@
 {
-  "name": "commbank_context_calibration_v3",
+  "name": "commbank_source_evidence_calibration_v4",
   "scope": "Authored Australian savings calibration questions across selected providers; unrestricted hosted web search versus a bounded observed corpus. Not a representative holdout or ChatGPT product validation.",
   "split": "calibration",
   "sampling": "authored_convenience_calibration",
@@ -13,8 +13,8 @@
   "runner": {
     "reasoning": "medium",
     "web_tool": "web_search_preview",
-    "snippet_chars": 3000,
-    "page_chars": 8000,
+    "snippet_chars": 6000,
+    "page_chars": 32000,
     "top_k": 5,
     "max_rounds": 8,
     "max_output_tokens": 4096,

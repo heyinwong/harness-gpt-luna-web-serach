@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-09-24T21:25:47.184188+00:00",
+  "selection_rule": "First two registered questions per category, repeat 0, both modes. Selected before reviewing these final answers.",
+  "case_ids": [
+    "discover_flexible",
+    "discover_simple",
+    "cba_fit",
+    "cba_reasons",
+    "major_choice",
+    "online_choice"
+  ],
+  "repeat": 0,
+  "modes": [
+    "custom",
+    "live"
+  ],
+  "reviewer": "Codex; not independent human review",
+  "criteria": [
+    "Key savings conditions consistent with available source evidence",
+    "Introductory, base and conditional rates distinguished when discussed",
+    "Digital-bank awards not treated as proof of better savings returns",
+    "Material unsupported or contradictory claims recorded; outside-corpus facts marked unverified rather than passed"
+  ],
+  "scope": "Qualitative spot check, not a population accuracy certificate. No configuration will be tuned on these validation answers.",
+  "reviews": [
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "no_material_issue_identified",
+      "note": "Withdrawal and bonus-condition distinctions for the shortlisted accounts agree with captured evidence. This is a spot check, not verification of every statement."
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "partially_verifiable",
+      "note": "Core Macquarie, ubank and ING access/bonus-condition distinctions agree with captured evidence. Bankwest and Bank First are outside the frozen corpus and those claims were not independently verified. The hosted shortlist therefore differs in source coverage from custom."
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "internal_contradiction",
+      "note": "The comparison correctly gives NAB a $1 minimum and ANZ a $10 minimum, but the decision guide calls ANZ the smallest stated deposit requirement. This is a model-answer error."
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "partially_verifiable",
+      "note": "Macquarie and ubank qualification claims agree with captured evidence. Hosted answer also recommends Bankwest and Rabobank, absent from this corpus; those product claims were not independently verified. This demonstrates source-coverage and shortlist differences despite possible agreement in aggregate behavior."
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "no_material_issue_identified",
+      "note": "Key GoalSaver and NetBank Saver rates, bonus rules, intro period and linked-account fees agree with captured source evidence."
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "no_material_issue_identified",
+      "note": "Key rates and qualifying conditions agree with captured source evidence; distinguishes introductory and ongoing rates."
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "no_material_issue_identified",
+      "note": "Key savings rates, introductory versus ongoing distinction, monthly conditions, linked-account fee warning and scheduled-payment restriction agree with captured sources. The $10,000 annual-interest illustration is arithmetically consistent. This review does not certify every general legal/privacy statement."
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "partially_verifiable",
+      "note": "Main savings-account facts agree with captured evidence. APRA and annual-report claims cite pages outside this frozen corpus and were not independently checked in this review; they are unverified, not an accuracy pass."
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "material_error",
+      "note": "Treats GoalSaver withdrawals as branch-only and uses that as a ranking drawback. Visual review of source PDF page 6 (printed pages 4\u20135) shows branch-only is restricted to the Branch/post-office column; electronic transfer and phone banking are also ticked. The extracted split table loses these graphical cells, explicitly marks them uncertain, and may contribute to the error."
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "source_disagreement",
+      "note": "Reports NAB Reward Saver 4.15% (0.01+4.14), whereas captured official product and rate pages report 5.00% (0.01+4.99). Possible hosted index/freshness disagreement; the live answer is not treated as factual ground truth. Snapshot evidence alone does not establish which source version the hosted tool read."
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "finding": "no_material_issue_identified",
+      "note": "Main CommBank, ING and ubank rates and requirements agree with captured sources. No digital-bank award used as proof of savings returns."
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "live",
+      "finding": "no_material_issue_identified",
+      "note": "Main account rates and qualification conditions agree with captured sources. No material discrepancy identified in the checked claims."
+    }
+  ],
+  "interpretation": "Non-blinded diagnostic review. No accuracy percentage or equivalence certificate is inferred. Facts not checked are not counted as correct. Frozen validation configuration is unchanged."
+}

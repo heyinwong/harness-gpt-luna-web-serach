@@ -193,6 +193,21 @@ class ProtocolTests(unittest.TestCase):
 
 
 class BudgetTests(unittest.TestCase):
+    def test_large_search_payload_is_reserved_and_hard_ceiling_still_blocks(self):
+        with tempfile.TemporaryDirectory() as d:
+            calls=[]
+            response={'id':'test','usage':{'input_tokens':100,'output_tokens':100},'output':[]}
+            def transport(payload):
+                calls.append(payload)
+                return response
+            budget=BudgetedTransport(Path(d)/'budget.json',2,transport)
+            payload=self.payload()|{'tools':[{'type':'function','name':'search'}],'input':'x'*250000}
+            budget(payload)
+            self.assertGreater(budget.ledger['requests'][0]['reserved_usd'],.125)
+            with self.assertRaisesRegex(RuntimeError,'750k-byte'):
+                budget(payload|{'input':'x'*750000})
+            self.assertEqual(len(calls),1)
+
     def payload(self):
         return {'model':'gpt-5.6-luna','tools':[{'type':'web_search_preview'}],
                 'reasoning':{'effort':'medium'},'max_tool_calls':8,'max_output_tokens':4096}

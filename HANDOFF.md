@@ -4,11 +4,11 @@ Operate this repository; keep **GPT-5.6 Luna** as the experimental model. The ow
 
 ## One setup
 
-Use `context` retrieval, 3,000-character search excerpts, five results per query, 8,000-character open windows, eight model rounds and medium reasoning. Search selects source passages with their adjacent question/heading and qualifying bullets. Page ranking uses readable link labels rather than URL tracking text. `open`, `click` and `find` remain available whenever Luna needs them. Never force an open count.
+Use `context` retrieval, 6,000-character search excerpts, five results per query, 32,000-character open windows, eight model rounds and medium reasoning. Search selects source passages with their adjacent question/heading and qualifying bullets. Page ranking uses readable link labels rather than URL tracking text. `open`, `click` and `find` remain available whenever Luna needs them. Never force an open count.
 
 The current corpus has **69 documents**, including CommBank and competitors. `reference.json` preserves the captured pages. `experiment.json` supplies the six award-placement conditions. The target is the existing **Canstar 2024 Digital Banking Bank of the Year** footnote, a bank-level award. It is visible after scrolling; this is a text-retrieval experiment, not a visual-attention experiment.
 
-Read [VALIDATION.md](VALIDATION.md) for the latest measured results and limitations. A functioning experiment is not automatically evidence of similarity to hosted Luna. Do not turn an inconclusive confidence result into a percentage-similarity claim.
+The completed 72-answer comparison found 6.47 versus 7.06 queries and 0.50 versus 0.33 opens per answer (custom versus hosted). Opening patterns and search batching still differ, and category results are less similar. Use the scoped claim in [VALIDATION.md](VALIDATION.md); formal equivalence remains inconclusive. The experiment is ready to run as a controlled exploratory study.
 
 ## Get the inputs
 
@@ -19,7 +19,7 @@ python3 -m pip install -r requirements-validation.txt
 python3 -m unittest discover -s tests -q
 ```
 
-Prefer the owner's **private frozen handover bundle**. It preserves the exact corpus and raw evidence; these are intentionally absent from the public repository. On the original machine the prepared inputs are in `results/commbank_final/`.
+Prefer the owner's **private frozen handover bundle**, `commbank-handoff.zip`. Extract it and work inside `luna-harness/`; `BUNDLE_MANIFEST.json` lists file hashes. It preserves the exact corpus and raw evidence; these are intentionally absent from the public repository. On the original machine the prepared inputs are in `results/commbank_final/`.
 
 If the private inputs are unavailable, build a new corpus:
 
@@ -29,9 +29,9 @@ python3 commbank_setup.py --cache results/commbank-cache --out-dir results/commb
 
 Building needs Node/npm and Chrome for selected dynamic pages, but spends no model-API credit. A fresh capture is a new corpus: rerun the comparison below. Do not inherit the old similarity result when corpus, model, retrieval, instructions or question mix changes. For an exact offline rebuild from a transferred raw cache, add `--offline` and use the cache path in the bundle.
 
-## Run the comparison
+## Repeat the comparison when inputs change
 
-The following assumes the frozen inputs are at `results/commbank_final`. Change that path if you made a fresh build. Keep the key in an ignored `.env`; never paste it into chat.
+The frozen bundle already includes the completed comparison, so there is no need to buy the same check again merely to hand over. The following assumes the frozen inputs are at `results/commbank_final`. Change that path if you made a fresh build. Keep the key in an ignored `.env`; never paste it into chat.
 
 ```sh
 python3 benchmark.py freeze --profile results/commbank_final/validation.json --corpus results/commbank_final/reference.json --out-dir results/my-comparison
@@ -46,10 +46,10 @@ This compares 18 previously authored experiment questions, twice per mode: 72 an
 Use the same corpus version and retrieval configuration as the comparison:
 
 ```sh
-python3 suite.py --corpus results/commbank_final/experiment.json --questions results/commbank_final/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --retrieval context --snippet-chars 3000 --page-chars 8000 --top-k 5 --max-rounds 8 --out-dir results/my-awards
+python3 suite.py --corpus results/commbank_final/experiment.json --questions results/commbank_final/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --retrieval context --snippet-chars 6000 --page-chars 32000 --top-k 5 --max-rounds 8 --out-dir results/my-awards
 ```
 
-This is plan-only: 216 custom answers. Add `--allow-paid`, an authorized `--budget-usd`, `--stop-after-estimated-usd` and `--max-runs` to execute. Start with a small operational batch. The same command resumes completed jobs; changing the configuration requires a new directory. Hosted web search cannot see the local treatments.
+The six-condition operational smoke test has completed and the scoring pipeline has been exercised. The full award study has not been run. This is plan-only: 216 custom answers. Add `--allow-paid`, an authorized `--budget-usd`, `--stop-after-estimated-usd` and `--max-runs` to execute. Start with a small operational batch. The same command resumes completed jobs; changing the configuration requires a new directory. Hosted web search cannot see the local treatments.
 
 ```sh
 python3 award_report.py prepare --suite-dir results/my-awards --corpus results/commbank_final/experiment.json --out results/my-awards/scoring.json
@@ -62,3 +62,5 @@ python3 award_report.py analyze --suite-dir results/my-awards --scores results/m
 ```
 
 A mention is not necessarily an endorsement or correct award use. Other awards remain in background pages. The separate award hub is an explicitly counterfactual local page. [COMMBANK_RUNBOOK.md](COMMBANK_RUNBOOK.md) documents the exact arms and contrasts if needed.
+
+When scoring, check PDF-dependent claims against the cached original: one validation answer misread the GoalSaver withdrawal table. Do not treat hosted answers as factual ground truth either; source versions can disagree. Preserve these errors in the quality report.

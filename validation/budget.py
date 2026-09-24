@@ -23,8 +23,11 @@ class BudgetedTransport:
         if hosted and payload.get("reasoning", {}).get("effort") == "none":
             raise RuntimeError("Budgeted hosted pilot requires a reasoning effort other than none")
         encoded_bytes = len(json.dumps(payload, ensure_ascii=False).encode())
-        if encoded_bytes > 200000:
-            raise RuntimeError("Pilot request exceeds the declared 200k-byte client-input ceiling")
+        # Rich multi-query search results can exceed 200k bytes. Keep a byte-based
+        # upper bound below the model's context capacity; reserve every byte as a
+        # token before the request rather than truncating evidence to save budget.
+        if encoded_bytes > 750000:
+            raise RuntimeError("Pilot request exceeds the declared 750k-byte client-input ceiling")
         # Bytes conservatively bound ordinary BPE text tokens. Hosted retrieval is hidden,
         # so reserve the entire documented 1.05M model window for hosted input instead.
         input_reserve = 1050000 if hosted else encoded_bytes + 4096

@@ -1,0 +1,3378 @@
+{
+  "verdict": "inconclusive",
+  "confidence_level": 0.95,
+  "simultaneous_coordinates": 196,
+  "interval_method": "Two-sided empirical Bernstein bounds with Bonferroni correction; paired question clusters.",
+  "scope": "Authored Australian savings calibration questions across selected providers; unrestricted hosted web search versus a bounded observed corpus. Not a representative holdout or ChatGPT product validation.",
+  "manifest_sha256": "516bd3058c423a62057ef63d6613abf5f5f5b3fe97ebe130a3d35d547e8e0e87",
+  "planned_runs": 48,
+  "observed_runs": 48,
+  "n_independent_questions": 12,
+  "flags": [
+    "exploratory_split_not_confirmatory",
+    "representative_independent_sampling_not_declared",
+    "too_few_independent_questions",
+    "too_few_questions_in_category:comparison",
+    "too_few_questions_in_category:conditions",
+    "too_few_questions_in_category:lookup"
+  ],
+  "point_estimates_outside_tolerance": [
+    "open_actions",
+    "any_open",
+    "search_count_distribution",
+    "open_count_distribution"
+  ],
+  "rows": [
+    {
+      "scope": "overall",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 2.0833333333333335,
+      "live": 2.5416666666666665,
+      "interval": {
+        "estimate": -0.4583333333333333,
+        "low": -20,
+        "high": 20,
+        "n_questions": 12
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "overall",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 1.7916666666666667,
+      "live": 1.2916666666666667,
+      "interval": {
+        "estimate": 0.5,
+        "low": -12,
+        "high": 12,
+        "n_questions": 12
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "overall",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 1.9583333333333333,
+      "live": 0.5,
+      "interval": {
+        "estimate": 1.4583333333333333,
+        "low": -10,
+        "high": 10,
+        "n_questions": 12
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.7083333333333334,
+      "live": 0.5,
+      "interval": {
+        "estimate": 0.20833333333333334,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.20833333333333334,
+      "live": 0.041666666666666664,
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": -10,
+        "high": 10,
+        "n_questions": 12
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.8333333333333334,
+      "live": 0.9722222222222223,
+      "interval": {
+        "estimate": -0.1388888888888889,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 1.5,
+      "live": 1.5416666666666667,
+      "interval": {
+        "estimate": -0.041666666666666664,
+        "low": -10,
+        "high": 10,
+        "n_questions": 12
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.4166666666666667,
+      "live": 0.4166666666666667,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 1.3333333333333333,
+      "live": 1.3333333333333333,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 12
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 375.75,
+      "live": 356.2916666666667,
+      "interval": {
+        "estimate": 19.458333333333332,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 12
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "overall",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.6666666666666666,
+        0.2916666666666667,
+        0.041666666666666664,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.5,
+        0.4583333333333333,
+        0.041666666666666664,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": -0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "overall",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.2916666666666667,
+        0.2916666666666667,
+        0.0,
+        0.3333333333333333,
+        0.08333333333333333
+      ],
+      "live": [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.4166666666666667,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.20833333333333334,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": -0.20833333333333334,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.3333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3055555555555556,
+        0.08333333333333333,
+        0.1111111111111111,
+        0.05555555555555555,
+        0.1111111111111111,
+        0.06944444444444443,
+        0.1111111111111111,
+        0.0625,
+        0.027777777777777776,
+        0.0,
+        0.020833333333333332,
+        0.041666666666666664
+      ],
+      "live": [
+        0.3125,
+        0.08333333333333333,
+        0.1111111111111111,
+        0.0625,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.08333333333333333,
+        0.013888888888888888,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.07638888888888888,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.006944444444444443,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": -0.006944444444444443,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": -0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": -0.020833333333333332,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.013888888888888888,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.020833333333333332,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "overall",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3194444444444445,
+        0.08333333333333333,
+        0.1111111111111111,
+        0.06944444444444443,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.0,
+        0.0,
+        0.0,
+        0.08333333333333333
+      ],
+      "live": [
+        0.3194444444444445,
+        0.08333333333333333,
+        0.1111111111111111,
+        0.06944444444444443,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.0,
+        0.0,
+        0.0,
+        0.08333333333333333
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 12,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 12
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 12
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 12,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 1.375,
+      "live": 2.75,
+      "interval": {
+        "estimate": -1.375,
+        "low": -20,
+        "high": 20,
+        "n_questions": 4
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "lookup",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 1.375,
+      "live": 1.375,
+      "interval": {
+        "estimate": 0.0,
+        "low": -12,
+        "high": 12,
+        "n_questions": 4
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "lookup",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 3.625,
+      "live": 0.625,
+      "interval": {
+        "estimate": 3.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 0.625,
+      "interval": {
+        "estimate": 0.375,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.625,
+      "live": 0.125,
+      "interval": {
+        "estimate": 0.5,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 1.125,
+      "live": 1.125,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.25,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 0.75,
+      "live": 0.75,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "lookup",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 380.875,
+      "live": 364.625,
+      "interval": {
+        "estimate": 16.25,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 4
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "lookup",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "lookup",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.375,
+        0.625,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.625,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.625,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.625,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "lookup",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.25,
+        0.0,
+        0.5,
+        0.25
+      ],
+      "live": [
+        0.375,
+        0.625,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.75,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.375,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.375,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "lookup",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.1875,
+        0.0,
+        0.0,
+        0.0625,
+        0.0
+      ],
+      "live": [
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0625,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.0625,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0625,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "lookup",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "live": [
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "lookup",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "lookup",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 3.5,
+      "live": 3.75,
+      "interval": {
+        "estimate": -0.25,
+        "low": -20,
+        "high": 20,
+        "n_questions": 4
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "comparison",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 2.625,
+      "live": 1.5,
+      "interval": {
+        "estimate": 1.125,
+        "low": -12,
+        "high": 12,
+        "n_questions": 4
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "comparison",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 1.5,
+      "live": 0.5,
+      "interval": {
+        "estimate": 1.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.625,
+      "live": 0.5,
+      "interval": {
+        "estimate": 0.125,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.6874999999999999,
+      "live": 0.9166666666666666,
+      "interval": {
+        "estimate": -0.22916666666666669,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 2.5,
+      "live": 2.375,
+      "interval": {
+        "estimate": 0.125,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.75,
+      "live": 0.75,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 2.25,
+      "live": 2.25,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 565.875,
+      "live": 521.875,
+      "interval": {
+        "estimate": 44.0,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 4
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "comparison",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.0,
+        0.875,
+        0.125,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.125,
+        0.75,
+        0.125,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.125,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "comparison",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.375,
+        0.25,
+        0.0,
+        0.375,
+        0.0
+      ],
+      "live": [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.375,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.375,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.41666666666666663,
+        0.0,
+        0.08333333333333333,
+        0.16666666666666666,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.4375,
+        0.0,
+        0.08333333333333333,
+        0.1875,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.041666666666666664,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.04166666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.02083333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.02083333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.4583333333333333,
+        0.0,
+        0.08333333333333333,
+        0.20833333333333331,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.4583333333333333,
+        0.0,
+        0.08333333333333333,
+        0.20833333333333331,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 1.375,
+      "live": 1.125,
+      "interval": {
+        "estimate": 0.25,
+        "low": -20,
+        "high": 20,
+        "n_questions": 4
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "conditions",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 1.375,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.375,
+        "low": -12,
+        "high": 12,
+        "n_questions": 4
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "conditions",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 0.75,
+      "live": 0.375,
+      "interval": {
+        "estimate": 0.375,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.5,
+      "live": 0.375,
+      "interval": {
+        "estimate": 0.125,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.8125,
+      "live": 1.0,
+      "interval": {
+        "estimate": -0.1875,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 0.875,
+      "live": 1.125,
+      "interval": {
+        "estimate": -0.25,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.25,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 4
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "conditions",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 180.5,
+      "live": 182.375,
+      "interval": {
+        "estimate": -1.875,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 4
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "conditions",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "conditions",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "conditions",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.5,
+        0.375,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "live": [
+        0.625,
+        0.375,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.125,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "conditions",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "live": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.125,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": -0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.125,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "conditions",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 4,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 4
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "conditions",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "conditions",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 4
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 4,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    }
+  ],
+  "live_repeatability": {
+    "search_queries": {
+      "mean_absolute_repeat_difference": 0.75,
+      "n_questions": 12
+    },
+    "search_actions": {
+      "mean_absolute_repeat_difference": 0.4166666666666667,
+      "n_questions": 12
+    },
+    "open_actions": {
+      "mean_absolute_repeat_difference": 0.6666666666666666,
+      "n_questions": 12
+    },
+    "any_open": {
+      "mean_absolute_repeat_difference": 0.6666666666666666,
+      "n_questions": 12
+    },
+    "find_actions": {
+      "mean_absolute_repeat_difference": 0.08333333333333333,
+      "n_questions": 12
+    },
+    "site_query_share": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "citation_domains": {
+      "mean_absolute_repeat_difference": 0.25,
+      "n_questions": 12
+    },
+    "target_mention": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "entity_mentions": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "answer_words": {
+      "mean_absolute_repeat_difference": 60.75,
+      "n_questions": 12
+    },
+    "completed": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    },
+    "budget_limited": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 12
+    }
+  },
+  "interpretation": "Confidence is coverage of registered metric bounds under the sampling assumptions; it is not a probability that two agents are identical or that results transfer to all future designs.",
+  "precision_plan": {
+    "notice": "Optimistic precision floor assuming zero difference and zero variance (perfect reliability for quality gates). Actual variance or a gap increases sample requirements; a gap outside tolerance requires a design change. Counts are independent questions per scope, not model repetitions. This is not a power calculation.",
+    "requirements": [
+      {
+        "scope": "overall",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "overall",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "overall",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "overall",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "lookup",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "lookup",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "lookup",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "lookup",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "lookup",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "lookup",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "lookup",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "lookup",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "lookup",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "lookup",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "conditions",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "conditions",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "conditions",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "conditions",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "conditions",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "conditions",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "conditions",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "conditions",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "conditions",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "conditions",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      }
+    ],
+    "largest_per_scope_floor": 1805
+  },
+  "coverage": {
+    "reported_hosted_source_urls": 265,
+    "source_urls_in_snapshot": 77,
+    "notice": "URL overlap ignores query, scheme and fragment. It does not establish identical content, complete candidate coverage or actual reading.",
+    "outside_snapshot_count": 188
+  },
+  "observations": [
+    {
+      "case_id": "cba_pair",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.026515
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013307
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011449
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012383
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004979
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001688
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013327
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002344
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007571
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.003052
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005094
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005693
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00775
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006092
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008907
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001571
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005933
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002314
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012074
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013421
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001212
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025605
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007851
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024904
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005794
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015267
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00765
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001118
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.028296
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011539
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015034
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013257
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02647
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008938
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025746
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012416
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.014743
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008224
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015062
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004173
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015165
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001598
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002627
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012113
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025186
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.01146
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002704
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013219
+    }
+  ],
+  "estimated_usd": 0.5228349999999999,
+  "conservative_accounted_usd": 1.0131069000000004,
+  "billing_status_counts": {
+    "settled": 106
+  },
+  "provenance_note": "Allowlisted numeric export of real recorded runs. Raw snapshots, API responses and traces remain private. Exploratory trials reusing hosted responses are not independent validations."
+}

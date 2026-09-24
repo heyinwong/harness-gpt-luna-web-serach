@@ -1,5 +1,5 @@
 {
-  "name": "commbank_award_question_validation_v1",
+  "name": "commbank_source_evidence_validation_v4",
   "scope": "Unmodified-page check on the 18 previously authored award-experiment questions. Unseen by candidate paid tuning; finite task-set evidence, not representative ChatGPT population validation.",
   "split": "validation",
   "sampling": "authored_convenience_validation",
@@ -13,8 +13,8 @@
   "runner": {
     "reasoning": "medium",
     "web_tool": "web_search_preview",
-    "snippet_chars": 3000,
-    "page_chars": 8000,
+    "snippet_chars": 6000,
+    "page_chars": 32000,
     "top_k": 5,
     "max_rounds": 8,
     "max_output_tokens": 4096,

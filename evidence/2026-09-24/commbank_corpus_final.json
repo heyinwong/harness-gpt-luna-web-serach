@@ -334,7 +334,7 @@
   "unresolved_capture_failures": 0,
   "unresolved_quality_flags": 0,
   "award_footnote_text_fraction": 0.8567164179104477,
-  "offline_tests": 65,
+  "offline_tests": 68,
   "captured_sources": [
     {
       "url": "https://www.amp.com.au/personal-banking/everyday-money/amp-bank-go-save",
@@ -1261,5 +1261,7 @@
   ],
   "changes_from_previous_corpus": [
     "Scope five ING HTML captures to product sections plus Important Information; exclude unrelated global help menus and retain footer legal conditions."
-  ]
+  ],
+  "offline_rebuild_verified": true,
+  "offline_rebuild_note": "Clean credential-free code export passed all 68 tests; reference.json and experiment.json rebuilt byte-for-byte from transferred raw cache."
 }

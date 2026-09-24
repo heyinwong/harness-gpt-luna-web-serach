@@ -1,0 +1,560 @@
+{
+  "verdict": "EXPLORATORY_ONLY",
+  "notice": "Reuses a recorded hosted reference. Selected after seeing pilot results; not a new holdout, confidence test or proof of transfer. Each row uses questions with all repetitions measurable in all three groups. Reliability rows include failures.",
+  "rows": [
+    {
+      "metric": "search_queries",
+      "n_matched_questions": 12,
+      "original_custom": 2.0833333333333335,
+      "candidate_custom": 1.875,
+      "hosted": 2.5416666666666665,
+      "registered_margin": 1.5
+    },
+    {
+      "metric": "search_actions",
+      "n_matched_questions": 12,
+      "original_custom": 1.7916666666666667,
+      "candidate_custom": 1.875,
+      "hosted": 1.2916666666666667,
+      "registered_margin": 1.0
+    },
+    {
+      "metric": "open_actions",
+      "n_matched_questions": 12,
+      "original_custom": 1.9583333333333333,
+      "candidate_custom": 0.875,
+      "hosted": 0.5,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "any_open",
+      "n_matched_questions": 12,
+      "original_custom": 0.7083333333333334,
+      "candidate_custom": 0.5416666666666666,
+      "hosted": 0.5,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "find_actions",
+      "n_matched_questions": 12,
+      "original_custom": 0.20833333333333334,
+      "candidate_custom": 0.125,
+      "hosted": 0.041666666666666664,
+      "registered_margin": 0.35
+    },
+    {
+      "metric": "site_query_share",
+      "n_matched_questions": 12,
+      "original_custom": 0.8333333333333334,
+      "candidate_custom": 0.9027777777777778,
+      "hosted": 0.9722222222222223,
+      "registered_margin": 0.15
+    },
+    {
+      "metric": "citation_domains",
+      "n_matched_questions": 12,
+      "original_custom": 1.5,
+      "candidate_custom": 1.5416666666666667,
+      "hosted": 1.5416666666666667,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "target_mention",
+      "n_matched_questions": 12,
+      "original_custom": 0.4166666666666667,
+      "candidate_custom": 0.4166666666666667,
+      "hosted": 0.4166666666666667,
+      "registered_margin": 0.1
+    },
+    {
+      "metric": "entity_mentions",
+      "n_matched_questions": 12,
+      "original_custom": 1.3333333333333333,
+      "candidate_custom": 1.3333333333333333,
+      "hosted": 1.3333333333333333,
+      "registered_margin": 0.5
+    },
+    {
+      "metric": "answer_words",
+      "n_matched_questions": 12,
+      "original_custom": 375.75,
+      "candidate_custom": 348.2916666666667,
+      "hosted": 356.2916666666667,
+      "registered_margin": 100
+    },
+    {
+      "metric": "completed",
+      "n_matched_questions": 12,
+      "original_custom": 1.0,
+      "candidate_custom": 1.0,
+      "hosted": 1.0,
+      "registered_margin": 0.05
+    },
+    {
+      "metric": "budget_limited",
+      "n_matched_questions": 12,
+      "original_custom": 0.0,
+      "candidate_custom": 0.0,
+      "hosted": 0.0,
+      "registered_margin": 0.05
+    }
+  ],
+  "distributions": [
+    {
+      "metric": "search_count_distribution",
+      "n_matched_questions": 12,
+      "registered_margin": 0.15,
+      "means": {
+        "original_custom": [
+          0.0,
+          0.6666666666666666,
+          0.2916666666666667,
+          0.041666666666666664,
+          0.0
+        ],
+        "candidate_custom": [
+          0.0,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.0,
+          0.0
+        ],
+        "hosted": [
+          0.0,
+          0.5,
+          0.4583333333333333,
+          0.041666666666666664,
+          0.0
+        ]
+      },
+      "original_custom_vs_hosted_tv": 0.16666666666666663,
+      "candidate_custom_vs_hosted_tv": 0.16666666666666666
+    },
+    {
+      "metric": "open_count_distribution",
+      "n_matched_questions": 12,
+      "registered_margin": 0.1,
+      "means": {
+        "original_custom": [
+          0.2916666666666667,
+          0.2916666666666667,
+          0.0,
+          0.3333333333333333,
+          0.08333333333333333
+        ],
+        "candidate_custom": [
+          0.4583333333333333,
+          0.3333333333333333,
+          0.08333333333333333,
+          0.125,
+          0.0
+        ],
+        "hosted": [
+          0.5,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "original_custom_vs_hosted_tv": 0.4166666666666667,
+      "candidate_custom_vs_hosted_tv": 0.20833333333333334
+    },
+    {
+      "metric": "citation_domain_distribution",
+      "n_matched_questions": 12,
+      "registered_margin": 0.15,
+      "means": {
+        "original_custom": [
+          0.3055555555555556,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.05555555555555555,
+          0.1111111111111111,
+          0.06944444444444443,
+          0.1111111111111111,
+          0.0625,
+          0.027777777777777776,
+          0.0,
+          0.020833333333333332,
+          0.041666666666666664
+        ],
+        "candidate_custom": [
+          0.3020833333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.052083333333333336,
+          0.1111111111111111,
+          0.06944444444444443,
+          0.1111111111111111,
+          0.0625,
+          0.024305555555555552,
+          0.010416666666666666,
+          0.020833333333333332,
+          0.041666666666666664
+        ],
+        "hosted": [
+          0.3125,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.0625,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.08333333333333333,
+          0.013888888888888888,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "original_custom_vs_hosted_tv": 0.07638888888888888,
+      "candidate_custom_vs_hosted_tv": 0.08333333333333334
+    },
+    {
+      "metric": "entity_distribution",
+      "n_matched_questions": 12,
+      "registered_margin": 0.15,
+      "means": {
+        "original_custom": [
+          0.3194444444444445,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.06944444444444443,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.0,
+          0.08333333333333333
+        ],
+        "candidate_custom": [
+          0.3194444444444445,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.06944444444444443,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.0,
+          0.08333333333333333
+        ],
+        "hosted": [
+          0.3194444444444445,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.06944444444444443,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "original_custom_vs_hosted_tv": 0.0,
+      "candidate_custom_vs_hosted_tv": 0.0
+    }
+  ],
+  "candidate_runs": 24,
+  "candidate_statuses": {
+    "completed": 24
+  },
+  "manifest": {
+    "baseline_manifest": "516bd3058c423a62057ef63d6613abf5f5f5b3fe97ebe130a3d35d547e8e0e87",
+    "source_trace_hashes": [
+      "c5f3730dc5be24f4109d59b872d376f778dd4834e424666189de97217e3f4d66",
+      "2755b91bcde3e818aeda2dc2096821fe646b905f25991d3de38ff017f278a5ac",
+      "f4647e1088674ac73aa82b5e773db01d3fb23d405ad0ce2696f8434b79b57c2b",
+      "65b165030d8ef32f4fff29da40612be18dcf4c54347a0e9c6761bbd903a2c632",
+      "41c503f89032575041f319efbfca4200641e4056e44888c133cfd6241c79d1ce",
+      "873d46de8bbff97c32b65bca950e1e2939611c2707ab3df20c1f744a35a56478",
+      "f6d137f474eccca8f194516a1b83ab7533fc4ceaf8227c329541b361b6e28984",
+      "5abdc28ea1643b79f724637ff8d05dfb9fed50746f7656c8edf6bbdb6ce0e0fe",
+      "e848fa67b604184f86225d4a8c423afb01d4ea253cea15c33706a910e96c8936",
+      "7abf13c7523d39fd3ec667288f4eacf8183c048ec6efcf48cccf215b8b84a08b",
+      "8ef8be5ca42559c3bbcc3220b9e641a6b29b1611420a937c6b61ff993e01f0f2",
+      "a46b85203b58ce7639031556c31cf50cb695446f9ac6f498837bd51a43d47fb9",
+      "3561bb2f348b96f3b07f8559ae033a6446ba2491f7392e77fa44768cb849614d",
+      "f73df593a35495b12b8de0faf4e3a00daf23c22d082d221cc03840e7cddb4789",
+      "2306df05858e42a9cddcbaf219d10cb668112ebea8287165ede8aac2e2121398",
+      "c7929996d2f488c85ba5e0344d172c8d53ad61a01bb3ab65d762c7d779b436a1",
+      "1f3f4d33c98e09fe9a9105788eb57b5ca36c11361548ad78d9470696a50cf909",
+      "8338f5e561266ef67cf7ba7666a9b8b6722d2fb1eecd2cc5d0053e7128759435",
+      "14b5331f6b523f5035934a99970599f266fec0df4cc66bc5fb81767c8bdb7344",
+      "0e5460956d97b3d91978e057acd44a0fcdd1dfdab9dbc378898efc3f5413a4f6",
+      "5bad1cb23d12b0a19472aa596fad6de000896be064cfb4717cddbd2c309d7250",
+      "95083ece67531f113ad7cbe0cb4f9c89774f9beec9201fb6214c957c65b84030",
+      "c9f9d315f79c5c1dbae8b94c9afb3a9d394382d04f0ca9b605c4effe436a279c",
+      "7cf00ace84bb5f65d7665ec9213515873f40e00343efdf2cb114ad05a97f7d73",
+      "bf93548506cb90ead7bed831b8e2dca41e961b57f3ca2760915d266dd70025ee",
+      "8e4c9178818bdda80fd9241317c05fb3d8056e407005eebb08f7fc5fb1576a46",
+      "69711a5db39ee0361fd34b965f666192a30ceaaa1947cb25ae845bc52d9fcd8d",
+      "3e5fe648064330173894c394bec20a06abb3ba63039531d44855f7b7e0766061",
+      "c4454cff5975caac59f23b372ca70530d1b6edbfe5241e823b68987b15568aec",
+      "c6bfabdad8f805eddeafded9bfa76f05494648d918bc22dd69e1167bc9ab5d24",
+      "27a3859e796c12d79eac1233436baf54e02cd42726752c2f77b79fad9c7c0a26",
+      "b2286351a3abe81c6c06ec5cf49e4b2846b94771b9b315e14afc8e7ba263cde7",
+      "cf8b606689d5cc1bf1b097e813986f88e8061d3f136e22179e71a3db0fa97d14",
+      "ba79b4f2871a0e6fdf76a0cacee6abb1c2cebe0d92c1b8209442443e94aae88a",
+      "449c2ca455b5649be2163704c96b776cebdc4b58d172119a5c3bd73f0ebafb2f",
+      "0d8385d3041cecd4ebfa33d722175abdd17edafd5d63cc0b13756b0859dae325",
+      "21e5290ab44668808b1cc556e4885b0900138e704bd1fb52852122b8979f08d8",
+      "ffaa28371cba8bc1e108116d1abffde68d1702158f170d476578f93291586d18",
+      "b33fe2f78e83d34bc8aebd8459c9743eacec66b04ca529d38d2fbf083ce7dd67",
+      "bb8c68ec4151c6a6b5a967ff6989e46529c5aeb29a69178f7f4d6e1a18912e22",
+      "15cc2549cd49830eb5222ea46224cbe1db908fc10dc16bc1be45bfe696c4d9ef",
+      "1dcd28fd2b70d7d05e9b4d58aeb807db429c01189c43704017a7be66e0430e0a",
+      "2bad1e570b6557858a43647806d65819e8ae89a51e532011c9f3a9c820d9592c",
+      "87f54b92b6bf213ce024cb0850585da02a65d5a2b2c12e4ad886c7e75b58eb55",
+      "2039f5517e78841596868b2559c2313226b90a9024a8353e19f0f42ae32bd14a",
+      "56ea1bd16d18f49a65449aeeb3e06dfb36e301a2cffbd14211b4c48fa1d108e0",
+      "f8b9d359f0e3b09d773de497cfb4522b1a7347bd545c6d295ec8f836419032c3",
+      "e933ca8c99c9323a043078b1b0cab9622bfa26814315d8c1472f79a607df2e8c"
+    ],
+    "candidate_config": {
+      "reasoning": "medium",
+      "web_tool": "web_search_preview",
+      "snippet_chars": 6000,
+      "page_chars": 32000,
+      "top_k": 5,
+      "max_rounds": 8,
+      "max_output_tokens": 4096,
+      "retrieval": "context"
+    },
+    "current_code_hashes": {
+      "search_lab.py": "06814dc99cd7cc3771f85c4948cb5ba8b714486961794967df59bc9300111fa3",
+      "benchmark.py": "80f6122492333afbb54116f05f4109ceeea852fb205937808adaec015f57a3fe",
+      "context_passages.py": "7ba5deadb651d7de045108fa9becbaffb0dc0ac6fcec72b8c9fee5e529d3c77c",
+      "passage_retrieval.py": "58617c6779c1e7697cc3ad7439700f2a8152dee29defa306df11c81d229025ff",
+      "validation/__init__.py": "b27a1ac25081635f78d20e5cf688346bc18f9a5acdf130d92a947a003915b320",
+      "validation/budget.py": "4c827f59d0df5d1c7f504d16d13ad20de3dfc9828d922de7eb2fc5560adf2cd9",
+      "validation/metrics.py": "693befb25a44d463030016ef56c064663f59635644b32e8859b0933e59eeafcd",
+      "validation/planning.py": "97fe501c3ce02c5e6961489592f09e556db0437218fddd1b79c4d547121992d0",
+      "validation/protocol.py": "8af8ae05a70f5dc6e747c917149150f61427c5a1284eb7656d566476f5a79e51",
+      "validation/snapshot.py": "32e763028582a86ff25292bbf098c4650ede35c778ab827c968a70738ecd30d0",
+      "validation/statistics.py": "03049188a073ef85b3c061ac31a6f2c4415fdb9263b6785e3de7324534b09483"
+    },
+    "candidate_corpus_sha256": "63068d5253678ba349e3056a3e1045b7e000eb820a17fb83e91472ed6b3b7b5d",
+    "selected_case_ids": [
+      "cba_goal_bonus",
+      "ing_bonus",
+      "nab_bonus",
+      "ubank_joint",
+      "cba_pair",
+      "online_conditions",
+      "major_withdrawals",
+      "rates_vs_awards",
+      "cba_source",
+      "macquarie_cap",
+      "anz_options",
+      "neutral_guidance"
+    ],
+    "calibration_code_sha256": "bea621ef72cf3bd8d001b294ae8954408284d6e0c0cf4baf158f00bb14882ad7",
+    "notice": "New-design calibration on the same frozen corpus and questions, reusing hosted responses. Implementation and runner settings may change; this is not a one-factor causal ablation."
+  },
+  "observations": [
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002771
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004666
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.000909
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00677
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00884
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00186
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005178
+    },
+    {
+      "case_id": "ubank_joint",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002262
+    },
+    {
+      "case_id": "anz_options",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008939
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002633
+    },
+    {
+      "case_id": "nab_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001523
+    },
+    {
+      "case_id": "neutral_guidance",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001234
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004669
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001617
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.009167
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004519
+    },
+    {
+      "case_id": "cba_goal_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.002976
+    },
+    {
+      "case_id": "cba_source",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006692
+    },
+    {
+      "case_id": "rates_vs_awards",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005871
+    },
+    {
+      "case_id": "online_conditions",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004661
+    },
+    {
+      "case_id": "cba_pair",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005197
+    },
+    {
+      "case_id": "major_withdrawals",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005562
+    },
+    {
+      "case_id": "ing_bonus",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.001674
+    },
+    {
+      "case_id": "macquarie_cap",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005479
+    }
+  ],
+  "estimated_usd": 0.105669,
+  "conservative_accounted_usd": 0.29091160000000005,
+  "billing_status_counts": {
+    "settled": 66
+  },
+  "provenance_note": "Allowlisted numeric export of real recorded runs. Raw snapshots, API responses and traces remain private. Exploratory trials reusing hosted responses are not independent validations."
+}

@@ -24,7 +24,7 @@ python commbank_setup.py --cache results/commbank-cache --out-dir results/commba
 
 This command uses ordinary public-web requests and Playwright CLI; it does **not** load a key or call a model. It produces `reference.json`, `experiment.json`, `audit.json`, `calibration.json`, `validation.json` and the question files. Output directories are immutable. Browser captures and original HTTP responses remain in the private cache. Rerunning against an existing cache reuses it; choose a new cache directory to refresh sources.
 
-For the original machine, the existing cache is `results/commbank_build/cache`, the current reviewed corpus is `results/commbank_final` (identical reference/experiment content to `results/commbank_corpus_v6`), discovery is `results/commbank_discovery_v1`, and the first bank calibration is `results/commbank_calibration_v1`. These paths are **not in a public clone**. A private handover archive can preserve them without publishing bank-page copies or model traces.
+For the original machine, the existing cache is `results/commbank_build/cache`, the current reviewed corpus is `results/commbank_final` (identical reference/experiment content to `results/commbank_corpus_v6`), discovery is `results/commbank_discovery_v1`, and the first bank calibration is `results/commbank_calibration_v1`. These paths are **not in a public clone**. The private `commbank-handoff.zip` preserves them, along with current validation and operational evidence, without publishing bank-page copies or model traces.
 
 To rebuild entirely from a transferred cache:
 
@@ -55,7 +55,7 @@ Other CommBank and competitor award evidence remains unchanged in the background
 
 This is a **text retrieval experiment**, not a visual-attention study. Collapsed/low-page content may still be accessible to search. BM25 can surface a footnote directly; being low on a human viewport does not imply the model missed it. Measure observed exposure, navigation and answer use separately.
 
-## Actual calibration so far
+## Historical calibration
 
 The first bank calibration used the **initial 67-document corpus**, before the ANZ dynamic-rate repair. Of 48 planned runs, hosted completed 24/24 and custom 23/24; one ANZ case exhausted its eight rounds. On 11 fully comparable questions, query counts averaged 3.00 custom versus 2.73 hosted, while opens averaged 2.77 versus 0.41. The verdict is **inconclusive**, with a substantial observed opening gap. See `evidence/2026-09-24/commbank_calibration_v1.json`.
 
@@ -76,7 +76,7 @@ The last command is plan-only. After the owner authorizes that run's budget, add
 python benchmark.py report --run-dir results/commbank-check-v1
 ```
 
-The current configuration uses context-preserving source passages, 3,000-character search excerpts and 8,000-character open windows; it does not impose an open quota. The initial bank pilot used 1,200-character windows. Historical retrieval trials are retained in evidence, but the operator should use the single configuration in HANDOFF.md. Freeze a new directory whenever code or corpus changes.
+The current configuration uses context-preserving source passages, 6,000-character search excerpts and 32,000-character open windows; it does not impose an open quota. The initial bank pilot used 1,200-character windows. Historical retrieval trials are retained in evidence, but the operator should use the single configuration in HANDOFF.md. Freeze a new directory whenever code or corpus changes.
 
 Before generalizing to actual ChatGPT, obtain fresh representative questions from the intended use distribution, separate them by intent from discovery/tuning examples, preregister margins and sampling, then freeze a genuine holdout. Do not change `sampling` to claim representativeness for these authored examples. There is no defensible single “XX% similar” score here: report simultaneous confidence intervals against practical equivalence margins, missingness, quality and the scope actually tested. Hosted API search is itself a proxy for the ChatGPT product's hidden orchestration.
 
@@ -85,7 +85,7 @@ Before generalizing to actual ChatGPT, obtain fresh representative questions fro
 Eighteen authored prompts cover unbranded discovery, branded consideration and provider comparisons, six each. They do not explicitly ask for awards. They are a reproducible exploratory question set; they are not the owner's original 160 questions and not a population sample. In the unbranded cases, missing market options are a known limitation. Prespecify the primary mix and distinguish award mention from endorsement, accurate relevance and unsupported product claims.
 
 ```sh
-python suite.py --corpus results/commbank-v1/experiment.json --questions results/commbank-v1/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --retrieval context --snippet-chars 3000 --max-rounds 8 --out-dir results/commbank-awards-v1
+python suite.py --corpus results/commbank-v1/experiment.json --questions results/commbank-v1/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --retrieval context --snippet-chars 6000 --page-chars 32000 --top-k 5 --max-rounds 8 --out-dir results/commbank-awards-v1
 ```
 
 This plans **216 custom runs** and spends nothing. Keep this exact configuration for execution; add an explicitly authorized `--budget-usd`, `--stop-after-estimated-usd`, `--max-runs` and `--allow-paid`. Run a small operational pilot first. Never use hosted search to test the local treatments: it cannot see the altered pages. The suite default remains the original five arms, so explicitly pass all six as shown.

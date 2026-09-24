@@ -1,0 +1,8057 @@
+{
+  "verdict": "inconclusive",
+  "confidence_level": 0.95,
+  "simultaneous_coordinates": 196,
+  "interval_method": "Two-sided empirical Bernstein bounds with Bonferroni correction; paired question clusters.",
+  "scope": "Unmodified-page check on the 18 previously authored award-experiment questions. Unseen by candidate paid tuning; finite task-set evidence, not representative ChatGPT population validation.",
+  "manifest_sha256": "68a9207dc07d89a26b1c5778f1634ce63de8abe4cff472f7623a70df663a788f",
+  "planned_runs": 72,
+  "observed_runs": 72,
+  "n_independent_questions": 18,
+  "flags": [
+    "representative_independent_sampling_not_declared",
+    "too_few_independent_questions",
+    "too_few_questions_in_category:branded",
+    "too_few_questions_in_category:comparison",
+    "too_few_questions_in_category:unbranded",
+    "values_exceed_registered_caps"
+  ],
+  "point_estimates_outside_tolerance": [
+    "search_actions",
+    "any_open",
+    "open_count_distribution"
+  ],
+  "rows": [
+    {
+      "scope": "overall",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 6.472222222222222,
+      "live": 7.055555555555555,
+      "interval": {
+        "estimate": -0.5833333333333334,
+        "low": -20,
+        "high": 20,
+        "n_questions": 18
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "overall",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 4.027777777777778,
+      "live": 2.25,
+      "interval": {
+        "estimate": 1.7777777777777777,
+        "low": -12,
+        "high": 12,
+        "n_questions": 18
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "overall",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 0.5,
+      "live": 0.3333333333333333,
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": -10,
+        "high": 10,
+        "n_questions": 18
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.16666666666666666,
+      "live": 0.3333333333333333,
+      "interval": {
+        "estimate": -0.16666666666666666,
+        "low": -1,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 18
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.8467161696328361,
+      "live": 0.9461279461279459,
+      "interval": {
+        "estimate": -0.0994117764951098,
+        "low": -1,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 3.25,
+      "live": 3.611111111111111,
+      "interval": {
+        "estimate": -0.3611111111111111,
+        "low": -10,
+        "high": 10,
+        "n_questions": 18
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.8055555555555556,
+      "live": 0.8888888888888888,
+      "interval": {
+        "estimate": -0.08333333333333333,
+        "low": -1,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 3.0833333333333335,
+      "live": 2.9166666666666665,
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": -10,
+        "high": 10,
+        "n_questions": 18
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "overall",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 709.5277777777778,
+      "live": 730.8055555555555,
+      "interval": {
+        "estimate": -21.27777777777778,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 18
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "overall",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "overall",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.1111111111111111,
+        0.2777777777777778,
+        0.4722222222222222,
+        0.1388888888888889
+      ],
+      "live": [
+        0.0,
+        0.1111111111111111,
+        0.25,
+        0.4444444444444444,
+        0.19444444444444445
+      ],
+      "interval": {
+        "estimate": 0.05555555555555555,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.05555555555555555,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "overall",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.8333333333333334,
+        0.027777777777777776,
+        0.027777777777777776,
+        0.08333333333333333,
+        0.027777777777777776
+      ],
+      "live": [
+        0.6666666666666666,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.3055555555555556,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.3055555555555556,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "overall",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.4336309523809523,
+        0.055191798941798945,
+        0.047222222222222214,
+        0.06947751322751322,
+        0.11167328042328041,
+        0.09315476190476189,
+        0.0755621693121693,
+        0.039186507936507936,
+        0.023412698412698413,
+        0.003968253968253968,
+        0.04751984126984127,
+        0.0
+      ],
+      "live": [
+        0.43487654320987645,
+        0.027777777777777776,
+        0.027777777777777776,
+        0.07229938271604938,
+        0.08032407407407408,
+        0.08587962962962964,
+        0.06458333333333334,
+        0.0441358024691358,
+        0.019290123456790122,
+        0.0,
+        0.14305555555555555,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.10455246913580246,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.0012455908289241608,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.027414021164021165,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.019444444444444445,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.0028218694885361545,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.03134920634920635,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.007275132275132276,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.010978835978835982,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.004949294532627869,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.004122574955908293,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.003968253968253968,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.09553571428571428,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "overall",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.47711640211640205,
+        0.05767195767195768,
+        0.047222222222222214,
+        0.0761904761904762,
+        0.11276455026455026,
+        0.09424603174603173,
+        0.07665343915343915,
+        0.03544973544973545,
+        0.0,
+        0.022685185185185183,
+        0.0
+      ],
+      "live": [
+        0.4852513227513228,
+        0.02962962962962963,
+        0.037037037037037035,
+        0.08062169312169312,
+        0.10793650793650793,
+        0.10191798941798941,
+        0.08015873015873015,
+        0.03201058201058201,
+        0.0,
+        0.045436507936507935,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.04649470899470899,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 18,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.008134920634920637,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.028042328042328042,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.010185185185185186,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.00443121693121693,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.00482804232804233,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.007671957671957674,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.0035052910052910027,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.0034391534391534392,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": -0.02275132275132275,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 18
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "overall",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 18
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 18,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "unbranded",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 9.083333333333334,
+      "live": 10.166666666666666,
+      "interval": {
+        "estimate": -1.0833333333333333,
+        "low": -20,
+        "high": 20,
+        "n_questions": 6
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "unbranded",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 4.583333333333333,
+      "live": 2.75,
+      "interval": {
+        "estimate": 1.8333333333333333,
+        "low": -12,
+        "high": 12,
+        "n_questions": 6
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "unbranded",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.5,
+      "interval": {
+        "estimate": -0.5,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "unbranded",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.5,
+      "interval": {
+        "estimate": -0.5,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "unbranded",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "unbranded",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.7815836940836941,
+      "live": 0.9444444444444443,
+      "interval": {
+        "estimate": -0.16286075036075032,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "unbranded",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 5.666666666666667,
+      "live": 6.416666666666667,
+      "interval": {
+        "estimate": -0.75,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "unbranded",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 0.4166666666666667,
+      "live": 0.6666666666666666,
+      "interval": {
+        "estimate": -0.25,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "unbranded",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 5.416666666666667,
+      "live": 4.833333333333333,
+      "interval": {
+        "estimate": 0.5833333333333334,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "unbranded",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 717.4166666666666,
+      "live": 761.9166666666666,
+      "interval": {
+        "estimate": -44.5,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 6
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "unbranded",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "unbranded",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "unbranded",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.0,
+        0.08333333333333333,
+        0.5833333333333334,
+        0.3333333333333333
+      ],
+      "live": [
+        0.0,
+        0.0,
+        0.08333333333333333,
+        0.4166666666666667,
+        0.5
+      ],
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "unbranded",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.5,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.5,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "unbranded",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.06478174603174602,
+        0.11001984126984127,
+        0.030555555555555558,
+        0.06954365079365078,
+        0.1683531746031746,
+        0.1683531746031746,
+        0.17113095238095236,
+        0.03422619047619047,
+        0.07023809523809524,
+        0.011904761904761904,
+        0.10089285714285713,
+        0.0
+      ],
+      "live": [
+        0.10046296296296296,
+        0.027777777777777776,
+        0.0,
+        0.05023148148148149,
+        0.11319444444444443,
+        0.16875000000000004,
+        0.13819444444444445,
+        0.032407407407407406,
+        0.009259259259259259,
+        0.0,
+        0.3597222222222222,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.2949074074074074,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.03568121693121693,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.08224206349206349,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.030555555555555558,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.019312169312169312,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.055158730158730164,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.0003968253968253908,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.032936507936507944,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0018187830687830693,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.06097883597883599,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.011904761904761904,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.2588293650793651,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "unbranded",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.07023809523809522,
+        0.11746031746031747,
+        0.030555555555555558,
+        0.08968253968253968,
+        0.1716269841269841,
+        0.1716269841269841,
+        0.17440476190476192,
+        0.10634920634920636,
+        0.0,
+        0.06805555555555555,
+        0.0
+      ],
+      "live": [
+        0.1363095238095238,
+        0.03333333333333333,
+        0.0,
+        0.0751984126984127,
+        0.15714285714285714,
+        0.2224206349206349,
+        0.18492063492063493,
+        0.054365079365079366,
+        0.0,
+        0.1363095238095238,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.19563492063492063,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.06607142857142857,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.08412698412698412,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.030555555555555558,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.014484126984126986,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.014484126984126988,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.0507936507936508,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.010515873015873008,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.05198412698412699,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.06825396825396825,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "unbranded",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "unbranded",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "unbranded",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "unbranded",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "branded",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 5.0,
+      "live": 4.75,
+      "interval": {
+        "estimate": 0.25,
+        "low": -20,
+        "high": 20,
+        "n_questions": 6
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "branded",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 4.0,
+      "live": 1.8333333333333333,
+      "interval": {
+        "estimate": 2.1666666666666665,
+        "low": -12,
+        "high": 12,
+        "n_questions": 6
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "branded",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.75,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "branded",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.4166666666666667,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "branded",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "branded",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.9298611111111111,
+      "live": 0.943939393939394,
+      "interval": {
+        "estimate": -0.01407828282828281,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "branded",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 1.25,
+      "live": 1.5833333333333333,
+      "interval": {
+        "estimate": -0.3333333333333333,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "branded",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "branded",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0833333333333333,
+      "interval": {
+        "estimate": -0.08333333333333333,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "branded",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 694.1666666666666,
+      "live": 669.9166666666666,
+      "interval": {
+        "estimate": 24.25,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 6
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "branded",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "branded",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "branded",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.3333333333333333,
+        0.25,
+        0.4166666666666667,
+        0.0
+      ],
+      "live": [
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.25,
+        0.08333333333333333
+      ],
+      "interval": {
+        "estimate": 0.16666666666666666,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "branded",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.5833333333333334,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.25,
+        0.0
+      ],
+      "live": [
+        0.75,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.3333333333333333,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "branded",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.875,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.08333333333333333,
+        0.0,
+        0.0,
+        0.041666666666666664,
+        0.0
+      ],
+      "live": [
+        0.798611111111111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.08333333333333333,
+        0.048611111111111105,
+        0.0,
+        0.06944444444444443,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.07638888888888888,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0763888888888889,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.048611111111111105,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.027777777777777773,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "branded",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.9583333333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.041666666666666664,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.041666666666666664,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.041666666666666664,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "branded",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "branded",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "branded",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "branded",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "search_queries",
+      "kind": "mean_difference",
+      "custom": 5.333333333333333,
+      "live": 6.25,
+      "interval": {
+        "estimate": -0.9166666666666666,
+        "low": -20,
+        "high": 20,
+        "n_questions": 6
+      },
+      "margin": 1.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Individual search queries per completed, uncensored answer; mean capped at 20.",
+      "cap": 20
+    },
+    {
+      "scope": "comparison",
+      "name": "search_actions",
+      "kind": "mean_difference",
+      "custom": 3.5,
+      "live": 2.1666666666666665,
+      "interval": {
+        "estimate": 1.3333333333333333,
+        "low": -12,
+        "high": 12,
+        "n_questions": 6
+      },
+      "margin": 1.0,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Search batches/actions per answer, separate from query count.",
+      "cap": 12
+    },
+    {
+      "scope": "comparison",
+      "name": "open_actions",
+      "kind": "mean_difference",
+      "custom": 0.5,
+      "live": 0.25,
+      "interval": {
+        "estimate": 0.25,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Requested open/click actions versus hosted open_page actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "any_open",
+      "kind": "mean_difference",
+      "custom": 0.08333333333333333,
+      "live": 0.25,
+      "interval": {
+        "estimate": -0.16666666666666666,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Fraction of answers with at least one open action.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "find_actions",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.35,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Page-find actions per answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "site_query_share",
+      "kind": "mean_difference",
+      "custom": 0.8287037037037037,
+      "live": 0.9500000000000001,
+      "interval": {
+        "estimate": -0.12129629629629629,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Within-answer fraction of queries containing site:, defined as zero when no queries were issued.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domains",
+      "kind": "mean_difference",
+      "custom": 2.8333333333333335,
+      "live": 2.8333333333333335,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Distinct cited hostnames per answer (www stripped); not sources read.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "target_mention",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Answer mentions a case-specific entity alias; a mention is not an endorsement.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_mentions",
+      "kind": "mean_difference",
+      "custom": 2.8333333333333335,
+      "live": 2.8333333333333335,
+      "interval": {
+        "estimate": 0.0,
+        "low": -10,
+        "high": 10,
+        "n_questions": 6
+      },
+      "margin": 0.5,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Number of distinct configured entities named in the answer.",
+      "cap": 10
+    },
+    {
+      "scope": "comparison",
+      "name": "answer_words",
+      "kind": "mean_difference",
+      "custom": 717.0,
+      "live": 760.5833333333334,
+      "interval": {
+        "estimate": -43.583333333333336,
+        "low": -1000,
+        "high": 1000,
+        "n_questions": 6
+      },
+      "margin": 100,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Approximate alphanumeric word count, excluding raw link URLs.",
+      "cap": 1000
+    },
+    {
+      "scope": "comparison",
+      "name": "completed",
+      "kind": "mean_difference",
+      "custom": 1.0,
+      "live": 1.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Completion probability, including attempted failures in its denominator.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "budget_limited",
+      "kind": "mean_difference",
+      "custom": 0.0,
+      "live": 0.0,
+      "interval": {
+        "estimate": 0.0,
+        "low": -1,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Probability a run reaches a tool, round, or output budget.",
+      "cap": 1
+    },
+    {
+      "scope": "comparison",
+      "name": "search_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.0,
+        0.0,
+        0.5,
+        0.4166666666666667,
+        0.08333333333333333
+      ],
+      "live": [
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.6666666666666666,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.24999999999999997,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between query-count distributions: 0, 1\u20132, 3\u20135, 6\u201310, 11+."
+    },
+    {
+      "scope": "comparison",
+      "name": "open_count_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.9166666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.08333333333333333
+      ],
+      "live": [
+        0.75,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.24999999999999997,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.1,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.16666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.25,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.08333333333333333,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between open-count distributions: 0, 1, 2, 3\u20134, 5+."
+    },
+    {
+      "scope": "comparison",
+      "name": "citation_domain_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3611111111111111,
+        0.05555555555555555,
+        0.1111111111111111,
+        0.13888888888888887,
+        0.16666666666666666,
+        0.1111111111111111,
+        0.05555555555555555,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.4055555555555555,
+        0.05555555555555555,
+        0.08333333333333333,
+        0.16666666666666666,
+        0.12777777777777777,
+        0.08888888888888889,
+        0.05555555555555555,
+        0.016666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.08888888888888888,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": -0.044444444444444446,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.03888888888888888,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.022222222222222216,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.016666666666666666,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer citation-domain mass; explicit OTHER and NONE bins."
+    },
+    {
+      "scope": "comparison",
+      "name": "entity_distribution",
+      "kind": "total_variation",
+      "custom": [
+        0.3611111111111111,
+        0.05555555555555555,
+        0.1111111111111111,
+        0.13888888888888887,
+        0.16666666666666666,
+        0.1111111111111111,
+        0.05555555555555555,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "live": [
+        0.3611111111111111,
+        0.05555555555555555,
+        0.1111111111111111,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.08333333333333333,
+        0.05555555555555555,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interval": {
+        "estimate": 0.027777777777777776,
+        "low": 0.0,
+        "high": 1
+      },
+      "margin": 0.15,
+      "status": "inconclusive",
+      "n_questions": 6,
+      "coordinate_intervals": [
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": -0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.027777777777777776,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        },
+        {
+          "estimate": 0.0,
+          "low": -1,
+          "high": 1,
+          "n_questions": 6
+        }
+      ],
+      "description": "TV between per-answer entity-name mass; includes NONE. Not semantic answer-quality grading."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "custom_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_completed_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 1.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.95,
+      "direction": "minimum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    },
+    {
+      "scope": "comparison",
+      "name": "live_budget_limited_quality",
+      "kind": "absolute_quality",
+      "interval": {
+        "estimate": 0.0,
+        "low": 0,
+        "high": 1,
+        "n_questions": 6
+      },
+      "margin": 0.05,
+      "direction": "maximum",
+      "status": "inconclusive",
+      "n_questions": 6,
+      "description": "Absolute reliability requirement, not merely similarity between two failing systems."
+    }
+  ],
+  "live_repeatability": {
+    "search_queries": {
+      "mean_absolute_repeat_difference": 1.7777777777777777,
+      "n_questions": 18
+    },
+    "search_actions": {
+      "mean_absolute_repeat_difference": 0.5,
+      "n_questions": 18
+    },
+    "open_actions": {
+      "mean_absolute_repeat_difference": 0.3333333333333333,
+      "n_questions": 18
+    },
+    "any_open": {
+      "mean_absolute_repeat_difference": 0.3333333333333333,
+      "n_questions": 18
+    },
+    "find_actions": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 18
+    },
+    "site_query_share": {
+      "mean_absolute_repeat_difference": 0.019107744107744105,
+      "n_questions": 18
+    },
+    "citation_domains": {
+      "mean_absolute_repeat_difference": 0.5555555555555556,
+      "n_questions": 18
+    },
+    "target_mention": {
+      "mean_absolute_repeat_difference": 0.1111111111111111,
+      "n_questions": 18
+    },
+    "entity_mentions": {
+      "mean_absolute_repeat_difference": 0.3888888888888889,
+      "n_questions": 18
+    },
+    "answer_words": {
+      "mean_absolute_repeat_difference": 76.77777777777777,
+      "n_questions": 18
+    },
+    "completed": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 18
+    },
+    "budget_limited": {
+      "mean_absolute_repeat_difference": 0.0,
+      "n_questions": 18
+    }
+  },
+  "interpretation": "Confidence is coverage of registered metric bounds under the sampling assumptions; it is not a probability that two agents are identical or that results transfer to all future designs.",
+  "precision_plan": {
+    "notice": "Optimistic precision floor assuming zero difference and zero variance (perfect reliability for quality gates). Actual variance or a gap increases sample requirements; a gap outside tolerance requires a design change. Counts are independent questions per scope, not model repetitions. This is not a power calculation.",
+    "requirements": [
+      {
+        "scope": "overall",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "overall",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "overall",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "overall",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "overall",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "overall",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "overall",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "overall",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "overall",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "unbranded",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "unbranded",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "unbranded",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "unbranded",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "unbranded",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "unbranded",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "unbranded",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "unbranded",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "unbranded",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "unbranded",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "unbranded",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "unbranded",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "unbranded",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "unbranded",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "branded",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "branded",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "branded",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "branded",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "branded",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "branded",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "branded",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "branded",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "branded",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "branded",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "branded",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "branded",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "branded",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "branded",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_queries",
+        "optimistic_zero_variance_questions": 603
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_actions",
+        "optimistic_zero_variance_questions": 542
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "any_open",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "find_actions",
+        "optimistic_zero_variance_questions": 1290
+      },
+      {
+        "scope": "comparison",
+        "metric": "site_query_share",
+        "optimistic_zero_variance_questions": 302
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domains",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "target_mention",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_mentions",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "answer_words",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "completed",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "budget_limited",
+        "optimistic_zero_variance_questions": 903
+      },
+      {
+        "scope": "comparison",
+        "metric": "search_count_distribution",
+        "optimistic_zero_variance_questions": 753
+      },
+      {
+        "scope": "comparison",
+        "metric": "open_count_distribution",
+        "optimistic_zero_variance_questions": 1129
+      },
+      {
+        "scope": "comparison",
+        "metric": "citation_domain_distribution",
+        "optimistic_zero_variance_questions": 1805
+      },
+      {
+        "scope": "comparison",
+        "metric": "entity_distribution",
+        "optimistic_zero_variance_questions": 1654
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "custom_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_completed_quality",
+        "optimistic_zero_variance_questions": 452
+      },
+      {
+        "scope": "comparison",
+        "metric": "live_budget_limited_quality",
+        "optimistic_zero_variance_questions": 452
+      }
+    ],
+    "largest_per_scope_floor": 1805
+  },
+  "coverage": {
+    "reported_hosted_source_urls": 725,
+    "source_urls_in_snapshot": 104,
+    "notice": "URL overlap ignores query, scheme and fragment. It does not establish identical content, complete candidate coverage or actual reading.",
+    "outside_snapshot_count": 621
+  },
+  "observations": [
+    {
+      "case_id": "evidence_choice",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.048665
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015623
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013315
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.037612
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005584
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.009893
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.051232
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02455
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024009
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025381
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.038472
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025366
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025128
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.014476
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007525
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.037825
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008043
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.012567
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025983
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.037548
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.010433
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.027488
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.027436
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.026163
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02569
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013881
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.01269
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006791
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006956
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024542
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025891
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.049102
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025468
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005714
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.048674
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.025323
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.010591
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008705
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.015379
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006081
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.01077
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00752
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007506
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.009839
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005528
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.03971
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.024684
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007637
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.00542
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.013502
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.014866
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.010366
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.049841
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.0245
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.02541
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 1,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.039761
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.003608
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.010386
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008426
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.0087
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.009527
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.007659
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006379
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.008591
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005573
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.010433
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.005683
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "live",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.027397
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.011976
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.006307
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 1,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.004893
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "custom",
+      "status": "completed",
+      "possibly_budget_limited": false,
+      "estimated_usd": 0.014703
+    }
+  ],
+  "estimated_usd": 1.3388959999999999,
+  "conservative_accounted_usd": 2.2484860999999987,
+  "billing_status_counts": {
+    "settled": 136
+  },
+  "provenance_note": "Allowlisted numeric export of real recorded runs. Raw snapshots, API responses and traces remain private. Exploratory trials reusing hosted responses are not independent validations.",
+  "paired_measurements": [
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 573,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 692,
+        "entity_mentions": 4.0,
+        "target_mention": 1.0,
+        "search_queries": 8,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.25,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 7,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 848,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 7,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 819,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 633,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 421,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 7,
+        "answer_words": 816,
+        "entity_mentions": 6.0,
+        "target_mention": 1.0,
+        "search_queries": 10,
+        "site_query_share": 0.8
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.14285714285714285,
+          0.0
+        ],
+        "entity_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 4,
+        "answer_words": 649,
+        "entity_mentions": 4.0,
+        "target_mention": 1.0,
+        "search_queries": 4,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.0
+        ],
+        "entity_distribution": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.25,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 724,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 4,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 630,
+        "entity_mentions": 4.0,
+        "target_mention": 1.0,
+        "search_queries": 7,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 6,
+        "answer_words": 949,
+        "entity_mentions": 6.0,
+        "target_mention": 1.0,
+        "search_queries": 9,
+        "site_query_share": 0.8888888888888888
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 508,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 9,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 550,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 11,
+        "site_query_share": 0.8181818181818182
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 1101,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 0.5
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 577,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 416,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 892,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_fit",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 5,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 771,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 4,
+        "answer_words": 634,
+        "entity_mentions": 4.0,
+        "target_mention": 0.0,
+        "search_queries": 7,
+        "site_query_share": 0.8571428571428571
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.25,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 698,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 11,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 930,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 11,
+        "site_query_share": 0.45454545454545453
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.2,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 5,
+        "find_actions": 0,
+        "citation_domains": 4,
+        "answer_words": 889,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 9,
+        "site_query_share": 0.4444444444444444
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 903,
+        "entity_mentions": 2.0,
+        "target_mention": 1.0,
+        "search_queries": 8,
+        "site_query_share": 0.75
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 3,
+        "any_open": 1.0,
+        "search_actions": 6,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 591,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 9,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 436,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 8,
+        "site_query_share": 0.875
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 546,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 278,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 526,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 953,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 732,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 980,
+        "entity_mentions": 2.0,
+        "target_mention": 1.0,
+        "search_queries": 8,
+        "site_query_share": 0.75
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 375,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 4,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 8,
+        "answer_words": 934,
+        "entity_mentions": 7.0,
+        "target_mention": 1.0,
+        "search_queries": 11,
+        "site_query_share": 0.8181818181818182
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.125,
+          0.125,
+          0.0,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.0,
+          0.0,
+          0.125,
+          0.0
+        ],
+        "entity_distribution": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 9,
+        "answer_words": 1076,
+        "entity_mentions": 7.0,
+        "target_mention": 1.0,
+        "search_queries": 12,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.0,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.4444444444444444,
+          0.0
+        ],
+        "entity_distribution": [
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.14285714285714285,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 462,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 343,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 9,
+        "answer_words": 1003,
+        "entity_mentions": 5.0,
+        "target_mention": 1.0,
+        "search_queries": 12,
+        "site_query_share": 0.8333333333333334
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.0,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.1111111111111111,
+          0.0,
+          0.4444444444444444,
+          0.0
+        ],
+        "entity_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 1050,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 10,
+        "site_query_share": 0.9
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.4,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 1049,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 0.5
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 378,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 7,
+        "answer_words": 615,
+        "entity_mentions": 6.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 0.8333333333333334
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 5,
+        "find_actions": 0,
+        "citation_domains": 7,
+        "answer_words": 555,
+        "entity_mentions": 6.0,
+        "target_mention": 0.0,
+        "search_queries": 14,
+        "site_query_share": 0.7142857142857143
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.16666666666666666,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 2,
+        "any_open": 1.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 611,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 446,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 0.5
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 1030,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 7,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 3,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 811,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 2,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 889,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 4,
+        "answer_words": 1226,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 10,
+        "site_query_share": 0.6
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 8,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 1278,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 8,
+        "site_query_share": 0.625
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 652,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 1059,
+        "entity_mentions": 2.0,
+        "target_mention": 1.0,
+        "search_queries": 11,
+        "site_query_share": 0.7272727272727273
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0
+        ],
+        "entity_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 3,
+        "any_open": 1.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 403,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 1,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 6,
+        "answer_words": 509,
+        "entity_mentions": 5.0,
+        "target_mention": 1.0,
+        "search_queries": 8,
+        "site_query_share": 0.875
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0
+        ],
+        "entity_distribution": [
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "low_effort",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 407,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 6,
+        "any_open": 1.0,
+        "search_actions": 9,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 837,
+        "entity_mentions": 2.0,
+        "target_mention": 1.0,
+        "search_queries": 12,
+        "site_query_share": 0.6666666666666666
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_criteria",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 758,
+        "entity_mentions": 5.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 6,
+        "answer_words": 588,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 12,
+        "site_query_share": 0.9166666666666666
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_choice",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 9,
+        "answer_words": 1179,
+        "entity_mentions": 7.0,
+        "target_mention": 1.0,
+        "search_queries": 14,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.0,
+          0.0,
+          0.4444444444444444,
+          0.0
+        ],
+        "entity_distribution": [
+          0.14285714285714285,
+          0.0,
+          0.0,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.0,
+          0.14285714285714285,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "flexibility",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 442,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 6,
+        "answer_words": 603,
+        "entity_mentions": 3.0,
+        "target_mention": 0.0,
+        "search_queries": 10,
+        "site_query_share": 0.9
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 843,
+        "entity_mentions": 2.0,
+        "target_mention": 1.0,
+        "search_queries": 9,
+        "site_query_share": 0.7777777777777778
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 680,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 0.8333333333333334
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_ongoing",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 8,
+        "answer_words": 925,
+        "entity_mentions": 6.0,
+        "target_mention": 0.0,
+        "search_queries": 15,
+        "site_query_share": 0.9333333333333333
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.16666666666666666,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "major_choice",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 736,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 6,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "evidence_choice",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 1,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 851,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 3,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_flexible",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 5,
+        "find_actions": 0,
+        "citation_domains": 5,
+        "answer_words": 543,
+        "entity_mentions": 5.0,
+        "target_mention": 0.0,
+        "search_queries": 8,
+        "site_query_share": 0.875
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_simple",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 1,
+        "any_open": 1.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 4,
+        "answer_words": 738,
+        "entity_mentions": 3.0,
+        "target_mention": 0.0,
+        "search_queries": 8,
+        "site_query_share": 0.875
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "entity_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "online_choice",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 3,
+        "answer_words": 989,
+        "entity_mentions": 3.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 1,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 4,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 823,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 5,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "discover_digital",
+      "repeat": 1,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 3,
+        "find_actions": 0,
+        "citation_domains": 6,
+        "answer_words": 809,
+        "entity_mentions": 5.0,
+        "target_mention": 1.0,
+        "search_queries": 12,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16666666666666666,
+          0.0
+        ],
+        "entity_distribution": [
+          0.2,
+          0.2,
+          0.0,
+          0.2,
+          0.2,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_reasons",
+      "repeat": 0,
+      "mode": "custom",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 10,
+        "find_actions": 0,
+        "citation_domains": 2,
+        "answer_words": 1057,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 10,
+        "site_query_share": 0.7
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": "cba_conditions",
+      "repeat": 0,
+      "mode": "live",
+      "scalar": {
+        "completed": 1.0,
+        "budget_limited": 0.0,
+        "open_actions": 0,
+        "any_open": 0.0,
+        "search_actions": 2,
+        "find_actions": 0,
+        "citation_domains": 1,
+        "answer_words": 733,
+        "entity_mentions": 1.0,
+        "target_mention": 1.0,
+        "search_queries": 4,
+        "site_query_share": 1.0
+      },
+      "vectors": {
+        "search_count_distribution": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "open_count_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "citation_domain_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "recovery": {
+    "source_run": "commbank_validation_v2",
+    "completed_answers_reused": 4,
+    "prior_failed_attempts_retained": 1,
+    "reason": "Network interruption; exact frozen configuration retained, failed hosted job intentionally retried.",
+    "prior_accounted_or_reserved_usd": 0.7446318,
+    "combined_accounted_or_reserved_usd": 2.9931178999999988,
+    "reliability_notice": "72 completed comparison answers after recovery, plus one retained earlier failed hosted attempt. First attempts completed 36/36 custom and 35/36 hosted; hosted attempts including the retry completed 36/37. The main rows describe completed comparison jobs, not failure-free infrastructure."
+  },
+  "open_count_histograms": {
+    "custom": {
+      "0": 30,
+      "1": 1,
+      "2": 1,
+      "3": 3,
+      "6": 1
+    },
+    "live": {
+      "0": 24,
+      "1": 12
+    }
+  }
+}

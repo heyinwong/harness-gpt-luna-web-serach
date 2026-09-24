@@ -2,13 +2,13 @@
 
 A controlled search environment for **GPT-5.6 Luna**: search pages, read them, follow links and answer. Opus can operate the experiment; Luna remains the model making the search decisions.
 
-The goal is to match observable behaviour—query counts, page opens, citations and mentions—on the same questions as hosted Luna web search. **The harness works, but the recorded tests have not established overall behavioural similarity. Page opening remains the main gap.** See [VALIDATION.md](VALIDATION.md) for results and the claim the evidence supports.
+The goal is to match observable behaviour—query counts, page opens, citations and mentions—on the same questions as hosted Luna web search. **Ready for a controlled, exploratory award experiment. A 72-answer comparison found close average query/open counts, citations and mentions; opening patterns and search batching still differ. Overall equivalence remains inconclusive.** See [VALIDATION.md](VALIDATION.md) for results and the claim the evidence supports.
 
 ## Start here
 
 1. Read [HANDOFF.md](HANDOFF.md) for the recommended setup and commands.
 2. Use the frozen private corpus bundle, or build the supplied CommBank corpus recipe.
-3. Run the comparison before interpreting the award experiment as evidence about hosted Luna.
+3. Use the recorded comparison’s scoped claim; rerun the comparison when inputs change.
 
 The corpus recipe covers **69 documents** from CommBank, competing banks, Canstar, Finder and MoneySmart. It includes product pages, rates, conditions and PDFs. Real bank content and raw model traces stay in the private bundle; the public repository contains code, source manifests, question sets and numeric results. `sample_corpus.json` is only a fictional offline fixture.
 

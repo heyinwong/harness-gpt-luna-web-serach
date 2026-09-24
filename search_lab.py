@@ -145,6 +145,9 @@ class Browser:
         self.documents = {u: Counter(tokens(p["title"] + " " + readable_text(p["text"]))) for u, p in self.pages.items()}
         self.avg_len = sum(map(lambda c: sum(c.values()), self.documents.values())) / len(self.pages)
         self.df = Counter(t for counts in self.documents.values() for t in counts)
+        self.title_terms = {u: set(tokens(readable_text(p['title']))) for u,p in self.pages.items()}
+        self.content_keys = {u: (urlsplit(u).hostname, hashlib.sha256(p['text'].encode()).hexdigest())
+                             for u,p in self.pages.items()}
 
     def resolve(self, url):
         url = canonical(url)
@@ -173,6 +176,8 @@ class Browser:
         self.visible_pages.add(url)
         self.page_seen_at.setdefault(url, len(self.events))
         return {"url": url, "title": self.pages[url]["title"], "text": text,
+                "source": {"kind": "captured_page_text", "captured_at": self.pages[url].get('retrieved_at'),
+                           "reading_semantics": "Search and open return text from this same captured page version."},
                 "links": self.links(url, text), **extra}
 
     def snippet(self, text, terms):
@@ -206,6 +211,14 @@ class Browser:
             sites = re.findall(r"\bsite:([^\s]+)", query)
             phrases = re.findall(r'"([^\"]+)"', query)
             terms = set(tokens(re.sub(r"\bsite:[^\s]+", "", query)))
+            # A site filter already specifies its domain. Repeating that domain's
+            # name must not outweigh the subject of the query (e.g. rate tables).
+            domain_words = set()
+            for site in sites:
+                domain = urlsplit(site if '://' in site else 'https://' + site).hostname or ''
+                domain_words.update(tokens(domain))
+            domain_words -= set('www com org net edu gov co au uk nz us io'.split())
+            terms -= domain_words
             ranked = []
             for url, page in self.pages.items():
                 host = urlsplit(url).hostname
@@ -226,12 +239,20 @@ class Browser:
                     if frequency:
                         idf = math.log(1 + (len(self.pages) - self.df[term] + .5) / (self.df[term] + .5))
                         score += idf * frequency * 2.2 / (frequency + 1.2 * (.25 + .75 * sum(counts.values()) / self.avg_len))
+                score += 2 * sum(math.log(1 + (len(self.pages) - self.df[term] + .5) / (self.df[term] + .5))
+                                 for term in terms & self.title_terms[url])
                 if score > 0 or (sites and not terms):
                     ranked.append((score, url))
             ranked.sort(key=lambda item: (-item[0], item[1]))
             results = []
-            for score, url in ranked[:self.top_k]:
+            seen_content = set()
+            for score, url in ranked:
+                if self.content_keys[url] in seen_content:
+                    continue
+                seen_content.add(self.content_keys[url])
                 results.append(self.expose(url, **self.search_excerpt(url, terms)))
+                if len(results) == self.top_k:
+                    break
             batches.append({"query": query, "results": results})
         return {"searches": batches}
 
@@ -330,9 +351,9 @@ def schema(name, description, properties):
 
 STR = {"type": "string"}
 TOOLS = [
-    schema("search", "Search available pages. Each query returns relevant excerpts and page links. Supports site:domain and quoted phrases. Independent queries may be batched.",
+    schema("search", "Search the captured pages and read their relevant source passages. The returned text is already-read page evidence with directly citable URLs and links. Search and open read the same captured page version. Supports site:domain and quoted phrases. Independent queries may be batched.",
            {"queries": {"type": "array", "items": STR, "minItems": 1, "maxItems": 8}}),
-    schema("open", "Read a page by URL. Use offset 0 initially or next_offset to continue a long page.",
+    schema("open", "Read additional text from the same captured page version used by search. An open supplies missing context; it does not refresh the page or independently verify passages already returned by search. Use offset 0 initially or next_offset to continue a long page.",
            {"url": STR, "offset": {"type": "integer", "minimum": 0}}),
     schema("click", "Open a link previously returned in a page or search excerpt, using its source page URL and link ID.",
            {"page_url": STR, "link_id": STR}),
@@ -517,10 +538,10 @@ def main():
     runner.add_argument("--reasoning", choices=("none", "low", "medium", "high", "xhigh", "max"), default="medium")
     runner.add_argument("--web-tool", choices=("web_search", "web_search_preview"), default="web_search_preview")
     runner.add_argument("--retrieval", choices=("context", "window"), default="context")
-    runner.add_argument("--snippet-chars", type=int, default=3000)
-    runner.add_argument("--page-chars", type=int, default=8000)
+    runner.add_argument("--snippet-chars", type=int, default=6000)
+    runner.add_argument("--page-chars", type=int, default=32000)
     runner.add_argument("--top-k", type=int, default=5)
-    runner.add_argument("--max-rounds", type=int, default=12)
+    runner.add_argument("--max-rounds", type=int, default=8)
     runner.add_argument("--max-output-tokens", type=int, default=4096)
     runner.add_argument("--allow-paid", action="store_true")
     runner.add_argument("--out", required=True)

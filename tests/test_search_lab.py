@@ -14,6 +14,32 @@ HUB = "https://example-bank.test/awards"
 
 
 class ToolTests(unittest.TestCase):
+    def test_context_retrieval_uses_the_treatment_not_original_snapshot_metadata(self):
+        corpus=copy.deepcopy(CORPUS)
+        product=next(p for p in corpus['pages'] if p.get('role')=='product')
+        product['original_snapshot']={'text':product['text'].replace('{{AWARD_BLOCK}}',corpus['award_sentence']), 'anchors':{}}
+        for arm in lab.EXPERIMENT_ARMS:
+            browser=lab.browser_class('context')(corpus,arm,snippet_chars=6000,page_chars=32000)
+            results=browser.search(['"2026 Sample Savings Service Award"'])['searches'][0]['results']
+            product_results=[r for r in results if r['url']==PRODUCT]
+            self.assertEqual(bool(product_results),arm in ('inline','link_descriptive','current_footnote'),arm)
+            if arm=='baseline':
+                self.assertEqual(results,[])
+
+    def test_site_name_repetition_does_not_dominate_subject_and_duplicates_do_not_fill_results(self):
+        rate_text='Savings interest rates and account terms.'
+        corpus={'pages':[
+            {'url':'https://acme.test/rates','title':'Savings interest rates','text':rate_text},
+            {'url':'https://acme.test/rates-copy','title':'Savings interest rates','text':rate_text},
+            {'url':'https://acme.test/home','title':'Acme','text':'Acme '*100+'accounts.'},
+            {'url':'https://competitor.test/rates','title':'Savings interest rates','text':rate_text}]}
+        browser=lab.Browser(corpus,'reference')
+        results=browser.search(['site:acme.test Acme savings interest rates'])['searches'][0]['results']
+        self.assertEqual(results[0]['url'],'https://acme.test/rates')
+        self.assertEqual(len([r for r in results if r['text']==rate_text]),1)
+        all_banks=browser.search(['savings interest rates'])['searches'][0]['results']
+        self.assertEqual(len([r for r in all_banks if r['text']==rate_text]),2)
+
     def test_link_destinations_do_not_manufacture_search_relevance(self):
         corpus = {'pages': [{'url': 'https://example.org/page', 'title': 'Account',
                             'text': '[Account conditions](https://example.org/tracking/fantasticaward)'}]}

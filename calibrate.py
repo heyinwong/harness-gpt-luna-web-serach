@@ -27,8 +27,24 @@ def compare(profile, source, candidate):
                     values[key].append(mean([g['scalar'][name] for g in group]))
         rows.append({'metric':name,'n_matched_questions':len(values['hosted']),
                      **{k:mean(v) if v else None for k,v in values.items()},'registered_margin':spec['margin']})
+    distributions=[]
+    for name,spec in profile['distributions'].items():
+        values={key:[] for key in ('original_custom','candidate_custom','hosted')}
+        for case in profile['cases']:
+            groups=([source.get((case['id'],r,'custom')) for r in range(repeats)],
+                    [candidate.get((case['id'],r)) for r in range(repeats)],
+                    [source.get((case['id'],r,'live')) for r in range(repeats)])
+            if all(g and name in g['vectors'] for group in groups for g in group):
+                for key,group in zip(values,groups):
+                    vectors=[g['vectors'][name] for g in group]
+                    values[key].append([mean([v[i] for v in vectors]) for i in range(len(vectors[0]))])
+        averages={k:[mean([v[i] for v in vs]) for i in range(len(vs[0]))] if vs else None for k,vs in values.items()}
+        distances={k+'_vs_hosted_tv':sum(abs(x-y) for x,y in zip(averages[k],averages['hosted']))/2 if averages['hosted'] else None
+                   for k in ('original_custom','candidate_custom')}
+        distributions.append({'metric':name,'n_matched_questions':len(values['hosted']),
+                              'registered_margin':spec['margin'],'means':averages,**distances})
     return {'verdict':'EXPLORATORY_ONLY', 'notice':'Reuses a recorded hosted reference. Selected after seeing pilot results; not a new holdout, confidence test or proof of transfer. Each row uses questions with all repetitions measurable in all three groups. Reliability rows include failures.',
-            'rows':rows, 'candidate_runs':len(candidate),
+            'rows':rows, 'distributions':distributions, 'candidate_runs':len(candidate),
             'candidate_statuses':{s:sum(v['details']['status']==s for v in candidate.values()) for s in {v['details']['status'] for v in candidate.values()}}}
 
 
@@ -39,6 +55,7 @@ def main():
     change=p.add_mutually_exclusive_group(required=True)
     change.add_argument('--snippet-chars',type=int)
     change.add_argument('--corpus',help='Use a repaired corpus with the original tool settings')
+    change.add_argument('--runner-config',help='Explicit new-design runner settings; allows changed implementation and records its hashes')
     p.add_argument('--case-ids',nargs='+',help='Optional registered calibration cases for a targeted diagnostic')
     p.add_argument('--budget-usd',type=float,default=.25)
     p.add_argument('--allow-paid',action='store_true')
@@ -58,11 +75,18 @@ def main():
     if hashlib.sha256(corpus.read_bytes()).hexdigest()!=source_manifest['corpus_sha256']:
         p.error('Baseline corpus changed')
     config=profile['runner']|({'snippet_chars':args.snippet_chars} if args.snippet_chars is not None else {})
+    if args.runner_config:
+        replacement=json.loads(Path(args.runner_config).read_text())
+        if set(replacement)-{'retrieval','reasoning','web_tool','snippet_chars','page_chars','top_k','max_rounds','max_output_tokens'}:
+            p.error('Runner configuration contains unsupported fields')
+        if any(replacement.get(k,config.get(k))!=config.get(k) for k in ('reasoning','web_tool')):
+            p.error('A reused hosted reference must keep its reasoning and web tool settings')
+        config.update(replacement)
     candidate_corpus=Path(args.corpus) if args.corpus else corpus
     candidate_data=json.loads(candidate_corpus.read_text())
     if candidate_data.get('failures') or candidate_data.get('quality_flags'):
         p.error('Resolve candidate corpus failures and quality flags before paid calibration')
-    lab.Browser(candidate_data,'reference')
+    lab.browser_class(config.get('retrieval','window'))(candidate_data,'reference',config['snippet_chars'],config['top_k'],config['page_chars'])
     selected=[c for c in profile['cases'] if not args.case_ids or c['id'] in args.case_ids]
     if args.case_ids and set(args.case_ids)!={c['id'] for c in selected}:
         p.error('Unknown selected calibration case')
@@ -73,7 +97,9 @@ def main():
           'calibration_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
           'notice':('One-factor snippet-length calibration; same frozen corpus and recorded hosted responses.' if not args.corpus else
                     'Corpus-repair diagnostic; original tool settings and recorded hosted responses. All changed source pages belong to this corpus factor.')}
-    if spec['current_code_hashes']!=source_manifest['code_hashes']:
+    if args.runner_config:
+        spec['notice']='New-design calibration on the same frozen corpus and questions, reusing hosted responses. Implementation and runner settings may change; this is not a one-factor causal ablation.'
+    if not args.runner_config and spec['current_code_hashes']!=source_manifest['code_hashes']:
         p.error('Code differs from baseline: this command isolates excerpt length only')
     jobs=[(c,r) for c in selected for r in range(profile['repeats'])]
     random.Random(profile['seed']).shuffle(jobs)
