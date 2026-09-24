@@ -19,9 +19,11 @@ python3 -m pip install -r requirements-validation.txt
 python3 -m unittest discover -s tests -q
 ```
 
-Prefer the owner's **private frozen handover bundle**, `commbank-handoff.zip`. Extract it and work inside `luna-harness/`; `BUNDLE_MANIFEST.json` lists file hashes. It preserves the exact corpus and raw evidence; these are intentionally absent from the public repository. On the original machine the prepared inputs are in `results/commbank_final/`.
+Download **commbank-handoff.zip** from the [handover release](https://github.com/heyinwong/harness-gpt-luna-web-serach/releases/tag/handover). Extract it and work inside `luna-harness/`; the ZIP includes code, the exact corpus and raw evidence. Cloning is optional for running this frozen version. If you already cloned the repository at the handover version, copy the extracted `results/` directory into its root. GitHub’s automatic “Source code” archives do not include these inputs.
 
-If the private inputs are unavailable, build a new corpus:
+`BUNDLE_MANIFEST.json` lists file hashes. The ZIP’s SHA-256 is `0bbf5a508ea223fde1532b6b2327459d56805b069dccf9f760e19876cc47bcff`. It contains no API key. References to a “private bundle” inside the unchanged archive predate the owner’s request to publish the release download.
+
+If the release download is unavailable, build a new corpus:
 
 ```sh
 python3 commbank_setup.py --cache results/commbank-cache --out-dir results/commbank-new
