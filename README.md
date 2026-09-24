@@ -7,10 +7,10 @@ The goal is to match observable behaviour—query counts, page opens, citations 
 ## Start here
 
 1. Read [HANDOFF.md](HANDOFF.md) for the recommended setup and commands.
-2. Use the frozen private corpus bundle, or build the supplied CommBank corpus recipe.
+2. Download **commbank-handoff.zip** from the [handover release](https://github.com/heyinwong/harness-gpt-luna-web-serach/releases/tag/handover) and extract it. Work inside `luna-harness/`; this ZIP contains both code and frozen inputs. GitHub’s automatic “Source code” ZIP does not contain the corpus.
 3. Use the recorded comparison’s scoped claim; rerun the comparison when inputs change.
 
-The corpus recipe covers **69 documents** from CommBank, competing banks, Canstar, Finder and MoneySmart. It includes product pages, rates, conditions and PDFs. Real bank content and raw model traces stay in the private bundle; the public repository contains code, source manifests, question sets and numeric results. `sample_corpus.json` is only a fictional offline fixture.
+The corpus recipe covers **69 documents** from CommBank, competing banks, Canstar, Finder and MoneySmart. It includes product pages, rates, conditions and PDFs. The owner-authorized release ZIP includes captured bank content and raw model traces. Git history contains code, source manifests, question sets and numeric results; credentials are excluded from both. `sample_corpus.json` is only a fictional offline fixture.
 
 ## Check the installation without API charges
 
