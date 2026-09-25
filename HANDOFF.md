@@ -2,6 +2,8 @@
 
 Operate this repository; keep **GPT-5.6 Luna** as the experimental model. The owner wants one usable search harness with measured similarity, not a reconstruction of ChatGPT internals.
 
+**Open-failure audit:** In the locked comparison, 18 custom open attempts included nine `not_in_corpus` failures: eight followed exposed links and one URL was unexposed. The reported 0.50 opens/answer counts attempts; successful opens were 0.25. These are corpus misses, not verified HTTP 404s. Repair linked-page coverage in a new corpus and rerun the comparison before treating page-opening similarity as established. See [the audit](evidence/2026-09-24/commbank_open_audit.json).
+
 ## One setup
 
 Use `context` retrieval, 6,000-character search excerpts, five results per query, 32,000-character open windows, eight model rounds and medium reasoning. Search selects source passages with their adjacent question/heading and qualifying bullets. Page ranking uses readable link labels rather than URL tracking text. `open`, `click` and `find` remain available whenever Luna needs them. Never force an open count.

@@ -15,6 +15,8 @@ The locked comparison completed **72 answers: 18 questions × two repetitions ×
 | Named providers per answer | 3.08 | 2.92 | ±0.50 |
 | Answer words, capped at 1,000 | 709.53 | 730.81 | ±100 |
 
+**Open attempts versus successful reads:** The 18 custom attempts included nine `not_in_corpus` errors in two digital-feature answers. Eight failed URLs were previously exposed links; one was unexposed. Successful opens averaged **0.25 per answer**, while the table’s registered attempt metric remains **0.50**. No live HTTP request was made for those missing URLs, so they are not verified 404s. This coverage defect limits the apparent agreement in average attempts and should be repaired and revalidated before claiming opening fidelity. [Detailed audit](evidence/2026-09-24/commbank_open_audit.json).
+
 These are descriptive point estimates, not confidence-certified passes. The query-count, citation-domain and provider-mention distribution distances were **0.056, 0.105 and 0.046**, each below its registered 0.15 tolerance. The **open-count distribution distance was 0.306**, above its 0.10 tolerance.
 
 The remaining opening difference is concrete: hosted opened exactly one page in 12/36 answers and none in 24/36. Custom opened pages in only 6/36 answers, with counts of 1, 2, 3, 3, 3 and 6. Similar average opens therefore conceal different opening patterns. Custom also split its queries into more search batches.

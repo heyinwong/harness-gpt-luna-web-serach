@@ -1,0 +1,179 @@
+{
+  "run": "commbank_validation_v3",
+  "corpus_sha256": "63068d5253678ba349e3056a3e1045b7e000eb820a17fb83e91472ed6b3b7b5d",
+  "custom_answers": 36,
+  "open_attempts": 18,
+  "successful_opens": 9,
+  "failed_opens": 9,
+  "answers_with_failed_opens": 2,
+  "failed_previously_exposed_links": 8,
+  "failed_unexposed_urls": 1,
+  "attempts_per_answer": 0.5,
+  "successful_opens_per_answer": 0.25,
+  "interpretation": "The registered open metric counts attempts, including errors. Eight failed attempts followed exposed links; one URL had not been exposed as a page or link. Unexposed does not prove invented: it may derive from model memory. not_in_corpus is an offline coverage error, not an observed HTTP 404. No live HTTP status was checked in this audit. All nine errors occurred in two digital-feature answers.",
+  "handoff_action": "Repair missing linked-page coverage in a new corpus version and rerun the comparison before treating opening similarity as established. Keep the existing frozen evidence; do not remove failed attempts or relabel successful opens as the original metric. Track guessed/unexposed URL attempts separately from exposed-link corpus misses and actual HTTP failures.",
+  "opens": [
+    {
+      "case_id": "cba_fit",
+      "repeat": 0,
+      "event_index": 1,
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/TSI_interest_rates.pdf",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "event_index": 3,
+      "url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "event_index": 4,
+      "url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 1,
+      "event_index": 5,
+      "url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "event_index": 2,
+      "url": "https://www.commbank.com.au/digital-banking/commbank-app.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_digital",
+      "repeat": 0,
+      "event_index": 3,
+      "url": "https://www.commbank.com.au/digital-banking/goal-tracker.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "event_index": 1,
+      "url": "https://www.commbank.com.au/banking/goal-saver.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "event_index": 2,
+      "url": "https://www.commbank.com.au/banking/netbank-saver.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_value",
+      "repeat": 0,
+      "event_index": 3,
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/TSI_interest_rates.pdf",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "event_index": 1,
+      "url": "https://www.commbank.com.au/banking/goal-saver.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "event_index": 2,
+      "url": "https://www.commbank.com.au/banking/netbank-saver.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "cba_products",
+      "repeat": 0,
+      "event_index": 3,
+      "url": "https://www.commbank.com.au/savings-accounts.html",
+      "provenance": "previously_returned_page",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "success"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 2,
+      "url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 3,
+      "url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 4,
+      "url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 5,
+      "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 6,
+      "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+      "provenance": "previously_exposed_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    },
+    {
+      "case_id": "digital_choice",
+      "repeat": 1,
+      "event_index": 7,
+      "url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+      "provenance": "not_previously_exposed_as_page_or_link",
+      "literal_url_in_earlier_tool_output": true,
+      "outcome": "not_in_corpus"
+    }
+  ]
+}
