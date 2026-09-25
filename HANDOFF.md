@@ -2,15 +2,15 @@
 
 Operate this repository; keep **GPT-5.6 Luna** as the experimental model. The owner wants one usable search harness with measured similarity, not a reconstruction of ChatGPT internals.
 
-**Open-failure audit:** In the locked comparison, 18 custom open attempts included nine `not_in_corpus` failures: eight followed exposed links and one URL was unexposed. The reported 0.50 opens/answer counts attempts; successful opens were 0.25. These are corpus misses, not verified HTTP 404s. Repair linked-page coverage in a new corpus and rerun the comparison before treating page-opening similarity as established. See [the audit](evidence/2026-09-24/commbank_open_audit.json).
+**Use the navigation-v2 release below.** The old offline harness treated URLs outside its corpus as failures, even when the pages existed. Public navigation now fetches those URLs on demand, follows redirects and caches the untreated responses. All six previously failing URLs pass a real-fetch/cache-replay regression. See [NAVIGATION.md](NAVIGATION.md) for the short contract and [VALIDATION.md](VALIDATION.md) for the new diagnostic pilot. The new 24-answer pilot had 28/28 successful custom opens but 2.33 versus 0.00 opens per answer (custom versus hosted). Overall Luna equivalence remains unestablished.
 
 ## One setup
 
-Use `context` retrieval, 6,000-character search excerpts, five results per query, 32,000-character open windows, eight model rounds and medium reasoning. Search selects source passages with their adjacent question/heading and qualifying bullets. Page ranking uses readable link labels rather than URL tracking text. `open`, `click` and `find` remain available whenever Luna needs them. Never force an open count.
+Use `--navigation live` with `context` retrieval, 6,000-character search excerpts, five results per query, 32,000-character open windows, eight model rounds and medium reasoning. Search selects source passages with their adjacent question/heading and qualifying bullets. Page ranking uses readable link labels rather than URL tracking text. `open`, `click` and `find` remain available whenever Luna needs them. Never force an open count.
 
 The current corpus has **69 documents**, including CommBank and competitors. `reference.json` preserves the captured pages. `experiment.json` supplies the six award-placement conditions. The target is the existing **Canstar 2024 Digital Banking Bank of the Year** footnote, a bank-level award. It is visible after scrolling; this is a text-retrieval experiment, not a visual-attention experiment.
 
-The completed 72-answer comparison found 6.47 versus 7.06 queries and 0.50 versus 0.33 opens per answer (custom versus hosted). Opening patterns and search batching still differ, and category results are less similar. Use the scoped claim in [VALIDATION.md](VALIDATION.md); formal equivalence remains inconclusive. The experiment is ready to run as a controlled exploratory study.
+The older **offline** 72-answer comparison found 6.47 versus 7.06 queries and 0.50 versus 0.33 opens per answer (custom versus hosted). Opening patterns and search batching still differ, and category results are less similar. Use the scoped claim in [VALIDATION.md](VALIDATION.md); formal equivalence remains inconclusive. Its numerical result does not validate the changed navigation. Interpret award effects within this exploratory harness.
 
 ## Get the inputs
 
@@ -21,9 +21,9 @@ python3 -m pip install -r requirements-validation.txt
 python3 -m unittest discover -s tests -q
 ```
 
-Download **commbank-handoff.zip** from the [handover release](https://github.com/heyinwong/harness-gpt-luna-web-serach/releases/tag/handover). Extract it and work inside `luna-harness/`; the ZIP includes code, the exact corpus and raw evidence. Cloning is optional for running this frozen version. If you already cloned the repository at the handover version, copy the extracted `results/` directory into its root. GitHub’s automatic “Source code” archives do not include these inputs.
+Download **commbank-handoff-navigation-v2.zip** from the [navigation-v2 release](https://github.com/heyinwong/harness-gpt-luna-web-serach/releases/tag/navigation-v2). Extract it and work inside `luna-harness/`; it includes current code, the exact corpus, raw evidence and navigation caches. GitHub's automatic “Source code” archives do not include these inputs. Avoid mixing this code with the older handover ZIP's code.
 
-`BUNDLE_MANIFEST.json` lists file hashes. The ZIP’s SHA-256 is `0bbf5a508ea223fde1532b6b2327459d56805b069dccf9f760e19876cc47bcff`. It contains no API key. References to a “private bundle” inside the unchanged archive predate the owner’s request to publish the release download.
+`BUNDLE_MANIFEST.json` lists every packaged file hash. The release includes a SHA-256 checksum file. No API key is included. Old runs retain their original code and manifests; do not resume them with the new implementation.
 
 If the release download is unavailable, build a new corpus:
 
@@ -35,25 +35,25 @@ Building needs Node/npm and Chrome for selected dynamic pages, but spends no mod
 
 ## Repeat the comparison when inputs change
 
-The frozen bundle already includes the completed comparison, so there is no need to buy the same check again merely to hand over. The following assumes the frozen inputs are at `results/commbank_final`. Change that path if you made a fresh build. Keep the key in an ignored `.env`; never paste it into chat.
+The bundle includes the older comparison and a new navigation-focused diagnostic. A full repeat comparison is available below; it is not already completed for the changed navigation. The following assumes the frozen inputs are at `results/commbank_final`. Change that path if you made a fresh build. Keep the key in an ignored `.env`; never paste it into chat.
 
 ```sh
-python3 benchmark.py freeze --profile results/commbank_final/validation.json --corpus results/commbank_final/reference.json --out-dir results/my-comparison
+python3 benchmark.py freeze --profile corpora/commbank/navigation_validation.json --corpus results/commbank_final/reference.json --out-dir results/my-comparison
 python3 benchmark.py run --run-dir results/my-comparison --budget-usd 4 --allow-paid
 python3 benchmark.py report --run-dir results/my-comparison
 ```
 
-This compares 18 previously authored experiment questions, twice per mode: 72 answers. The dollar cap is a per-directory conservative request budget. Use only an owner-authorized budget. A failed or unfinished attempt stays in the evidence; do not delete or retry it silently. The report covers means, distributions, mentions, citations and reliability. The questions are a fixed convenience set, so population-wide claims remain limited.
+This repeats 18 previously inspected questions, twice per mode: 72 answers. It is a descriptive regression check, not a fresh holdout. The profile explicitly enables live cached navigation. The dollar cap is a per-directory conservative request budget. Use only an owner-authorized budget. A failed or unfinished attempt stays in the evidence; do not delete or retry it silently. The report covers means, distributions, mentions, citations and reliability. The questions are a fixed convenience set, so population-wide claims remain limited.
 
 ## Run the award experiment
 
 Use the same corpus version and retrieval configuration as the comparison:
 
 ```sh
-python3 suite.py --corpus results/commbank_final/experiment.json --questions results/commbank_final/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --retrieval context --snippet-chars 6000 --page-chars 32000 --top-k 5 --max-rounds 8 --out-dir results/my-awards
+python3 suite.py --corpus results/commbank_final/experiment.json --questions results/commbank_final/award_questions.json --arms baseline inline no_link link_vague link_descriptive current_footnote --repeats 2 --navigation live --retrieval context --snippet-chars 6000 --page-chars 32000 --top-k 5 --max-rounds 8 --out-dir results/my-awards
 ```
 
-The six-condition operational smoke test has completed and the scoring pipeline has been exercised. The full award study has not been run. This is plan-only: 216 custom answers. Add `--allow-paid`, an authorized `--budget-usd`, `--stop-after-estimated-usd` and `--max-runs` to execute. Start with a small operational batch. The same command resumes completed jobs; changing the configuration requires a new directory. Hosted web search cannot see the local treatments.
+The six-condition operational smoke test and scoring check used the older offline runner. The new navigation has automated treatment-isolation checks across all six conditions; start with a small paid operational batch on your machine. The full award study has not been run. This is plan-only: 216 custom answers. Add `--allow-paid`, an authorized `--budget-usd`, `--stop-after-estimated-usd` and `--max-runs` to execute. All conditions share `results/my-awards/web-cache`; archive that directory with the results. Background fetches do not enter the search index. The same command resumes completed jobs; changing the configuration requires a new directory. Hosted web search cannot see the local treatments.
 
 ```sh
 python3 award_report.py prepare --suite-dir results/my-awards --corpus results/commbank_final/experiment.json --out results/my-awards/scoring.json

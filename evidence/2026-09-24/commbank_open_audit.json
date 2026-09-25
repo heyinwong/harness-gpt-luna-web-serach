@@ -274,6 +274,7 @@
     "runtime": "Search, open and click use the same frozen URL map. Preserve missing-corpus errors separately from captured HTTP failures. Do not fetch changing live pages silently during treatment runs or fabricate redirect destinations.",
     "metrics": "Report open attempts, successful reads, missing-corpus failures and previously unexposed URL attempts separately. Preserve the original attempt-based metric.",
     "url_guessing": "Do not ban unexposed URL opens just to improve counts. The one unexposed URL here is a real redirecting Westpac URL. Require grounded link IDs for click and retain provenance for direct opens.",
-    "validation": "Replay known failures as regression checks, then evaluate a new frozen question set against hosted Luna. Earlier inspected validation questions are now development evidence, not a fresh holdout. No equivalence claim is inherited by the repaired corpus."
+    "validation": "Replay known failures as regression checks, then evaluate a new frozen question set against hosted Luna. Earlier inspected validation questions are now development evidence, not a fresh holdout. No equivalence claim is inherited by the repaired corpus.",
+    "status": "Superseded by the owner-approved generic cached public navigation fix. The finite-coverage plan is retained as history; see NAVIGATION.md and evidence/2026-09-25."
   }
 }

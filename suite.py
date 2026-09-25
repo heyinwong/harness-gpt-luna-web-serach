@@ -41,6 +41,8 @@ def main():
     parser.add_argument("--reasoning", choices=("none", "low", "medium", "high", "xhigh", "max"), default="medium")
     parser.add_argument("--web-tool", choices=("web_search", "web_search_preview"), default="web_search_preview")
     parser.add_argument("--retrieval", choices=("context", "window"), default="context")
+    parser.add_argument("--navigation", choices=("offline", "live", "replay"), default="offline")
+    parser.add_argument("--web-cache", help="Shared cache for all conditions; defaults to out-dir/web-cache")
     parser.add_argument("--snippet-chars", type=int, default=6000)
     parser.add_argument("--page-chars", type=int, default=32000)
     parser.add_argument("--top-k", type=int, default=5)
@@ -63,12 +65,14 @@ def main():
     if args.include_live and "SYNTHETIC" in corpus.get("description", "").upper():
         parser.error("Use a real corpus/question set for a paired live suite; the default fixture is synthetic")
     jobs = plan(json.loads(Path(args.questions).read_text()), list(dict.fromkeys(args.arms)), args.repeats, args.include_live, args.seed)
-    config = {k: getattr(args, k) for k in ("retrieval", "reasoning", "web_tool", "snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens")}
+    config = {k: getattr(args, k) for k in ("navigation", "retrieval", "reasoning", "web_tool", "snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens")}
     config.update(model="gpt-5.6-luna", corpus_sha256=hashlib.sha256(Path(args.corpus).read_bytes()).hexdigest(),
                   instructions=lab.INSTRUCTIONS, runner_sha256=hashlib.sha256(Path(lab.__file__).read_bytes()).hexdigest(),
                   suite_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    if args.web_cache:
+        config["web_cache"] = str(Path(args.web_cache).resolve())
     config['retrieval_code_hashes'] = {name: hashlib.sha256((lab.ROOT/name).read_bytes()).hexdigest()
-                                       for name in ('context_passages.py', 'passage_retrieval.py')}
+                                       for name in ('context_passages.py', 'passage_retrieval.py', 'navigation.py', 'corpus_builder.py', 'validation/snapshot.py')}
     print(json.dumps({"paid_enabled": args.allow_paid, "planned_runs": len(jobs), "maximum_new_runs_this_invocation": args.max_runs,
                       "estimated_spend_stop_usd": args.stop_after_estimated_usd,
                       "reservation_budget_usd": args.budget_usd,
@@ -99,7 +103,8 @@ def main():
             print("Stopped before the next run at the configured run-count or estimated-spend boundary.")
             return
         values = config | {"allow_paid": True, "mode": job["mode"], "arm": job["arm"],
-                           "question": job["question"], "corpus": args.corpus, "out": str(path)}
+                           "question": job["question"], "corpus": args.corpus, "out": str(path),
+                           "web_cache": args.web_cache or str(output / "web-cache")}
         trace = lab.run(SimpleNamespace(**values), transport=budget)
         trace["suite_job"] = job
         trace["suite_config"] = config

@@ -120,6 +120,8 @@ def extract(trace, case, profile):
             vectors[name] = [x / total for x in weights] + [0.0] if total else [0.0] * len(weights) + [1.0]
     details.update(queries=queries if known else None, action_sequence=actions, entity_presence=entities,
                    citation_domains=domains, local_failed_opens=metrics.get("failed_opens"),
+                   successful_opens=metrics.get("successful_opens"), open_failure_types=metrics.get("open_failure_types"),
+                   unexposed_url_attempts=metrics.get("unexposed_url_attempts"),
                    explicit_link_follow=metrics.get("explicit_product_to_hub_follow"),
                    elapsed_seconds=trace.get("elapsed_seconds"), estimated_usd=trace.get("usage", {}).get("estimated_usd"))
     details["clipped"] = {name: value for name, value in base.items()

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local search experiment plus opt-in Responses API runners. Python 3.11+, stdlib only."""
+"""Local search experiment plus opt-in Responses API runners. Python 3.11+; public navigation uses requirements-validation.txt."""
 from __future__ import annotations
 
 import argparse
@@ -123,12 +123,14 @@ def make_pages(corpus, arm):
 
 
 class Browser:
-    """Every action operates only on local pages; no hidden HTTP fetches."""
+    """Frozen search index, with explicitly configured cached public navigation."""
 
     def __init__(self, corpus, arm="baseline", snippet_chars=1200, top_k=5, page_chars=8000):
         if not (100 <= snippet_chars <= 20000 and 1 <= top_k <= 20 and 100 <= page_chars <= 50000):
             raise ValueError("Invalid snippet, result-count or page-window setting")
         self.pages = make_pages(corpus, arm)
+        self.navigation = None
+        self.controlled_pages = [p for p in corpus["pages"] if p.get("role") in ("product", "hub")]
         self.aliases = {}
         for url, page in self.pages.items():
             for alias in page.get('aliases', []):
@@ -148,6 +150,31 @@ class Browser:
         self.title_terms = {u: set(tokens(readable_text(p['title']))) for u,p in self.pages.items()}
         self.content_keys = {u: (urlsplit(u).hostname, hashlib.sha256(p['text'].encode()).hexdigest())
                              for u,p in self.pages.items()}
+
+    def enable_navigation(self, cache, mode="live", fetcher=None):
+        from navigation import PublicNavigator, control_key
+        self.controlled_routes = {}
+        for page in self.controlled_pages:
+            target = canonical(page['url'])
+            for route in [page['url'], *page.get('aliases', []), page.get('resolved_url', page['url'])]:
+                key = control_key(route)
+                if key in self.controlled_routes and self.controlled_routes[key] != target:
+                    raise ValueError('Conflicting controlled page aliases')
+                self.controlled_routes[key] = target
+        kwargs = {'fetcher': fetcher} if fetcher else {}
+        self.navigation = PublicNavigator(cache, mode, self.local_navigation_target, **kwargs)
+
+    def local_navigation_target(self, url):
+        from navigation import control_key
+        controlled = self.controlled_routes.get(control_key(url))
+        if controlled is not None:
+            if controlled not in self.pages:
+                return {'error': 'not_available_in_condition', 'url': controlled}
+            return {'local_url': controlled}
+        resolved = self.resolve(url)
+        if resolved in self.pages:
+            return {'local_url': resolved}
+        return None
 
     def resolve(self, url):
         url = canonical(url)
@@ -176,7 +203,7 @@ class Browser:
         self.visible_pages.add(url)
         self.page_seen_at.setdefault(url, len(self.events))
         return {"url": url, "title": self.pages[url]["title"], "text": text,
-                "source": {"kind": "captured_page_text", "captured_at": self.pages[url].get('retrieved_at'),
+                "source": {"kind": "captured_page_text", **self.pages[url].get("navigation_source", {}), "captured_at": self.pages[url].get('retrieved_at'),
                            "reading_semantics": "Search and open return text from this same captured page version."},
                 "links": self.links(url, text), **extra}
 
@@ -220,7 +247,8 @@ class Browser:
             domain_words -= set('www com org net edu gov co au uk nz us io'.split())
             terms -= domain_words
             ranked = []
-            for url, page in self.pages.items():
+            for url in self.documents:
+                page = self.pages[url]
                 host = urlsplit(url).hostname
                 def matches_site(site):
                     constraint = urlsplit(site if "://" in site else "https://" + site)
@@ -237,9 +265,9 @@ class Browser:
                 for term in terms:
                     frequency = counts[term]
                     if frequency:
-                        idf = math.log(1 + (len(self.pages) - self.df[term] + .5) / (self.df[term] + .5))
+                        idf = math.log(1 + (len(self.documents) - self.df[term] + .5) / (self.df[term] + .5))
                         score += idf * frequency * 2.2 / (frequency + 1.2 * (.25 + .75 * sum(counts.values()) / self.avg_len))
-                score += 2 * sum(math.log(1 + (len(self.pages) - self.df[term] + .5) / (self.df[term] + .5))
+                score += 2 * sum(math.log(1 + (len(self.documents) - self.df[term] + .5) / (self.df[term] + .5))
                                  for term in terms & self.title_terms[url])
                 if score > 0 or (sites and not terms):
                     ranked.append((score, url))
@@ -258,6 +286,19 @@ class Browser:
 
     def open(self, url, offset=0):
         fragment = unquote(urlsplit(url).fragment)
+        navigation = None
+        if self.navigation:
+            loaded = self.navigation.load(url)
+            if 'error' in loaded:
+                return loaded
+            navigation = loaded.get('navigation')
+            fragment = loaded.get('fragment', fragment)
+            if 'page' in loaded:
+                page = loaded['page']
+                self.pages[page['url']] = page
+                url = page['url']
+            else:
+                url = loaded['local_url']
         url = self.resolve(url)
         if url not in self.pages:
             return {"error": "not_in_corpus", "url": url}
@@ -272,8 +313,11 @@ class Browser:
                 offset = m.start()
             if m.start() < end < m.end():
                 end = m.end()
-        return self.expose(url, text[offset:end], start=offset, end=end,
-                           total_chars=len(text), next_offset=end if end < len(text) else None)
+        result = self.expose(url, text[offset:end], start=offset, end=end,
+                             total_chars=len(text), next_offset=end if end < len(text) else None)
+        if navigation is not None:
+            result['navigation'] = navigation
+        return result
 
     def click(self, page_url, link_id):
         page_url = self.resolve(page_url)
@@ -321,6 +365,11 @@ class Browser:
             elif name == "find" and self.resolve(arguments.get("url", "")) not in observed_pages:
                 result = {"error": "page_not_previously_exposed"}
             else:
+                if name in ('open', 'click'):
+                    target = arguments.get('url') if name == 'open' else observed_links.get((self.resolve(arguments['page_url']), arguments['link_id']))
+                    resolved = self.resolve(target)
+                    event['url_provenance'] = ('previously_returned_page' if resolved in observed_pages else
+                        'previously_exposed_link' if resolved in {self.resolve(u) for u in observed_links.values()} else 'unexposed_url')
                 result = allowed[name](**arguments)
         except (ValueError, TypeError) as exc:
             result = {"error": "invalid_arguments", "message": str(exc)}
@@ -339,6 +388,9 @@ class Browser:
                 "open_attempts": len(attempts), "successful_opens": len(successful),
                 "unique_open_urls": len({e["output"]["url"] for e in successful}),
                 "failed_opens": len(attempts) - len(successful),
+                "open_failure_types": dict(Counter(e['output']['error'] for e in attempts if 'error' in e['output'])),
+                "unexposed_url_attempts": sum(e.get('url_provenance') == 'unexposed_url' for e in attempts),
+                "http_404_opens": sum(e['output'].get('http_status') == 404 for e in attempts),
                 "find_actions": sum(e["tool"] == "find" for e in self.events),
                 "explicit_product_to_hub_follow": bool(followed)}
 
@@ -360,6 +412,14 @@ TOOLS = [
     schema("find", "Find text in a page previously returned by search or open; returns matching passages.",
            {"url": STR, "text": STR}),
 ]
+
+
+def navigation_tools():
+    tools = copy.deepcopy(TOOLS)
+    tools[1]['description'] = ('Read additional text from a URL. Captured pages use the same version as search. '
+        'Other public URLs are fetched and cached, following redirects. Reopening a captured or cached page '
+        'does not refresh it. Use offset 0 initially or next_offset to continue.')
+    return tools
 
 
 def load_api_key(key_file=None):
@@ -449,6 +509,10 @@ def run(args, transport=request_response, browser_factory=None):
         raise ValueError("This pilot is pinned to gpt-5.6-luna; do not silently substitute another model")
     corpus = json.loads(Path(args.corpus).read_text()) if args.mode == "custom" else None
     browser = (browser_factory or browser_class(getattr(args, "retrieval", "window")))(corpus, args.arm, args.snippet_chars, args.top_k, args.page_chars) if corpus else None
+    navigation_mode = getattr(args, 'navigation', 'offline')
+    if browser and navigation_mode != 'offline':
+        browser.enable_navigation(getattr(args, 'web_cache', None) or str(Path(args.out).parent / 'web-cache'), navigation_mode)
+    active_tools = navigation_tools() if navigation_mode != 'offline' else TOOLS
     started = time.monotonic()
     trace = {"created_at": datetime.now(timezone.utc).isoformat(), "mode": args.mode,
              "model": args.model, "reasoning": args.reasoning, "question": args.question,
@@ -458,6 +522,8 @@ def run(args, transport=request_response, browser_factory=None):
              "retrieval_backend": getattr(browser, 'backend_name', 'window') if browser else 'hosted',
              "config": {k: getattr(args, k) for k in ("snippet_chars", "page_chars", "top_k", "max_rounds", "max_output_tokens", "web_tool")},
              "responses": [], "tool_events": [], "status": "running"}
+    if hasattr(args, "navigation"):
+        trace["config"]["navigation"] = args.navigation
     if hasattr(args, "retrieval"):
         trace["config"]["retrieval"] = args.retrieval
     if getattr(args, "allowed_domains", None):
@@ -470,7 +536,7 @@ def run(args, transport=request_response, browser_factory=None):
             payload = {"model": args.model, "instructions": trace["instructions"], "input": history,
                        "reasoning": {"effort": args.reasoning}, "store": False,
                        "include": ["reasoning.encrypted_content"], "max_output_tokens": args.max_output_tokens,
-                       "tools": TOOLS if args.mode == "custom" else [{"type": args.web_tool}], "tool_choice": "auto"}
+                       "tools": active_tools if args.mode == "custom" else [{"type": args.web_tool}], "tool_choice": "auto"}
             if args.mode == "live":
                 payload["include"].append("web_search_call.action.sources")
                 payload["max_tool_calls"] = args.max_rounds
@@ -505,6 +571,8 @@ def run(args, transport=request_response, browser_factory=None):
                 browser.events[-1]["requested_in_response"] = len(trace["responses"]) - 1
                 history.append({"type": "function_call_output", "call_id": call["call_id"], "output": json.dumps(result)})
             trace["tool_events"] = browser.events if browser else []
+            if browser and browser.navigation:
+                trace["navigation_reads"] = list(browser.navigation.reads)
             save(args.out, trace)
         else:
             trace["status"] = "round_limit_reached"
@@ -512,6 +580,8 @@ def run(args, transport=request_response, browser_factory=None):
         trace["status"] = "failed"
         trace["error"] = str(exc)
     trace["tool_events"] = browser.events if browser else []
+    if browser and browser.navigation:
+        trace["navigation_reads"] = list(browser.navigation.reads)
     trace["metrics"] = browser.metrics() if args.mode == "custom" else hosted_metrics(trace["responses"])
     trace["usage"] = cost_estimate(trace["responses"], args.mode)
     trace["elapsed_seconds"] = round(time.monotonic() - started, 3)
@@ -538,6 +608,8 @@ def main():
     runner.add_argument("--reasoning", choices=("none", "low", "medium", "high", "xhigh", "max"), default="medium")
     runner.add_argument("--web-tool", choices=("web_search", "web_search_preview"), default="web_search_preview")
     runner.add_argument("--retrieval", choices=("context", "window"), default="context")
+    runner.add_argument("--navigation", choices=("offline", "live", "replay"), default="offline")
+    runner.add_argument("--web-cache", help="Shared untreated public-response cache")
     runner.add_argument("--snippet-chars", type=int, default=6000)
     runner.add_argument("--page-chars", type=int, default=32000)
     runner.add_argument("--top-k", type=int, default=5)

@@ -1,0 +1,93 @@
+{
+  "purpose": "Replay every recorded custom tool action with final handoff code and frozen response cache; no model calls or background fetching. Outputs match original pilot exactly.",
+  "custom_traces": 12,
+  "tool_events": 76,
+  "open_attempts": 28,
+  "all_outputs_match": true,
+  "rows": [
+    {
+      "case_id": "nav_cba_actions",
+      "repeat": 0,
+      "events": 5,
+      "open_attempts": 1,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_cba_actions",
+      "repeat": 1,
+      "events": 4,
+      "open_attempts": 1,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_discover_routine",
+      "repeat": 1,
+      "events": 4,
+      "open_attempts": 1,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_discover_buffer",
+      "repeat": 1,
+      "events": 8,
+      "open_attempts": 4,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_cba_planning",
+      "repeat": 0,
+      "events": 8,
+      "open_attempts": 3,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_discover_buffer",
+      "repeat": 0,
+      "events": 2,
+      "open_attempts": 0,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_cba_planning",
+      "repeat": 1,
+      "events": 8,
+      "open_attempts": 3,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_compare_budgeting",
+      "repeat": 0,
+      "events": 12,
+      "open_attempts": 6,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_compare_goals",
+      "repeat": 1,
+      "events": 5,
+      "open_attempts": 3,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_compare_goals",
+      "repeat": 0,
+      "events": 5,
+      "open_attempts": 0,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_compare_budgeting",
+      "repeat": 1,
+      "events": 10,
+      "open_attempts": 6,
+      "exact_outputs_match": true
+    },
+    {
+      "case_id": "nav_discover_routine",
+      "repeat": 0,
+      "events": 5,
+      "open_attempts": 0,
+      "exact_outputs_match": true
+    }
+  ]
+}

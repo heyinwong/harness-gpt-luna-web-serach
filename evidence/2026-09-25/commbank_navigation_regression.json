@@ -1,0 +1,215 @@
+{
+  "purpose": "Replay six known missing destinations through the new navigation implementation; diagnostic regression, not a fresh model fidelity test.",
+  "rows": [
+    {
+      "requested_url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+      "resolved_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "error": null,
+      "title": "Managing money in the CommBank app",
+      "text_chars": 4856,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "9b8ae6842046768d871a8f3b8666f3fa430c9858c73e721474d008d4d439cbac",
+        "content_sha256": "2eb313a0616bde8d69a3e06df65d1329c169e2bef30e2b48b1405122be023299",
+        "captured_at": "2026-09-25T00:41:06.647458+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+        "hops": [
+          {
+            "url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+            "status": 301,
+            "record_sha256": "ad1576103002df09683659c344ea3c7943123b3d9ec9a20c9f835ad3c0cec898"
+          },
+          {
+            "url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+            "status": 200,
+            "record_sha256": "9b8ae6842046768d871a8f3b8666f3fa430c9858c73e721474d008d4d439cbac"
+          }
+        ]
+      }
+    },
+    {
+      "requested_url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "resolved_url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "error": null,
+      "title": "Category budgets \u2013 CommBank",
+      "text_chars": 3489,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "c282af6acdbe7b5e74ff770d95977abc60513ef708f4e2657a1a656ae16e6a5a",
+        "content_sha256": "193ed22d899c096510253eae213f13e15eee8385b8f0af45b0cd4a9807d04048",
+        "captured_at": "2026-09-25T00:41:06.777603+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+        "hops": [
+          {
+            "url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+            "status": 200,
+            "record_sha256": "c282af6acdbe7b5e74ff770d95977abc60513ef708f4e2657a1a656ae16e6a5a"
+          }
+        ]
+      }
+    },
+    {
+      "requested_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "resolved_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "error": null,
+      "title": "Managing money in the CommBank app",
+      "text_chars": 4856,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "9b8ae6842046768d871a8f3b8666f3fa430c9858c73e721474d008d4d439cbac",
+        "content_sha256": "2eb313a0616bde8d69a3e06df65d1329c169e2bef30e2b48b1405122be023299",
+        "captured_at": "2026-09-25T00:41:06.647458+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+        "hops": []
+      }
+    },
+    {
+      "requested_url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+      "resolved_url": "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals",
+      "error": null,
+      "title": "Savings goals | Westpac",
+      "text_chars": 13944,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "2e00c89ef8f4c50277f27ea94140f1c86090bdbd314de3f93f9e341b061209bb",
+        "content_sha256": "863416827dec3b1528128cd6f20dc81e5fbf7105eae23b3bd7e6dd07403e8ca2",
+        "captured_at": "2026-09-25T00:41:07.064670+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+        "hops": [
+          {
+            "url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+            "status": 301,
+            "record_sha256": "ced885b0acf2a22702a36be2f83a36c293bd7c346482e2b2d754a31b8f1b405d"
+          },
+          {
+            "url": "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals",
+            "status": 200,
+            "record_sha256": "2e00c89ef8f4c50277f27ea94140f1c86090bdbd314de3f93f9e341b061209bb"
+          }
+        ]
+      }
+    },
+    {
+      "requested_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+      "resolved_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+      "error": null,
+      "title": "Savings Finder | Westpac",
+      "text_chars": 6394,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "c16f1ee83dc8fa96969f89b669e2d159bd7b5603549f9ba44a1f58263472b967",
+        "content_sha256": "139fae9e8f6999405a3d2d902e41a90ee66f026d32a293e444c7b022cf9cde9e",
+        "captured_at": "2026-09-25T00:41:07.199206+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+        "hops": [
+          {
+            "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+            "status": 200,
+            "record_sha256": "c16f1ee83dc8fa96969f89b669e2d159bd7b5603549f9ba44a1f58263472b967"
+          }
+        ]
+      }
+    },
+    {
+      "requested_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+      "resolved_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+      "error": null,
+      "title": "Stay on top with our Westpac App Budget Tools | Westpac",
+      "text_chars": 7742,
+      "source": {
+        "kind": "cached_public_page",
+        "record_sha256": "286162713b638e388fe93228cc389ce93a10f31315925f17ce5cde41790bdb2d",
+        "content_sha256": "bc23d40480a5190cb1dc26d4e9da1093e18c8277897449e9dde0e48bbbbd714d",
+        "captured_at": "2026-09-25T00:41:07.324099+00:00",
+        "reading_semantics": "Search and open return text from this same captured page version."
+      },
+      "navigation": {
+        "requested_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+        "hops": [
+          {
+            "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+            "status": 200,
+            "record_sha256": "286162713b638e388fe93228cc389ce93a10f31315925f17ce5cde41790bdb2d"
+          }
+        ]
+      }
+    }
+  ],
+  "metrics": {
+    "search_actions": 0,
+    "search_queries": 0,
+    "open_attempts": 6,
+    "successful_opens": 6,
+    "unique_open_urls": 5,
+    "failed_opens": 0,
+    "open_failure_types": {},
+    "unexposed_url_attempts": 5,
+    "http_404_opens": 0,
+    "find_actions": 0,
+    "explicit_product_to_hub_follow": false
+  },
+  "navigation_reads": [
+    {
+      "url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+      "record": "b8120ed7e1dc0c5a372e697aa5c2761ca7794f3597350faac3e592eb06d33ef4.json",
+      "record_sha256": "ad1576103002df09683659c344ea3c7943123b3d9ec9a20c9f835ad3c0cec898",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "record": "9f7ad906355091c2adef2641c1ffa3e7a70c7fafa71266807406a6dd63aa1a28.json",
+      "record_sha256": "9b8ae6842046768d871a8f3b8666f3fa430c9858c73e721474d008d4d439cbac",
+      "raw_sha256": "2eb313a0616bde8d69a3e06df65d1329c169e2bef30e2b48b1405122be023299"
+    },
+    {
+      "url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "record": "e4c7456606a1722d216920ba2745bc54e8cbef3e081004de8d6168944b7d51b9.json",
+      "record_sha256": "c282af6acdbe7b5e74ff770d95977abc60513ef708f4e2657a1a656ae16e6a5a",
+      "raw_sha256": "193ed22d899c096510253eae213f13e15eee8385b8f0af45b0cd4a9807d04048"
+    },
+    {
+      "url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+      "record": "995eeae108a1a834d89fa1ea28d854361256fa169e3eca6eaaf3c6f289db7fa5.json",
+      "record_sha256": "ced885b0acf2a22702a36be2f83a36c293bd7c346482e2b2d754a31b8f1b405d",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals",
+      "record": "ffdacd726d24bce3b7992fa66b589cb6055c25c55f3a8cf066379d7da8ad0a90.json",
+      "record_sha256": "2e00c89ef8f4c50277f27ea94140f1c86090bdbd314de3f93f9e341b061209bb",
+      "raw_sha256": "863416827dec3b1528128cd6f20dc81e5fbf7105eae23b3bd7e6dd07403e8ca2"
+    },
+    {
+      "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+      "record": "e8273f32ba722199997186b7bc4781df2d6ebc21941f6fa60a93e93abff02c95.json",
+      "record_sha256": "c16f1ee83dc8fa96969f89b669e2d159bd7b5603549f9ba44a1f58263472b967",
+      "raw_sha256": "139fae9e8f6999405a3d2d902e41a90ee66f026d32a293e444c7b022cf9cde9e"
+    },
+    {
+      "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+      "record": "f9acb470258ded44a1e97dbe33b9c5d5f3089e4596569b0a26cb980f88d671a4.json",
+      "record_sha256": "286162713b638e388fe93228cc389ce93a10f31315925f17ce5cde41790bdb2d",
+      "raw_sha256": "bc23d40480a5190cb1dc26d4e9da1093e18c8277897449e9dde0e48bbbbd714d"
+    }
+  ],
+  "automated_tests": {
+    "count": 79,
+    "result": "passed",
+    "command": "python3 -m unittest discover -s tests -q"
+  }
+}

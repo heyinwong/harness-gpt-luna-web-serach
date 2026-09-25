@@ -59,7 +59,7 @@ class ContextPassageBrowser(Browser):
         candidates=self.evidence_index[url]
         if not query or not candidates:
             return super().search_excerpt(url,terms)
-        weights={t:math.log(1+(len(self.pages)+1)/(self.df[t]+1)) for t in query}
+        weights={t:math.log(1+(len(self.documents)+1)/(self.df[t]+1)) for t in query}
         selected=[];seen=set();covered=set();ranges=[]
         for _ in range(8):
             def score(u):

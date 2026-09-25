@@ -1,6 +1,6 @@
 # CommBank corpus and award experiment
 
-For the short, current workflow, use [HANDOFF.md](HANDOFF.md). This document records corpus and treatment details.
+For the short, current workflow, use [HANDOFF.md](HANDOFF.md), including `--navigation live`. The build and calibration commands below document historical corpus preparation; use `corpora/commbank/navigation_validation.json` for the current repeat comparison. This document records corpus and treatment details.
 
 ## What this package establishes
 
@@ -24,7 +24,7 @@ python commbank_setup.py --cache results/commbank-cache --out-dir results/commba
 
 This command uses ordinary public-web requests and Playwright CLI; it does **not** load a key or call a model. It produces `reference.json`, `experiment.json`, `audit.json`, `calibration.json`, `validation.json` and the question files. Output directories are immutable. Browser captures and original HTTP responses remain in the private cache. Rerunning against an existing cache reuses it; choose a new cache directory to refresh sources.
 
-For the original machine, the existing cache is `results/commbank_build/cache`, the current reviewed corpus is `results/commbank_final` (identical reference/experiment content to `results/commbank_corpus_v6`), discovery is `results/commbank_discovery_v1`, and the first bank calibration is `results/commbank_calibration_v1`. These paths are **not in a public clone**. The private `commbank-handoff.zip` preserves them, along with current validation and operational evidence, without publishing bank-page copies or model traces.
+For the original machine, the existing cache is `results/commbank_build/cache`, the current reviewed corpus is `results/commbank_final` (identical reference/experiment content to `results/commbank_corpus_v6`), discovery is `results/commbank_discovery_v1`, and the first bank calibration is `results/commbank_calibration_v1`. These paths are **not in a public clone**. The owner-authorized public navigation-v2 release ZIP preserves these inputs, raw traces and the new navigation caches. See HANDOFF.md for its download and current commands.
 
 To rebuild entirely from a transferred cache:
 

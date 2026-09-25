@@ -13,7 +13,7 @@ from validation.planning import precision_plan
 
 
 def code_hashes():
-    paths = [lab.ROOT / name for name in ("search_lab.py", "benchmark.py", "context_passages.py", "passage_retrieval.py")] + sorted((lab.ROOT / "validation").glob("*.py"))
+    paths = [lab.ROOT / name for name in ("search_lab.py", "benchmark.py", "context_passages.py", "passage_retrieval.py", "navigation.py", "corpus_builder.py")] + sorted((lab.ROOT / "validation").glob("*.py"))
     import hashlib
     return {str(p.relative_to(lab.ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
@@ -97,7 +97,8 @@ def main():
                 case = cases[job["case_id"]]
                 values = profile["runner"] | {"model": profile["model"], "instructions": profile["instructions"],
                          "allow_paid": True, "mode": job["mode"], "arm": "reference", "question": case["question"],
-                         "corpus": str(directory / "corpus.json"), "out": str(path)}
+                         "corpus": str(directory / "corpus.json"), "out": str(path),
+                         "web_cache": str(directory / "web-cache")}
                 trace = lab.run(SimpleNamespace(**values), transport=budget)
                 trace["benchmark_job"] = job
                 trace["benchmark_manifest_sha256"] = fingerprint(manifest)
@@ -122,8 +123,14 @@ def main():
                               "source_urls_in_snapshot": sum(page_key(u) in corpus_urls for u in sources),
                               "outside_snapshot": sorted(u for u in sources if page_key(u) not in corpus_urls),
                               "notice": "URL overlap ignores query, scheme and fragment. It does not establish identical content, complete candidate coverage or actual reading."}
+        from navigation import navigation_summary
+        result["navigation_summary"] = navigation_summary(traces)
         lab.save(directory / "report.json", result)
-        (directory / "report.md").write_text(markdown(result))
+        n = result["navigation_summary"]
+        note = ("\n## Navigation diagnostics\n\n" + f"Custom: {n['open_attempts']} open attempts, {n['successful_opens']} successful reads. "
+                + f"Failure types: {json.dumps(n['failure_types'])}. Unexposed URL attempts: {n['unexposed_url_attempts']}. "
+                + f"Actual HTTP 404s: {n['http_404_opens']}.\n\n" + n['notice'] + "\n")
+        (directory / "report.md").write_text(markdown(result) + note)
         print(json.dumps({"verdict": result["verdict"], "observed_runs": result["observed_runs"], "report": str(directory / "report.md")}), flush=True)
 
 

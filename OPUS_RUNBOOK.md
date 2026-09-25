@@ -4,7 +4,7 @@
 
 **CommBank update:** Start with [COMMBANK_RUNBOOK.md](COMMBANK_RUNBOOK.md) for the Luna-informed 69-document competitor corpus, reproducible builder, six placement conditions and bank-specific calibration. The original documentation pilot below remains historical evidence; it is not a bank-domain fidelity pass.
 
-Read `HANDOFF.md`, `README.md`, `STATISTICS.md` and `VALIDATION.md` first. Public clones include numeric evidence in `evidence/`; they do not include the original ignored `results/` directories. Generate fresh snapshots/runs or obtain those private artifacts from the owner before using commands that refer to existing results. Opus operates the repository; **the experimental decision model remains `gpt-5.6-luna`**. Switching the decision model to Opus creates a different experiment. Do not substitute models, adjust the open count by imposing a quota, or describe a pilot as a confidence-certified replica of ChatGPT.
+Read `HANDOFF.md`, `README.md`, `STATISTICS.md` and `VALIDATION.md` first. Public clones include numeric evidence in `evidence/`; they do not include the original ignored `results/` directories. Download the owner-authorized navigation-v2 release ZIP linked in HANDOFF.md before using commands that refer to existing results. Current runs use cached public navigation; the examples below predate that change. Opus operates the repository; **the experimental decision model remains `gpt-5.6-luna`**. Switching the decision model to Opus creates a different experiment. Do not substitute models, adjust the open count by imposing a quota, or describe a pilot as a confidence-certified replica of ChatGPT.
 
 ## 1. Setup and free checks
 
