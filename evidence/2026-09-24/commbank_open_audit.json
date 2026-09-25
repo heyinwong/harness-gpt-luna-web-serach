@@ -10,7 +10,7 @@
   "failed_unexposed_urls": 1,
   "attempts_per_answer": 0.5,
   "successful_opens_per_answer": 0.25,
-  "interpretation": "The registered open metric counts attempts, including errors. Eight failed attempts followed exposed links; one URL had not been exposed as a page or link. Unexposed does not prove invented: it may derive from model memory. not_in_corpus is an offline coverage error, not an observed HTTP 404. No live HTTP status was checked in this audit. All nine errors occurred in two digital-feature answers.",
+  "interpretation": "The registered open metric counts attempts, including errors. Eight failed attempts followed exposed links; one URL had not been exposed as a page or link. Unexposed does not prove invented: it may derive from model memory. not_in_corpus is an offline coverage error, not an observed HTTP 404. The original trace records no live HTTP status; the separate follow-up check below found all six distinct URLs resolving successfully. All nine errors occurred in two digital-feature answers.",
   "handoff_action": "Repair missing linked-page coverage in a new corpus version and rerun the comparison before treating opening similarity as established. Keep the existing frozen evidence; do not remove failed attempts or relabel successful opens as the original metric. Track guessed/unexposed URL attempts separately from exposed-link corpus misses and actual HTTP failures.",
   "opens": [
     {
@@ -175,5 +175,105 @@
       "literal_url_in_earlier_tool_output": true,
       "outcome": "not_in_corpus"
     }
-  ]
+  ],
+  "followup_http_check": {
+    "notice": "Checked after the frozen validation, on 2026-09-25 UTC. All six distinct missing URLs returned HTTP 200 after redirects; returned page titles matched the requested banking features. This does not reconstruct the hosted tool response or retroactively change the frozen trace.",
+    "urls": [
+      {
+        "url": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+        "status": 200,
+        "resolved_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+        "content_type": "text/html;charset=utf-8",
+        "title": "Managing money in the CommBank app",
+        "h1": [
+          "Managing money in the CommBank app"
+        ],
+        "bytes": 67257,
+        "checked_at": "2026-09-25T00:33:20.560445+00:00"
+      },
+      {
+        "url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+        "status": 200,
+        "resolved_url": "https://www.commbank.com.au/digital-banking/category-budgets.html",
+        "content_type": "text/html;charset=utf-8",
+        "title": "Category budgets \u2013 CommBank",
+        "h1": [
+          "Category budgets"
+        ],
+        "bytes": 50733,
+        "checked_at": "2026-09-25T00:33:20.449876+00:00"
+      },
+      {
+        "url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+        "status": 200,
+        "resolved_url": "https://www.commbank.com.au/digital-banking/managing-money.html",
+        "content_type": "text/html;charset=utf-8",
+        "title": "Managing money in the CommBank app",
+        "h1": [
+          "Managing money in the CommBank app"
+        ],
+        "bytes": 67257,
+        "checked_at": "2026-09-25T00:33:20.457144+00:00"
+      },
+      {
+        "url": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+        "status": 200,
+        "resolved_url": "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals",
+        "content_type": "text/html; charset=utf-8",
+        "title": "Savings goals | Westpac",
+        "h1": [],
+        "bytes": 42084,
+        "checked_at": "2026-09-25T00:33:20.480107+00:00"
+      },
+      {
+        "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+        "status": 200,
+        "resolved_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+        "content_type": "text/html; charset=UTF-8",
+        "title": "Savings Finder | Westpac",
+        "h1": [
+          "Savings Finder"
+        ],
+        "bytes": 176677,
+        "checked_at": "2026-09-25T00:33:20.616459+00:00"
+      },
+      {
+        "url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+        "status": 200,
+        "resolved_url": "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/",
+        "content_type": "text/html; charset=UTF-8",
+        "title": "Stay on top with our Westpac App Budget Tools | Westpac",
+        "h1": [
+          "Stay on top with our Westpac App Budget Tools"
+        ],
+        "bytes": 177727,
+        "checked_at": "2026-09-25T00:33:20.614236+00:00"
+      }
+    ]
+  },
+  "repair_plan": {
+    "scope": "One corpus-coverage repair; retain model, tools, excerpt settings, prompts and existing margins.",
+    "capture_canonical_pages": [
+      "https://www.commbank.com.au/digital-banking/category-budgets.html",
+      "https://www.commbank.com.au/digital-banking/managing-money.html",
+      "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals",
+      "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/insights-and-budgeting-savings-finder/",
+      "https://www.westpac.com.au/personal-banking/online-banking/insights-hub/spend-insights-and-budgeting-tools/"
+    ],
+    "record_redirect_aliases": [
+      {
+        "from": "https://www.commbank.com.au/digital-banking/bill-sense.html",
+        "to": "https://www.commbank.com.au/digital-banking/managing-money.html"
+      },
+      {
+        "from": "https://www.westpac.com.au/personal-banking/bank-accounts/savings-accounts/savings-goals/",
+        "to": "https://www.westpac.com.au/bank-accounts/savings-accounts/savings-goals"
+      }
+    ],
+    "preflight": "Inventory task-relevant links exposed by captured pages for target and competitor banks. Capture those pages or explicitly record verified unavailability. Verify source content, aliases and parser quality before freezing. Do not require a whole-web crawl.",
+    "runtime": "Search, open and click use the same frozen URL map. Preserve missing-corpus errors separately from captured HTTP failures. Do not fetch changing live pages silently during treatment runs or fabricate redirect destinations.",
+    "metrics": "Report open attempts, successful reads, missing-corpus failures and previously unexposed URL attempts separately. Preserve the original attempt-based metric.",
+    "url_guessing": "Do not ban unexposed URL opens just to improve counts. The one unexposed URL here is a real redirecting Westpac URL. Require grounded link IDs for click and retain provenance for direct opens.",
+    "validation": "Replay known failures as regression checks, then evaluate a new frozen question set against hosted Luna. Earlier inspected validation questions are now development evidence, not a fresh holdout. No equivalence claim is inherited by the repaired corpus."
+  }
 }
