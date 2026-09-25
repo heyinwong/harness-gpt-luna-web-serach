@@ -1,3 +1,5 @@
+> **Historical design note.** The current architecture and six-condition design are specified in [README.md](README.md). This note predates navigation v2; its corpus-only navigation and five-arm details describe the earlier implementation.
+
 # Harness design and validation plan
 
 ## Purpose and evidence
